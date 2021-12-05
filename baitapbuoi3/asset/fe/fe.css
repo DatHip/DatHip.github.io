@@ -1,0 +1,279 @@
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: inherit;
+}
+
+html {
+   font-family: Arial, Helvetica, sans-serif;
+   box-sizing: border-box;
+   line-height: 1.4;
+}
+
+a {
+   /* display: block; */
+   text-decoration: none;
+   color: black;
+}
+
+img {
+   display: block;
+   width: 450px;
+   max-width: 100%;
+   border-radius: 2px;
+}
+
+body {
+   background-color: #f3f3f3;
+}
+
+li {
+   margin-bottom: 5px;
+}
+
+ol {
+   max-width: 80%;
+   margin: auto;
+   text-align: left;
+   padding-left: 10px;
+}
+
+.main::after {
+   content: "";
+   display: table;
+   clear: both;
+}
+
+.gird {
+   width: 1100px;
+   max-width: 100%;
+   margin: auto;
+   overflow: hidden;
+}
+
+.gird::after {
+   content: "";
+   display: table;
+   clear: both;
+}
+
+.container {
+   float: left;
+   width: 69%;
+   background: white;
+   box-shadow: 1px 1.5px 5px #ccc;
+   border-radius: 4px;
+   margin-bottom: 50px;
+   padding-bottom: 18px;
+   padding-top: 18px;
+   overflow: hidden;
+}
+
+.container::after {
+   content: "";
+   display: table;
+   clear: both;
+}
+
+/*  */
+
+.nav {
+   padding-top: 20px;
+   padding-bottom: 20px;
+}
+
+.nav__link {
+   text-align: center;
+   padding: 8px 12px;
+}
+
+.nav__back {
+   float: left;
+   padding: 8px 12px;
+   background-color: #ccc;
+   border-radius: 4px;
+   cursor: pointer;
+   text-transform: capitalize;
+   transition: 0.2s;
+}
+
+.nav__back:hover {
+   opacity: 0.8;
+}
+
+.nav a:hover {
+}
+
+/*  */
+.course_info {
+   width: 100%;
+   float: left;
+   width: 100%;
+   text-align: center;
+}
+
+.course_info::after {
+   content: "";
+   display: table;
+   clear: both;
+}
+
+.header__img {
+   align-items: center;
+   justify-content: center;
+   display: flex;
+}
+
+img {
+   border-radius: 4px;
+   margin-top: 15px;
+   margin-bottom: 15px;
+   box-shadow: 1px 2px 3px #ccc;
+}
+
+.header h1 {
+   font-size: 38px;
+   margin-bottom: 10px;
+   color: #464646;
+}
+
+h2 {
+   margin-top: 10px;
+   font-size: 28px;
+   margin-bottom: 10px;
+   color: #464646;
+   text-align: left;
+   padding-left: 50px;
+}
+
+.header p {
+   margin: auto;
+   max-width: 80%;
+   text-align: left;
+   font-size: 16px;
+}
+
+/*  */
+.aside {
+   padding-left: 20px;
+   float: left;
+}
+
+.aside::after {
+   content: "";
+   display: table;
+   clear: both;
+}
+
+.aside__container {
+   width: 320px;
+   max-width: 100%;
+   position: fixed;
+   padding: 18px;
+   background-color: white;
+   border-radius: 4px;
+   box-shadow: 1px 2px 5px #ccc;
+   padding-bottom: 22px;
+}
+
+.aside__container {
+   content: "";
+   display: table;
+   clear: both;
+}
+
+.aside li {
+   list-style: none;
+}
+
+.aside__price-15 {
+   font-size: 28px !important;
+   font-weight: 600;
+   color: #333;
+}
+
+.aside__price-17 {
+   margin-left: 5px;
+   font-size: 18px;
+   color: #333;
+   text-decoration: line-through;
+}
+
+.aside__price-saleoff {
+   font-size: 14px;
+   color: rgba(0, 0, 0, 0.651);
+}
+
+.aside__btn {
+   width: 100%;
+   margin-bottom: 12px;
+}
+
+.aside__btn button {
+   width: 100%;
+   display: block;
+   padding: 12px;
+   font-size: 18px;
+   font-weight: bold;
+   margin-bottom: 10px;
+   color: white;
+   border: none;
+   border-radius: 4px;
+   cursor: pointer;
+   transition: 0.2s;
+}
+
+.aside__btn button:hover {
+   opacity: 0.8;
+}
+
+.aside__btn button:first-child {
+   background-color: #df322f;
+   text-transform: uppercase;
+}
+
+.aside__btn button:nth-child(2) {
+   background-color: #0bb732;
+}
+
+.aside__endow p {
+   margin-top: 5px;
+   font-size: 14px;
+   font-weight: 700;
+   color: #02791d;
+   padding-left: 12px;
+   margin-bottom: 6px;
+}
+
+.aside__btn-7day {
+   font-size: 14px;
+   text-align: center;
+   color: #858585;
+}
+
+.aside ul {
+   padding-left: 18px;
+   margin-bottom: 4px;
+}
+
+.aside li {
+   font-size: 15px;
+   list-style: circle;
+}
+
+.aside__contact-btn {
+   float: right;
+   padding: 10px 16px;
+   font-size: 16px;
+   font-weight: bold;
+   color: white;
+   background-color: #0bb732;
+   border: none;
+   border-radius: 4px;
+   cursor: pointer;
+   transition: 0.2s;
+}
+
+.aside__contact-btn:hover {
+   opacity: 0.8;
+}
