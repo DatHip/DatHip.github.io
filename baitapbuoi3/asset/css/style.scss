@@ -76,9 +76,13 @@ body {
     font-weight: 600;
   }
 
-  p:last-child {
+  .route__p {
     font-weight: 500;
     font-size: 14px;
     margin-top: 8px;
+  }
+
+  .route__p:last-child {
+    font-weight: 600;
   }
 }

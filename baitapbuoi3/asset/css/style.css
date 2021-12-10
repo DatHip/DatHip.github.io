@@ -85,9 +85,13 @@ body {
   font-weight: 600;
 }
 
-.route__list-info p:last-child {
+.route__list-info .route__p {
   font-weight: 500;
   font-size: 14px;
   margin-top: 8px;
+}
+
+.route__list-info .route__p:last-child {
+  font-weight: 600;
 }
 /*# sourceMappingURL=style.css.map */
