@@ -6,7 +6,7 @@
 }
 
 body {
-   background-color: #F4F7FA;
+   background-color: #f4f7fa;
 }
 
 a {
@@ -23,7 +23,6 @@ h1 {
    text-transform: capitalize;
 }
 
-
 .header {
    text-align: center;
    padding: 60px 0;
@@ -33,8 +32,45 @@ h1 {
 .location {
    position: relative;
    margin-bottom: 24px;
-   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+   box-shadow: rgba(170, 168, 168, 0.24) 0px 3px 8px;
    border-radius: 4px;
+}
+
+.location__hover {
+   position: absolute;
+   padding: 12px 22px;
+   color: white;
+   z-index: 2;
+   letter-spacing: 1.5px;
+   border: 1px solid white;
+   bottom: 5%;
+   left: 50%;
+   transform: translateX(-50%);
+   opacity: 0;
+   transition: 0.2s;
+   text-align: center;
+   &:hover {
+      background-color: #c73194;
+   }
+}
+
+a:hover .location__hover {
+   animation: GoUp 0.3s ease-in-out forwards;
+}
+
+@keyframes GoUp {
+   0% {
+      bottom: 5%;
+   }
+
+   50% {
+      opacity: 0.5;
+   }
+
+   100% {
+      opacity: 1;
+      bottom: 18%;
+   }
 }
 
 a:hover .location__img::before {
@@ -49,7 +85,7 @@ a:hover .location__img::before {
       width: 100%;
       height: 100%;
       border-radius: 4px;
-      transition: 0.3s ease-in;
+      transition: 0.3s ease-in-out;
       background-color: rgba(0, 0, 0, 0.3);
    }
    height: 200px;
