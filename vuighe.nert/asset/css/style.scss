@@ -1,0 +1,510 @@
+body {
+  background: #222;
+}
+
+.button-48 {
+  background-color: #d80f16;
+  border-radius: 4px;
+  color: white;
+  padding: 10px 14px;
+  span {
+    transition: 0.2s;
+  }
+  &:hover span {
+    color: #333;
+  }
+}
+
+.col {
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+.row {
+  margin-left: -6px;
+  margin-right: -6px;
+}
+
+.header__navbar {
+  height: 6rem;
+  padding: 0 0 0 0;
+  align-items: center;
+}
+
+.container__title {
+  display: block;
+  margin-bottom: 1.2rem;
+  font-size: 2.5rem;
+  font-weight: 400;
+
+  & a {
+    color: #1f9b82;
+  }
+
+  & i {
+    font-weight: 800;
+    font-size: 18px;
+  }
+}
+
+.header {
+  background: #333333;
+  position: fixed;
+  right: 0;
+  top: 0;
+  left: 0;
+  border-bottom: 1px solid #ccc;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+  z-index: 20;
+
+  & a {
+    color: #1f9b82;
+  }
+
+  .header__navbar-left-logo {
+    margin-top: 5px;
+  }
+
+  &__navbar-left {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-list {
+      display: flex;
+      margin-right: 1rem;
+    }
+
+    &-logo img {
+      max-width: 100%;
+      height: 5rem;
+    }
+
+    .header__navbar-left-list-item {
+      padding: 0.5rem 1.5rem;
+      border: 1px solid #555;
+      border-radius: 1.5rem;
+      margin: 0 0.5rem;
+
+      & a {
+        font-size: 1.4rem;
+      }
+    }
+  }
+
+  .header__navbar-right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &_search {
+      width: 32rem;
+      margin-left: 1.5rem;
+      position: relative;
+
+      & input {
+        width: 100%;
+        padding: 0.6rem 1.4rem;
+        border-radius: 20px;
+        border: 1px solid #ccc;
+        font-size: 1.3rem;
+      }
+
+      .header__navbar-right_search-btn {
+        position: absolute;
+        font-size: 14px;
+        top: 52%;
+        transform: translateY(-52%);
+        right: 1.4rem;
+        color: #999;
+      }
+    }
+
+    .header__navbar-right_user {
+      display: flex;
+      justify-content: left;
+      float: right;
+
+      .header__navbar-right_user-item {
+        cursor: pointer;
+        height: 40px;
+        width: 40px;
+        background-color: #eeeeee;
+        border-radius: 50%;
+        margin-right: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+
+        & i {
+          font-size: 1.8rem;
+        }
+
+        &:last-child {
+          margin-right: 0;
+          background-color: white;
+        }
+      }
+    }
+  }
+}
+
+.container {
+  margin-top: 8rem;
+
+  .layout1 {
+    .layout1_link-top {
+      position: relative;
+    }
+    .layout1_link-top-play {
+      z-index: 10;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      bottom: 1.2rem;
+      left: 1rem;
+      color: white;
+      font-size: 4.4rem;
+      background-color: #081432;
+      height: 8rem;
+      width: 8rem;
+      border-radius: 50%;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+        rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+
+      & i {
+        margin-left: 9px;
+        margin-top: 4px;
+      }
+    }
+    .layout1_link-top-title {
+      position: absolute;
+      bottom: 3rem;
+      left: 10rem;
+      color: white;
+      font-size: 2rem;
+      font-weight: 600;
+      & p:first-child {
+        font-size: 1.5rem;
+        font-weight: 500;
+        margin-bottom: 1rem;
+      }
+    }
+
+    .layou1_link-right img {
+      margin-bottom: 6px;
+    }
+
+    .layout1_link-bottom {
+      margin-top: 0.6rem;
+    }
+
+    .layout1_link_img-big {
+      height: 278px;
+    }
+  }
+
+  .infor {
+    .col {
+      margin-bottom: 6px;
+    }
+
+    .infor_list-item {
+      overflow: hidden;
+      max-height: 8.6rem;
+
+      & img {
+        transition: 0.3s;
+        border-radius: 2px;
+      }
+
+      & p {
+        font-size: 1.4rem;
+        color: var(--text-color);
+        line-height: 1.4;
+        transition: 0.2s;
+      }
+    }
+  }
+
+  .comic {
+    .comic__list-item {
+      display: flex;
+      position: relative;
+      cursor: pointer;
+      transition: 0.3s;
+
+      &:hover {
+        opacity: 0.8;
+      }
+
+      &::before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.2);
+      }
+    }
+
+    .comic__list-item-chap {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      color: white;
+      padding: 2px 6px;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: 4;
+      font-size: 1.2rem;
+      border: 1px solid #ccc;
+    }
+
+    .comic__list-item-name {
+      position: absolute;
+      color: white;
+      font-size: 1.6rem;
+      bottom: 10px;
+      left: 10px;
+      z-index: 4;
+      text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4),
+        0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  .whattowatch {
+    .whattowatch__input-list {
+      width: 60%;
+      position: absolute;
+      top: 10%;
+      right: 10px;
+      display: none;
+      border-radius: 2px;
+      background: rgba(255, 255, 255, 0.603);
+
+      & p {
+        width: 100%;
+        padding: 4px 10px;
+        color: black;
+        z-index: 1;
+        font-size: 12px;
+        font-weight: 600;
+      }
+    }
+
+    & img {
+      width: 100%;
+    }
+
+    .whattowatch__list-item {
+      height: 180px;
+      overflow: hidden;
+    }
+  }
+
+  .charts {
+    .charts__list-item {
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+      height: 10rem;
+      margin-bottom: 10px;
+      cursor: pointer;
+      &:hover img {
+        transform: scale(1.2);
+      }
+      & img {
+        transition: 0.3s;
+      }
+    }
+    .charts__coating {
+      z-index: 2;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        -180deg,
+        rgba(231, 59, 43, 0.5),
+        rgba(244, 67, 54, 0.2)
+      );
+    }
+    .charts__coating2 {
+      z-index: 2;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        -180deg,
+        rgba(156, 39, 176, 0.6),
+        rgba(156, 39, 176, 0.2)
+      );
+    }
+    .charts__coating3 {
+      z-index: 2;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        -180deg,
+        rgba(63, 81, 181, 0.6),
+        rgba(63, 81, 181, 0.2)
+      );
+    }
+    .charts__coating4 {
+      z-index: 2;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        -180deg,
+        rgba(0, 150, 136, 0.9),
+        rgba(0, 150, 136, 0.2)
+      );
+    }
+    .charts__coating5 {
+      z-index: 2;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        -180deg,
+        rgba(255, 193, 7, 0.6),
+        rgba(255, 193, 7, 0.2)
+      );
+    }
+    .charts__coating6 {
+      z-index: 2;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        -180deg,
+        rgba(199, 133, 68, 0.6),
+        rgba(140, 106, 73, 0.2)
+      );
+    }
+
+    .charts__list-item-numb {
+      position: absolute;
+      bottom: 20px;
+      right: 16px;
+      color: white;
+      font-size: 4rem;
+      font-weight: 700;
+      z-index: 5;
+      text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4),
+        0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1);
+    }
+
+    .charts__list-item-name {
+      z-index: 5;
+      top: 10px;
+      left: 10px;
+      font-size: 1.4rem;
+      position: absolute;
+      color: white;
+      text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4),
+        0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1);
+    }
+  }
+}
+.footer {
+  margin-bottom: 10rem;
+  .footer__container {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+// Dùng chung
+.newEpisode {
+  .newEpisode_link-name > p {
+    font-size: 16px;
+  }
+
+  .newEpisode_title {
+    display: block;
+    margin-bottom: 1.2rem;
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: var(--text-color);
+    transition: 0.3s;
+
+    & i {
+      font-weight: 800;
+      font-size: 20px;
+    }
+  }
+
+  .newEpisode_link {
+    display: flex;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: '';
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      position: absolute;
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+
+    & img {
+      height: 100%;
+      transition: 0.3s;
+    }
+
+    .newEpisode_link-btn {
+      position: absolute;
+      top: 4%;
+      left: 3%;
+      font-size: 8rem;
+      color: rgba(255, 255, 255, 0.6);
+      z-index: 2;
+      display: none;
+      transition: 0.3s;
+    }
+
+    .newEpisode_link-title {
+      position: absolute;
+      bottom: 8px;
+      left: 0;
+      color: white;
+      z-index: 4;
+      padding: 0 14px;
+      width: 100%;
+      text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4),
+        0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1);
+    }
+
+    .newEPisode_link-name-botton {
+      display: flex;
+      font-size: 1.2rem;
+      justify-content: space-between;
+      margin-top: 5px;
+      text-shadow: none;
+    }
+  }
+
+  .hover-slice:hover .newEpisode_link-btn {
+    display: block !important;
+  }
+
+  .hover-slice:hover .newEpisode_link img {
+    transform: scale(1.3);
+  }
+
+  .hover-slice:hover .whattowatch__input-list {
+    display: block !important;
+  }
+
+  .newEpisode_title:hover {
+    color: #23c6c8;
+  }
+}
+.hover-slice:hover .img {
+  transform: scale(1.2);
+}
