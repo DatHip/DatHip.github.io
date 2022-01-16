@@ -1,0 +1,57 @@
+@font-face {
+  font-family: Playfair;
+  src: url(../font/Playfair_Display/PlayfairDisplay-Regular.ttf);
+}
+
+@font-face {
+  font-family: Ubunbu;
+  src: url(../font/Ubuntu/Ubuntu-Regular.ttf);
+}
+
+:root {
+  --text-nhat: #b4ad9e;
+  --text-color: #626262;
+  --text-sign: #333;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.mb-70 {
+  margin-bottom: 70px;
+}
+
+.mb-1 {
+  margin-bottom: 10rem;
+}
+
+.mb-25 {
+  margin-bottom: 25px;
+}
+
+.mb-30 {
+  margin-bottom: 30px;
+}
+
+.mb-35 {
+  margin-bottom: 35px;
+}
+
+.mb-50 {
+  margin-bottom: 50px;
+}
+
+.mb-135 {
+  margin-bottom: 135px;
+}
+/*# sourceMappingURL=main.css.map */

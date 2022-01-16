@@ -1,0 +1,173 @@
+* {
+  font-family: Playfair;
+}
+
+body {
+  background: #b79891; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #94716b,
+    #b79891
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #94716b,
+    #b79891
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.header {
+  padding-top: 7rem;
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .navbar__item {
+      margin-left: 9rem;
+      font-size: 1.4rem;
+      text-transform: uppercase;
+    }
+    .navbar__logo {
+      & a {
+        font-family: 'Inconsolata', monospace;
+        text-decoration: none;
+        color: black;
+        font-size: 4rem;
+      }
+    }
+  }
+}
+
+.container {
+  .container__signup {
+    padding-top: 75px;
+    padding-bottom: 75px;
+    background-color: #f0f0f0;
+  }
+  .container__photodiary {
+    .container__photodiary-content {
+      font-size: 1.4rem;
+      color: var(--text-nhat);
+      font-family: Ubunbu;
+    }
+    & h2 {
+      font-size: 3.6rem;
+      color: var(--text-color);
+      font-family: 'Playfair';
+    }
+    & p {
+      font-size: 1.4rem;
+      line-height: 2.4rem;
+    }
+  }
+  .container__leavea > p {
+    font-size: 1.4rem;
+    color: var(--text-nhat);
+    font-family: Ubunbu;
+  }
+
+  .container__leavea-item > p {
+    font-size: 1.4rem;
+    color: var(--text-nhat);
+    font-family: Ubunbu;
+  }
+
+  .container__leavea-item {
+    & h2 {
+      font-size: 3rem;
+      color: var(--text-color);
+    }
+    & p:last-child {
+      color: #626262;
+      font-size: 1.4rem;
+      font-family: Playfair;
+      line-height: 2.4rem;
+      width: 95%;
+    }
+  }
+  .container__signup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & p {
+      margin-bottom: 8rem;
+      font-size: 3.6rem;
+      color: var(--text-sign);
+      letter-spacing: 2.4px;
+    }
+    .container__signup-intro {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      max-width: 100%;
+      & input {
+        width: 540px;
+        padding-bottom: 1rem;
+        padding-left: 0.6rem;
+        border: none;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.8);
+        outline: none;
+        background-color: transparent;
+        color: #727272;
+      }
+    }
+    .container__sigup-item {
+      width: 100%;
+      position: relative;
+      & img {
+        position: absolute;
+        right: 0;
+        cursor: pointer;
+      }
+    }
+  }
+  .container__btn {
+    margin-bottom: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .container__btn-intro {
+      cursor: pointer;
+      border: 1px solid var(--text-color);
+      background-color: white;
+      font-size: 1.8rem;
+      padding: 1.2rem 2.4rem;
+      color: var(--text-color);
+      transition: 0.2s;
+      &:hover {
+        background-color: #f0f0f0;
+      }
+    }
+  }
+}
+
+.footer {
+  background: #f0f0f0;
+  padding: 4rem 0;
+  .footer__intro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.4rem;
+    & p {
+      color: black;
+    }
+  }
+  .footer__title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    & p:first-child {
+      margin-right: 2rem;
+    }
+  }
+  .footer__social {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    & img {
+      margin-left: 2rem;
+    }
+  }
+}
