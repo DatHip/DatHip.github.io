@@ -1,0 +1,46 @@
+@media (min-width: 0) and (max-width: 740px) {
+  p {
+    width: 100% !important;
+  }
+  body {
+    background-color: white;
+    background: unset;
+  }
+  .container__sigup-item {
+    margin-left: 2.6rem;
+    margin-right: 2.6rem;
+    & img {
+      right: 5% !important;
+    }
+    & input {
+      width: 90% !important;
+    }
+  }
+
+  .navbar {
+    flex-direction: column;
+    .navbar__list {
+      margin-top: 2rem;
+    }
+    .navbar__item {
+      margin-left: 2rem !important;
+      &:first-child {
+        margin-left: 0 !important;
+      }
+    }
+  }
+  .p-16 {
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
+  }
+
+  .container__signup-intro {
+    text-align: center;
+  }
+}
+
+@media (min-width: 740px) and (max-width: 1023px) {
+  .navbar__item {
+    margin-left: 4rem !important;
+  }
+}

@@ -141,9 +141,14 @@ body {
 }
 
 .container .container__signup .container__sigup-item img {
+  width: auto !important;
   position: absolute;
   right: 0;
   cursor: pointer;
+}
+
+.container .container__signup .container__sigup-item input {
+  font-size: 1.4rem;
 }
 
 .container .container__btn {

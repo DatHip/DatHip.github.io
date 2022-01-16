@@ -160,8 +160,16 @@
   margin-left: 91.66667%;
 }
 
-/* >= Tablet */
+img {
+  width: 100%;
+}
+
+/* <= Tablet */
 @media (min-width: 740px) {
+  img {
+    width: auto;
+  }
+
   .row {
     margin-left: -8px;
     margin-right: -8px;
@@ -298,6 +306,10 @@
 
 /* PC medium resolution > */
 @media (min-width: 1113px) {
+  img {
+    width: auto;
+  }
+
   .row {
     margin-left: -12px;
     margin-right: -12px;
@@ -450,33 +462,41 @@
 
 /* Tablet - PC low resolution */
 @media (min-width: 740px) and (max-width: 1023px) {
+  img {
+    width: 100%;
+  }
+
   .wide {
     width: 644px;
   }
   .wide1 {
-    max-width: 544px;
+    max-width: 600px;
     margin: 0 auto;
   }
 
   .wide2 {
-    max-width: 500px;
+    max-width: 580px;
     margin: 0 auto;
   }
 }
 
 /* > PC low resolution */
 @media (min-width: 1024px) and (max-width: 1239px) {
+  img {
+    width: auto;
+  }
+
   .wide {
     width: 984px;
   }
 
   .wide1 {
-    max-width: 900px;
+    max-width: 960px;
     margin: 0 auto;
   }
 
   .wide2 {
-    max-width: 860px;
+    max-width: 900px;
     margin: 0 auto;
   }
 
