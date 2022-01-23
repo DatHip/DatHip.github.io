@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>To Do List</title>
+      <link rel="stylesheet" href="./asset/style.css" />
+   </head>
+   <body>
+      <div class="main">
+         <h1>Việc Cần Làm</h1>
+         <div class="todo_input">
+            <input type="text" placeholder="Nhập việc cần làm" />
+            <button class="btn_add">Thêm</button>
+         </div>
+
+         <div class="todo_option">
+            <div class="todo_option-item">
+               <input type="radio" name="todo-option-item" id="all" checked value="1" />
+               <label for="all">Tất cả</label>
+            </div>
+            <div class="todo_option-item">
+               <input type="radio" name="todo-option-item" id="unactive" checked value="2" />
+               <label for="unactive">Chưa hoàn thành</label>
+            </div>
+            <div class="todo_option-item">
+               <input type="radio" name="todo-option-item" id="active" checked value="3" />
+               <label for="all">Hoàn Thành</label>
+            </div>
+         </div>
+
+         <div class="todo_container">
+            <div class="todo_list">
+               <div class="todo_item">
+                  <div class="todo_item-title">
+                     <input type="checkbox" />
+                     <p>Viec Can lam</p>
+                  </div>
+                  <div class="todo_item-btn">
+                     <button class="btn btn_update">
+                        <img src="./img/pencil.svg" alt="" />
+                     </button>
+                     <button class="btn btn_remove">
+                        <img src="./img/remove.svg" alt="" />
+                     </button>
+                  </div>
+               </div>
+
+               <div class="todo_item">
+                  <div class="todo_item-title">
+                     <input type="checkbox" />
+                     <p>Viec Can lam</p>
+                  </div>
+                  <div class="todo_item-btn">
+                     <button class="btn btn_update">
+                        <img src="./img/pencil.svg" alt="" />
+                     </button>
+                     <button class="btn btn_remove">
+                        <img src="./img/remove.svg" alt="" />
+                     </button>
+                  </div>
+               </div>
+               <div class="todo_item">
+                  <div class="todo_item-title">
+                     <input type="checkbox" />
+                     <p>Viec Can lam</p>
+                  </div>
+                  <div class="todo_item-btn">
+                     <button class="btn btn_update">
+                        <img src="./img/pencil.svg" alt="" />
+                     </button>
+                     <button class="btn btn_remove">
+                        <img src="./img/remove.svg" alt="" />
+                     </button>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <script src="./js/main.js"></script>
+   </body>
+</html>
