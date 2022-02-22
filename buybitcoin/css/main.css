@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+html {
+  /* font-size: 62.5%; */
+  box-sizing: border-box;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+li {
+  list-style: none;
+}
+button {
+  border: none;
+  outline: none;
+  border-radius : 4px;
+  cursor: pointer;
+  transition: .3s;
+}
+
+button:hover {
+  opacity: .8;
+}
+
+.pr120 {
+  padding-right: 120px;
+  margin-left: auto;
+}
+
+.pl120 {
+  margin-right: auto;
+  padding-left: 120px;
+}
+
+.mb150 {
+  margin-bottom: 150px;
+}
