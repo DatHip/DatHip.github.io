@@ -1,0 +1,34 @@
+@media (min-width: 1024px) and (max-width: 1379px) {
+  .m-none {
+    display: none;
+  }
+  .m-block {
+    display: block;
+  }
+  .main-page {
+    margin-right: 0 !important;
+  }
+  .player_queue {
+    -webkit-transition: 3s;
+    transition: 3s;
+    right: -100% !important;
+  }
+  .header {
+    right: 0;
+  }
+}
+
+@media (min-width: 1380px) and (max-width: 1590px) {
+  .main-page {
+    margin-right: 0 !important;
+  }
+  .player_queue {
+    -webkit-transition: 3s;
+    transition: 3s;
+    right: -100% !important;
+  }
+  .header {
+    right: 0;
+  }
+}
+/*# sourceMappingURL=responsive.css.map */

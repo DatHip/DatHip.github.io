@@ -1,0 +1,43 @@
+@media (min-width: 740px) {}
+
+@media (min-width: 1113px) {}
+
+@media (min-width: 740px) and (max-width: 1023px) {}
+
+@media (min-width: 1024px) and (max-width: 1379px) {
+  .m-none {
+    display: none;
+  }
+
+  .m-block {
+    display: block;
+  }
+
+  .main-page {
+    margin-right: 0 !important;
+  }
+
+  .player_queue {
+    transition: 3s;
+    right: -100% !important;
+  }
+
+  .header {
+    right: 0;
+  }
+}
+
+@media (min-width: 1380px) and (max-width: 1590px) {
+  .main-page {
+    margin-right: 0 !important;
+  }
+
+  .player_queue {
+    transition: 3s;
+    right: -100% !important;
+  }
+
+  .header {
+    right: 0;
+  }
+}
