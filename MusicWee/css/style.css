@@ -9,7 +9,6 @@
   height: 100vh;
   background-color: 1920px auto repeat;
   width: 100%;
-  min-width: 768px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -17,15 +16,35 @@
 
 .sider-navbar {
   padding-top: 1rem;
-  height: calc(100vh - 90px) !important;
+  height: calc(100vh - 90px);
   position: relative;
-  z-index: 100;
-  min-width: 240px;
+  z-index: 101;
+  max-width: 240px;
+  width: 100%;
   background-color: var(--sidebar-bg);
-  height: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   background-color: rgba(255, 255, 255, 0.05);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-transition: .3s linear;
+  transition: .3s linear;
+  overflow-x: auto;
+}
+
+.sider-navbar .sider-navbar-exanded {
+  display: none;
 }
 
 .sider-navbar .sider {
@@ -42,6 +61,19 @@
           align-items: center;
   font-family: "Patrick Hand SC", cursive;
   padding: 0 25px;
+  -webkit-transition: 0.2s ease-in;
+  transition: 0.2s ease-in;
+}
+
+.sider-navbar .sider .sider_brand-item p {
+  font-size: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+      align-items: center;
+  font-family: "Patrick Hand SC", cursive;
   -webkit-transition: 0.2s ease-in;
   transition: 0.2s ease-in;
 }
@@ -204,10 +236,11 @@
   width: 100%;
   outline: none;
   border: none;
-  font-size: 1.6rem;
+  font-weight: 500;
+  font-size: 1.4rem;
   background-color: transparent;
   color: var(----navigation-text);
-  padding: 18px 28px;
+  padding: 16px 28px;
   border-top: 1px solid #2b3f69;
   cursor: pointer;
   -webkit-transition: 0.2s ease-in;
@@ -238,7 +271,6 @@
 .header {
   background-color: transparent;
   padding: 2rem 6rem 2rem;
-  min-width: 660px;
   position: fixed;
   top: 0;
   left: 240px;
@@ -268,9 +300,13 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  margin-right: 1rem;
 }
 
 .header .header_content .header_content-left .header_btn-back,
@@ -356,7 +392,6 @@
   width: 100%;
   background-color: transparent;
   font-size: 1.4rem;
-  min-width: 460px;
   font-weight: 400;
   font-size: 1.3rem;
 }
@@ -446,7 +481,7 @@
   border-radius: 6px;
   padding: 5px 0;
   position: absolute;
-  z-index: 1;
+  z-index: 101;
   top: 125%;
   left: -30px;
 }
@@ -474,16 +509,27 @@
   background-color: var(--layout-bg);
 }
 
+.playing-bar .playing_time-left {
+  opacity: .6;
+}
+
+.playing-bar .playing_time-left,
+.playing-bar .playing_time-right {
+  font-size: 12px;
+  color: var(--player-text);
+  font-weight: 500;
+}
+
 .playing-bar .playing-bar-main {
   z-index: 99;
   height: 9rem;
-  min-width: 768px;
   background-color: var(--player-bg);
   border-top: 1px solid var(--border-player);
 }
 
 .playing-bar .player_controls-main {
-  padding: 1rem 2.4rem;
+  min-width: 100%;
+  padding: 1.4rem 2.4rem;
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -491,9 +537,13 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+}
+
+.playing-bar .player_controls-left {
+  width: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .playing-bar .player_controls-left .player_controls-media {
@@ -612,7 +662,7 @@
   margin-right: 1rem;
 }
 
-.player_controls-center {
+.playing-bar .player_controls-center {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -626,9 +676,15 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  max-width: 40vw;
 }
 
-.player_controls-center .player_top {
+.playing-bar .player_controls-center .player_top {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -640,44 +696,44 @@
           justify-content: space-between;
 }
 
-.player_controls-center .player_top .playing_title-hover {
+.playing-bar .player_controls-center .player_top .playing_title-hover {
   min-width: 14rem;
 }
 
-.player_controls-center .player_top .player_btn {
+.playing-bar .player_controls-center .player_top .player_btn {
   margin: 0 1rem;
   color: var(--player-text);
   padding: 0.5rem;
 }
 
-.player_controls-center .player_top .playing_title-hover {
+.playing-bar .player_controls-center .player_top .playing_title-hover {
   left: -51px;
 }
 
-.player_controls-center .player_top span:first-child {
+.playing-bar .player_controls-center .player_top span:first-child {
   font-size: 2rem;
   font-weight: 300;
   padding: 0.3rem;
 }
 
-.player_controls-center .player_top .player_playing-input {
+.playing-bar .player_controls-center .player_top .player_playing-input {
   margin: 0 0.8rem;
   cursor: pointer;
+  line-height: 1;
 }
 
-.player_controls-center .player_top .player_playing-input:hover {
-  font-weight: 400;
+.playing-bar .player_controls-center .player_top .player_playing-input:hover ion-icon {
   -webkit-transition: 0.2s ease-in;
   transition: 0.2s ease-in;
-  color: var(--link-text-hover);
+  color: var(--purple-primary);
 }
 
-.player_controls-center .player_top .player_playing-input span {
+.playing-bar .player_controls-center .player_top .player_playing-input span {
   font-size: 3.8rem;
   padding: 0;
 }
 
-.player_controls-center .player_bottom {
+.playing-bar .player_controls-center .player_bottom {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -688,9 +744,11 @@
       -ms-flex-pack: center;
           justify-content: center;
   max-height: 2rem;
+  width: 100%;
+  margin-bottom: 6px;
 }
 
-.player_controls-center .player_bottom div {
+.playing-bar .player_controls-center .player_bottom div {
   margin: 0 1rem;
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -704,31 +762,33 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -ms-flex-positive: 1;
+      flex-grow: 1;
 }
 
-.player_controls-center .player_bottom div input {
-  min-width: 640px;
+.playing-bar .player_controls-center .player_bottom div input {
   width: 100%;
   height: 3px;
 }
 
-.player_controls-right {
+.playing-bar .player_controls-right {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 30%;
 }
 
-.player_controls-right .player_btn {
+.playing-bar .player_controls-right .player_btn {
   margin: 0 3px;
 }
 
-.player_controls-right .playing_volume {
+.playing-bar .player_controls-right .playing_volume {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -738,13 +798,26 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  position: relative;
 }
 
-.player_controls-right .playing_volume input {
+.playing-bar .player_controls-right .playing_volume input {
   margin-left: 6px;
-  width: 70px;
+  width: 80px;
   height: 3px;
   cursor: pointer;
+}
+
+.playing-bar .player_controls-right .playing_volume-input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .player_queue {
@@ -1163,6 +1236,10 @@
   margin: 0 1.6rem;
 }
 
+.main-page .container_radio {
+  margin-top: 3.6rem;
+}
+
 .main-page .container_radio .main_title-text {
   margin-top: 1.6rem;
   margin-bottom: 0;
@@ -1443,6 +1520,16 @@
   margin-top: 3.6rem;
 }
 
+.main-page .container_release .main_subtitle {
+  display: block;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  height: 21px;
+  overflow: hidden;
+}
+
 .main-page .container_release .release_title {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1517,7 +1604,7 @@
 
 .main-page .container_release .release_list .release_list-item .release_list-item-img {
   width: 120px;
-  height: 120px;
+  height: auto;
 }
 
 .main-page .container_release .release_list .release_list-item .release_list-item-right {
@@ -1857,6 +1944,12 @@
 }
 
 .main-page .container_zing-chart .zing-chart_list .zing-chart_item .zing-chart_item-left .zing-chart_item-info .zing-chart_item-text .zing-chart_item-artist {
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  height: 21px;
+  overflow: hidden;
   color: var(--text-secondary);
 }
 
@@ -1913,5 +2006,229 @@
 
 .main-page::-webkit-scrollbar-thumb:hover {
   opacity: 0.8;
+}
+
+.sider-navbar::-webkit-scrollbar-track {
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.sider-navbar::-webkit-scrollbar {
+  width: 3px;
+  cursor: pointer;
+}
+
+.sider-navbar::-webkit-scrollbar-thumb {
+  border-radius: 2px;
+  background-color: var(--scroll-bar);
+  cursor: pointer;
+}
+
+.sider-navbar::-webkit-scrollbar-thumb:hover {
+  opacity: 0.7;
+}
+
+.playing_playlist {
+  display: none;
+}
+
+.navbar-left-actice {
+  overflow: hidden;
+  max-width: 7rem;
+  width: 100%;
+  position: fixed;
+  background-color: var(--sidebar-popup-bg);
+  z-index: 999;
+  opacity: 1;
+}
+
+.navbar-left-actice .navbar-exanded-btn-right {
+  display: none;
+}
+
+.navbar-left-actice .sider_menu-item-title,
+.navbar-left-actice .sider_vip,
+.navbar-left-actice .sider_add-playlist,
+.navbar-left-actice .sider .sider_brand-item .sider_brand-item-text {
+  display: none;
+}
+
+.navbar-left-actice .sider {
+  height: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 0;
+}
+
+.navbar-left-actice .sider .sider_brand-item {
+  padding: unset;
+}
+
+.navbar-left-actice .sider .sider_brand-item .sider_brand-item-img img {
+  margin-right: 0;
+}
+
+.navbar-left-actice .sider_menu-item {
+  border-left: none !important;
+}
+
+.navbar-left-actice .sider_menu-item a {
+  padding: 16px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0;
+}
+
+.navbar-left-actice .sider_menu-item a span:first-child {
+  margin: 0;
+}
+
+.navbar-left-actice .sider_divide {
+  opacity: 1;
+  width: 50px;
+  height: 1px;
+  background-color: var(--border-primary);
+  border-radius: 4px;
+  margin: 1.2rem 1rem;
+}
+
+.navbar-left-actice .sider-navbar-exanded {
+  position: absolute;
+  bottom: 10px;
+  right: 14px;
+  border-radius: 999px;
+  outline: none;
+  border: none;
+  width: 40px;
+  height: 40px;
+  background-color: var(--alpha-bg);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.navbar-left-actice .sider-navbar-exanded:hover {
+  opacity: .7;
+}
+
+.navbar-left-actice .sider-navbar-exanded:hover span {
+  color: var(--white);
+}
+
+.navbar-left-actice .sider-navbar-exanded:active {
+  opacity: .9;
+}
+
+.navbar-left-actice .sider-navbar-exanded:active span {
+  color: var(--white);
+}
+
+.navbar-left-actice .sider-navbar-exanded span {
+  color: var(--navigation-text);
+  font-weight: 400;
+  pointer-events: none;
+  cursor: pointer;
+}
+
+.navbar-exanded-active {
+  position: fixed;
+  background-color: var(--sidebar-popup-bg);
+}
+
+.navbar-exanded-active .navbar-exanded-btn-left {
+  display: none;
+}
+
+.navbar-exanded-active .sider-navbar-exanded {
+  position: absolute;
+  bottom: 10px;
+  right: 14px;
+  border-radius: 999px;
+  outline: none;
+  border: none;
+  width: 40px;
+  height: 40px;
+  background-color: var(--alpha-bg);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: .2s ease-in;
+  transition: .2s ease-in;
+  cursor: pointer;
+}
+
+.navbar-exanded-active .sider-navbar-exanded:hover {
+  opacity: .7;
+}
+
+.navbar-exanded-active .sider-navbar-exanded:hover span {
+  color: var(--white);
+}
+
+.navbar-exanded-active .sider-navbar-exanded:active {
+  opacity: .9;
+}
+
+.navbar-exanded-active .sider-navbar-exanded:active span {
+  color: var(--white);
+}
+
+.navbar-exanded-active .sider-navbar-exanded span {
+  color: var(--navigation-text);
+  font-weight: 400;
+  pointer-events: none;
+  cursor: pointer;
+}
+
+.navbar-exanded-active .sider_add-playlist {
+  display: none;
+}
+
+.navbar-exanded-active .sider_menu-item a {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.player_queue-is_active {
+  right: 0 !important;
+}
+
+.icon_play-btn {
+  font-size: 50px;
+  color: #ffffff;
+  --ionicon-stroke-width: 16px;
+}
+
+.icon_pause-btn {
+  font-size: 50px;
+  color: #ffffff;
+  --ionicon-stroke-width: 16px;
 }
 /*# sourceMappingURL=style.css.map */

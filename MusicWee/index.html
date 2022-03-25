@@ -52,41 +52,62 @@
                      <div class="sider_brand-item-img">
                         <img src="./img/logo/pabicon.webp" alt="" />
                      </div>
-                     D4T <span>MP3</span>
+                     <p class="sider_brand-item-text">D4T <span>MP3</span></p>
                   </div>
                </div>
-               <div class="sider_menu">
+               <div class="sider_menu sider_menu-c">
                   <ul class="sider_menu-list">
                      <li title="Cá nhân" class="sider_menu-item">
-                        <a href="#"><span class="material-icons-outlined"> music_video </span> Cá Nhân </a>
+                        <a href="#">
+                           <span class="material-icons-outlined"> music_video </span>
+                           <span class="sider_menu-item-title">Cá Nhân</span>
+                        </a>
                      </li>
                      <li title="Khám phá" class="sider_menu-item sider_active">
-                        <a href="#"><span class="material-icons-outlined"> album </span> Khám Phá</a>
+                        <a href="#">
+                           <span class="material-icons-outlined"> album </span>
+                           <span class="sider_menu-item-title">Khám Phá</span></a
+                        >
                      </li>
                      <li title="#topchart" class="sider_menu-item">
-                        <a href="#"><span class="material-icons-two-tone"> timeline </span> Top Chart</a>
+                        <a href="#">
+                           <span class="material-icons-two-tone"> timeline </span>
+                           <span class="sider_menu-item-title">Top Chart</span></a
+                        >
                      </li>
                      <li title="Radio" class="sider_menu-item">
-                        <a href="#"><span class="material-icons-outlined"> radio </span> Radio</a>
+                        <a href="#" class="sider_menu"
+                           ><span class="material-icons-outlined"> radio </span>
+                           <span class="sider_menu-item-title">Radio</span></a
+                        >
                      </li>
                   </ul>
                </div>
                <div class="sider_divide"></div>
-               <div class="sider_menu">
+               <div class="sider_menu sider_menu-bottom">
                   <ul class="sider_menu-list">
                      <li title="Nhạc mới" class="sider_menu-item">
-                        <a href="#"><span class="material-icons-outlined"> music_note </span> Nhạc Mới</a>
+                        <a href="#"
+                           ><span class="material-icons-outlined"> music_note </span>
+                           <span class="sider_menu-item-title">Nhạc Mới</span></a
+                        >
                      </li>
                      <li title="Thể Loại" class="sider_menu-item">
-                        <a href="#"><span class="material-icons-outlined"> category </span> Thể Loại</a>
+                        <a href="#"
+                           ><span class="material-icons-outlined"> category </span>
+                           <span class="sider_menu-item-title">Thể Loại</span></a
+                        >
                      </li>
                      <li title="#Top100" class="sider_menu-item">
-                        <a href="#"><span class="material-icons-outlined"> star_outline </span> Top 100</a>
+                        <a href="#"
+                           ><span class="material-icons-outlined"> star_outline </span>
+                           <span class="sider_menu-item-title">Top 100</span></a
+                        >
                      </li>
                      <li title="MV" class="sider_menu-item">
                         <a href="#">
                            <span class="material-icons-outlined"> movie_filter </span>
-                           MV</a
+                           <span class="sider_menu-item-title">MV</span></a
                         >
                      </li>
                   </ul>
@@ -116,6 +137,11 @@
                </div>
                <button class="sider_add-playlist">
                   <p><span class="material-icons-outlined">add</span> Tạo playlist mới</p>
+               </button>
+
+               <button class="sider-navbar-exanded">
+                  <span class="material-icons-outlined navbar-exanded-btn-left"> navigate_next </span>
+                  <span class="material-icons-outlined navbar-exanded-btn-right"> navigate_before </span>
                </button>
             </aside>
             <!-- Top -->
@@ -189,7 +215,7 @@
                         <a href="#">Tất Cả <span class="material-icons-outlined"> chevron_right </span></a>
                      </div>
                      <div class="recently_list row">
-                        <div title="Nhạc của Taylor Swift" class="col l-1-4 m-2 c-2">
+                        <div title="Nhạc của Taylor Swift" class="col l-1-4 m-2 c-2 m2-6 m2-5">
                            <a class="main-page_list-item main_page-hover" href="#">
                               <div class="main-page_list-item_img" href="#">
                                  <img src="./img/ngheganday/taylor.jpg" alt="taylor" />
@@ -200,7 +226,8 @@
                                     <span class="playing_title-hover">Thêm vào thư viện </span>
                                  </div>
                                  <div class="recently_btn-hover recently_btn-hover-play">
-                                    <span class="material-icons"> play_circle_outline </span>
+                                    <span> <ion-icon class="icon_play-btn" name="play-circle-outline"></ion-icon> </span>
+                                    <!-- <span> <ion-icon class="icon_pause-btn" name="pause-circle-outline"></ion-icon> </span> -->
                                  </div>
                                  <div class="recently_btn-hover player_btn">
                                     <span class="material-icons-outlined"> more_horiz </span>
@@ -212,7 +239,7 @@
                               <a class="main_title-text" title="Nhạc của Taylor Swift" href="#">Nhạc của Taylor Swift</a>
                            </div>
                         </div>
-                        <div title="Top 100 Pop Âu Mỹ Hay Nhất" class="col l-1-4 m-2 c-2">
+                        <div title="Top 100 Pop Âu Mỹ Hay Nhất" class="col l-1-4 m-2 c-2 m2-6 m2-5">
                            <a class="main-page_list-item main_page-hover" href="#">
                               <div class="main-page_list-item_img" href="#">
                                  <img src="./img/ngheganday/100popaumi.webp" alt="taylor" />
@@ -223,7 +250,8 @@
                                     <span class="playing_title-hover">Thêm vào thư viện </span>
                                  </div>
                                  <div class="recently_btn-hover recently_btn-hover-play">
-                                    <span class="material-icons"> play_circle_outline </span>
+                                    <span> <ion-icon class="icon_play-btn" name="play-circle-outline"></ion-icon> </span>
+                                    <!-- <span> <ion-icon class="icon_pause-btn" name="pause-circle-outline"></ion-icon> </span> -->
                                  </div>
                                  <div class="recently_btn-hover player_btn">
                                     <span class="material-icons-outlined"> more_horiz </span>
@@ -237,7 +265,7 @@
                               >
                            </div>
                         </div>
-                        <div title="Top 100 Nhạc Phim Việt Nam Hay Nhất" class="col l-1-4 m-2 c-2">
+                        <div title="Top 100 Nhạc Phim Việt Nam Hay Nhất" class="col l-1-4 m-2 c-2 m2-6 m2-5">
                            <a class="main-page_list-item main_page-hover" href="#">
                               <div class="main-page_list-item_img" href="#">
                                  <img src="./img/ngheganday/100vietnam.webp" alt="taylor" />
@@ -248,7 +276,8 @@
                                     <span class="playing_title-hover">Thêm vào thư viện </span>
                                  </div>
                                  <div class="recently_btn-hover recently_btn-hover-play">
-                                    <span class="material-icons"> play_circle_outline </span>
+                                    <span> <ion-icon class="icon_play-btn" name="play-circle-outline"></ion-icon> </span>
+                                    <!-- <span> <ion-icon class="icon_pause-btn" name="pause-circle-outline"></ion-icon> </span> -->
                                  </div>
                                  <div class="recently_btn-hover player_btn">
                                     <span class="material-icons-outlined"> more_horiz </span>
@@ -262,7 +291,7 @@
                               >
                            </div>
                         </div>
-                        <div title="Hot Rhythmic" class="col l-1-4 m-2 c-2">
+                        <div title="Hot Rhythmic" class="col l-1-4 m-2 c-2 m2-6 m2-5">
                            <a class="main-page_list-item main_page-hover" href="#">
                               <div class="main-page_list-item_img" href="#">
                                  <img src="./img/ngheganday/hotrhythmic.webp" alt="taylor" />
@@ -273,7 +302,8 @@
                                     <span class="playing_title-hover">Thêm vào thư viện </span>
                                  </div>
                                  <div class="recently_btn-hover recently_btn-hover-play">
-                                    <span class="material-icons"> play_circle_outline </span>
+                                    <span> <ion-icon class="icon_play-btn" name="play-circle-outline"></ion-icon> </span>
+                                    <!-- <span> <ion-icon class="icon_pause-btn" name="pause-circle-outline"></ion-icon> </span> -->
                                  </div>
                                  <div class="recently_btn-hover player_btn">
                                     <span class="material-icons-outlined"> more_horiz </span>
@@ -285,7 +315,7 @@
                               <a class="main_title-text" title="Hot Rhythmic" href="#">Hot Rhythmic</a>
                            </div>
                         </div>
-                        <div title="Top Hits US-UK" class="col l-1-4 m-2 c-2">
+                        <div title="Top Hits US-UK" class="col l-1-4 m-2 c-2 m2-6 m2-5">
                            <a class="main-page_list-item main_page-hover" href="#">
                               <div class="main-page_list-item_img" href="#">
                                  <img src="./img/ngheganday/tophis.webp" alt="taylor" />
@@ -296,7 +326,8 @@
                                     <span class="playing_title-hover">Thêm vào thư viện </span>
                                  </div>
                                  <div class="recently_btn-hover recently_btn-hover-play">
-                                    <span class="material-icons"> play_circle_outline </span>
+                                    <span> <ion-icon class="icon_play-btn" name="play-circle-outline"></ion-icon> </span>
+                                    <!-- <span> <ion-icon class="icon_pause-btn" name="pause-circle-outline"></ion-icon> </span> -->
                                  </div>
                                  <div class="recently_btn-hover player_btn">
                                     <span class="material-icons-outlined"> more_horiz </span>
@@ -308,7 +339,7 @@
                               <a class="main_title-text" title="Top Hits US-UK" href="#">Top Hits US-UK</a>
                            </div>
                         </div>
-                        <div title="Viral Hits" class="col l-1-4 m-2 c-2">
+                        <div title="Viral Hits" class="col l-1-4 m-2 c-2 m2-6 m2-none">
                            <a class="main-page_list-item main_page-hover" href="#">
                               <div class="main-page_list-item_img" href="#">
                                  <img src="./img/ngheganday/viralhits.webp" alt="taylor" />
@@ -319,7 +350,8 @@
                                     <span class="playing_title-hover">Thêm vào thư viện </span>
                                  </div>
                                  <div class="recently_btn-hover recently_btn-hover-play">
-                                    <span class="material-icons"> play_circle_outline </span>
+                                    <span> <ion-icon class="icon_play-btn" name="play-circle-outline"></ion-icon> </span>
+                                    <!-- <span> <ion-icon class="icon_pause-btn" name="pause-circle-outline"></ion-icon> </span> -->
                                  </div>
                                  <div class="recently_btn-hover player_btn">
                                     <span class="material-icons-outlined"> more_horiz </span>
@@ -331,7 +363,7 @@
                               <a class="main_title-text" title="Viral Hits" href="#">Viral Hits</a>
                            </div>
                         </div>
-                        <div title="Wekkend Jamz" class="col l-1-4 m-0 c-2">
+                        <div title="Wekkend Jamz" class="col l-1-4 m-none c-2">
                            <a class="main-page_list-item main_page-hover" href="#">
                               <div class="main-page_list-item_img" href="#">
                                  <img src="./img/ngheganday/wekkendJamz.webp" alt="taylor" />
@@ -342,7 +374,8 @@
                                     <span class="playing_title-hover">Thêm vào thư viện </span>
                                  </div>
                                  <div class="recently_btn-hover recently_btn-hover-play">
-                                    <span class="material-icons"> play_circle_outline </span>
+                                    <span> <ion-icon class="icon_play-btn" name="play-circle-outline"></ion-icon> </span>
+                                    <!-- <span> <ion-icon class="icon_pause-btn" name="pause-circle-outline"></ion-icon> </span> -->
                                  </div>
                                  <div class="recently_btn-hover player_btn">
                                     <span class="material-icons-outlined"> more_horiz </span>
@@ -374,7 +407,8 @@
                                     <span class="playing_title-hover">Thêm vào thư viện </span>
                                  </div>
                                  <div class="recently_btn-hover recently_btn-hover-play">
-                                    <span class="material-icons"> play_circle_outline </span>
+                                    <span> <ion-icon class="icon_play-btn" name="play-circle-outline"></ion-icon> </span>
+                                    <!-- <span> <ion-icon class="icon_pause-btn" name="pause-circle-outline"></ion-icon> </span> -->
                                  </div>
                                  <div class="recently_btn-hover player_btn">
                                     <span class="material-icons-outlined"> more_horiz </span>
@@ -400,7 +434,8 @@
                                     <span class="playing_title-hover">Thêm vào thư viện </span>
                                  </div>
                                  <div class="recently_btn-hover recently_btn-hover-play">
-                                    <span class="material-icons"> play_circle_outline </span>
+                                    <span> <ion-icon class="icon_play-btn" name="play-circle-outline"></ion-icon> </span>
+                                    <!-- <span> <ion-icon class="icon_pause-btn" name="pause-circle-outline"></ion-icon> </span> -->
                                  </div>
                                  <div class="recently_btn-hover player_btn">
                                     <span class="material-icons-outlined"> more_horiz </span>
@@ -426,7 +461,8 @@
                                     <span class="playing_title-hover">Thêm vào thư viện </span>
                                  </div>
                                  <div class="recently_btn-hover recently_btn-hover-play">
-                                    <span class="material-icons"> play_circle_outline </span>
+                                    <span> <ion-icon class="icon_play-btn" name="play-circle-outline"></ion-icon> </span>
+                                    <!-- <span> <ion-icon class="icon_pause-btn" name="pause-circle-outline"></ion-icon> </span> -->
                                  </div>
                                  <div class="recently_btn-hover player_btn">
                                     <span class="material-icons-outlined"> more_horiz </span>
@@ -452,7 +488,8 @@
                                     <span class="playing_title-hover">Thêm vào thư viện </span>
                                  </div>
                                  <div class="recently_btn-hover recently_btn-hover-play">
-                                    <span class="material-icons"> play_circle_outline </span>
+                                    <span> <ion-icon class="icon_play-btn" name="play-circle-outline"></ion-icon> </span>
+                                    <!-- <span> <ion-icon class="icon_pause-btn" name="pause-circle-outline"></ion-icon> </span> -->
                                  </div>
                                  <div class="recently_btn-hover player_btn">
                                     <span class="material-icons-outlined"> more_horiz </span>
@@ -467,7 +504,7 @@
                               </div>
                            </div>
                         </div>
-                        <div class="want_list-item col l-2-4 m-3 c-2" title="Hits Quốc Dân">
+                        <div class="want_list-item col l-2-4 m-0 c-2" title="Hits Quốc Dân">
                            <a class="want_list-item-link main-page_list-item main_page-hover" href="#">
                               <div class="want_list-item-link main-page_list-item_img" href="#">
                                  <img src="./img/cothebanmuonnghe/usukTodayTophits.webp" alt="taylor" />
@@ -478,7 +515,8 @@
                                     <span class="playing_title-hover">Thêm vào thư viện </span>
                                  </div>
                                  <div class="recently_btn-hover recently_btn-hover-play">
-                                    <span class="material-icons"> play_circle_outline </span>
+                                    <span> <ion-icon class="icon_play-btn" name="play-circle-outline"></ion-icon> </span>
+                                    <!-- <span> <ion-icon class="icon_pause-btn" name="pause-circle-outline"></ion-icon> </span> -->
                                  </div>
                                  <div class="recently_btn-hover player_btn">
                                     <span class="material-icons-outlined"> more_horiz </span>
@@ -513,7 +551,8 @@
                                     <span class="playing_title-hover">Thêm vào thư viện </span>
                                  </div>
                                  <div class="recently_btn-hover recently_btn-hover-play">
-                                    <span class="material-icons"> play_circle_outline </span>
+                                    <span> <ion-icon class="icon_play-btn" name="play-circle-outline"></ion-icon> </span>
+                                    <!-- <span> <ion-icon class="icon_pause-btn" name="pause-circle-outline"></ion-icon> </span> -->
                                  </div>
                                  <div class="recently_btn-hover player_btn">
                                     <span class="material-icons-outlined"> more_horiz </span>
@@ -540,7 +579,8 @@
                                     <span class="playing_title-hover">Thêm vào thư viện </span>
                                  </div>
                                  <div class="recently_btn-hover recently_btn-hover-play">
-                                    <span class="material-icons"> play_circle_outline </span>
+                                    <span> <ion-icon class="icon_play-btn" name="play-circle-outline"></ion-icon> </span>
+                                    <!-- <span> <ion-icon class="icon_pause-btn" name="pause-circle-outline"></ion-icon> </span> -->
                                  </div>
                                  <div class="recently_btn-hover player_btn">
                                     <span class="material-icons-outlined"> more_horiz </span>
@@ -566,7 +606,8 @@
                                     <span class="playing_title-hover">Thêm vào thư viện </span>
                                  </div>
                                  <div class="recently_btn-hover recently_btn-hover-play">
-                                    <span class="material-icons"> play_circle_outline </span>
+                                    <span> <ion-icon class="icon_play-btn" name="play-circle-outline"></ion-icon> </span>
+                                    <!-- <span> <ion-icon class="icon_pause-btn" name="pause-circle-outline"></ion-icon> </span> -->
                                  </div>
                                  <div class="recently_btn-hover player_btn">
                                     <span class="material-icons-outlined"> more_horiz </span>
@@ -592,7 +633,8 @@
                                     <span class="playing_title-hover">Thêm vào thư viện </span>
                                  </div>
                                  <div class="recently_btn-hover recently_btn-hover-play">
-                                    <span class="material-icons"> play_circle_outline </span>
+                                    <span> <ion-icon class="icon_play-btn" name="play-circle-outline"></ion-icon> </span>
+                                    <!-- <span> <ion-icon class="icon_pause-btn" name="pause-circle-outline"></ion-icon> </span> -->
                                  </div>
                                  <div class="recently_btn-hover player_btn">
                                     <span class="material-icons-outlined"> more_horiz </span>
@@ -607,7 +649,7 @@
                               </div>
                            </div>
                         </div>
-                        <div class="todaychoice_list-item col l-2-4 m-3 c-2" title="Anime Now">
+                        <div class="todaychoice_list-item col l-2-4 m-0 c-2" title="Anime Now">
                            <a class="todaychoice_list-item-link main-page_list-item main_page-hover" href="#">
                               <div class="todaychoice_list-item-link main-page_list-item_img" href="#">
                                  <img src="./img/luaChonHomNay/animenow.webp" alt="taylor" />
@@ -618,7 +660,8 @@
                                     <span class="playing_title-hover">Thêm vào thư viện </span>
                                  </div>
                                  <div class="recently_btn-hover recently_btn-hover-play">
-                                    <span class="material-icons"> play_circle_outline </span>
+                                    <span> <ion-icon class="icon_play-btn" name="play-circle-outline"></ion-icon> </span>
+                                    <!-- <span> <ion-icon class="icon_pause-btn" name="pause-circle-outline"></ion-icon> </span> -->
                                  </div>
                                  <div class="recently_btn-hover player_btn">
                                     <span class="material-icons-outlined"> more_horiz </span>
@@ -654,7 +697,8 @@
                                     <span class="playing_title-hover">Thêm vào thư viện </span>
                                  </div>
                                  <div class="recently_btn-hover recently_btn-hover-play">
-                                    <span class="material-icons"> play_circle_outline </span>
+                                    <span> <ion-icon class="icon_play-btn" name="play-circle-outline"></ion-icon> </span>
+                                    <!-- <span> <ion-icon class="icon_pause-btn" name="pause-circle-outline"></ion-icon> </span> -->
                                  </div>
                                  <div class="recently_btn-hover player_btn">
                                     <span class="material-icons-outlined"> more_horiz </span>
@@ -665,7 +709,7 @@
                            <div class="xones_list-item-title">
                               <a class="main_title-text" title="Asia Rap" href="#">Asia Rap</a>
                               <div class="main_subtitle">
-                                 <p>RAPPER châu Á vươn ra thế giới</p>
+                                 <p>RAPPER Châu Á vươn ra thế giới</p>
                               </div>
                            </div>
                         </div>
@@ -680,7 +724,8 @@
                                     <span class="playing_title-hover">Thêm vào thư viện </span>
                                  </div>
                                  <div class="recently_btn-hover recently_btn-hover-play">
-                                    <span class="material-icons"> play_circle_outline </span>
+                                    <span> <ion-icon class="icon_play-btn" name="play-circle-outline"></ion-icon> </span>
+                                    <!-- <span> <ion-icon class="icon_pause-btn" name="pause-circle-outline"></ion-icon> </span> -->
                                  </div>
                                  <div class="recently_btn-hover player_btn">
                                     <span class="material-icons-outlined"> more_horiz </span>
@@ -706,7 +751,8 @@
                                     <span class="playing_title-hover">Thêm vào thư viện </span>
                                  </div>
                                  <div class="recently_btn-hover recently_btn-hover-play">
-                                    <span class="material-icons"> play_circle_outline </span>
+                                    <span> <ion-icon class="icon_play-btn" name="play-circle-outline"></ion-icon> </span>
+                                    <!-- <span> <ion-icon class="icon_pause-btn" name="pause-circle-outline"></ion-icon> </span> -->
                                  </div>
                                  <div class="recently_btn-hover player_btn">
                                     <span class="material-icons-outlined"> more_horiz </span>
@@ -732,7 +778,8 @@
                                     <span class="playing_title-hover">Thêm vào thư viện </span>
                                  </div>
                                  <div class="recently_btn-hover recently_btn-hover-play">
-                                    <span class="material-icons"> play_circle_outline </span>
+                                    <span> <ion-icon class="icon_play-btn" name="play-circle-outline"></ion-icon> </span>
+                                    <!-- <span> <ion-icon class="icon_pause-btn" name="pause-circle-outline"></ion-icon> </span> -->
                                  </div>
                                  <div class="recently_btn-hover player_btn">
                                     <span class="material-icons-outlined"> more_horiz </span>
@@ -747,7 +794,7 @@
                               </div>
                            </div>
                         </div>
-                        <div class="xones_list-item col l-2-4 m-3 c-2" title="HWASA X ONEWE">
+                        <div class="xones_list-item col l-2-4 m-0 c-2" title="HWASA X ONEWE">
                            <a class="xones_list-item-link main-page_list-item main_page-hover" href="#">
                               <div class="xones_list-item-link main-page_list-item_img" href="#">
                                  <img src="./img/xone/hwasaXonewe.webp" alt="HWASA X ONEWE" />
@@ -758,7 +805,8 @@
                                     <span class="playing_title-hover">Thêm vào thư viện </span>
                                  </div>
                                  <div class="recently_btn-hover recently_btn-hover-play">
-                                    <span class="material-icons"> play_circle_outline </span>
+                                    <span> <ion-icon class="icon_play-btn" name="play-circle-outline"></ion-icon> </span>
+                                    <!-- <span> <ion-icon class="icon_pause-btn" name="pause-circle-outline"></ion-icon> </span> -->
                                  </div>
                                  <div class="recently_btn-hover player_btn">
                                     <span class="material-icons-outlined"> more_horiz </span>
@@ -782,7 +830,7 @@
                         <p>Radio Nổi Bật</p>
                      </div>
                      <div class="xones_list row">
-                        <div class="xones_list-item col l-1-4 m-2-4 c-2" title="XONE Raido">
+                        <div class="col l-1-4 m-2 c-2 m2-6 m2-5" title="XONE Raido">
                            <a class="xones_list-item-link main-page_list-item main_page-hover" href="#">
                               <div class="xones_list-item-link-img main-page_list-item_img" href="#">
                                  <img src="./img/mainRadio/xOne.webp" alt="taylor" />
@@ -795,7 +843,8 @@
                               </div>
                               <div class="recently_list-item_hover">
                                  <div class="recently_btn-hover recently_btn-hover-play">
-                                    <span class="material-icons"> play_circle_outline </span>
+                                    <span> <ion-icon class="icon_play-btn" name="play-circle-outline"></ion-icon> </span>
+                                    <!-- <span> <ion-icon class="icon_pause-btn" name="pause-circle-outline"></ion-icon> </span> -->
                                  </div>
                               </div>
                            </a>
@@ -806,7 +855,7 @@
                               </div>
                            </div>
                         </div>
-                        <div class="xones_list-item col l-1-4 m-2-4 c-2" title="On Ari">
+                        <div class="col l-1-4 m-2 c-2 m2-6 m2-5" title="On Ari">
                            <a class="xones_list-item-link main-page_list-item main_page-hover" href="#">
                               <div class="xones_list-item-link-img main-page_list-item_img" href="#">
                                  <img src="./img/mainRadio/onRadio.webp" alt="taylor" />
@@ -819,7 +868,8 @@
                               </div>
                               <div class="recently_list-item_hover">
                                  <div class="recently_btn-hover recently_btn-hover-play">
-                                    <span class="material-icons"> play_circle_outline </span>
+                                    <span> <ion-icon class="icon_play-btn" name="play-circle-outline"></ion-icon> </span>
+                                    <!-- <span> <ion-icon class="icon_pause-btn" name="pause-circle-outline"></ion-icon> </span> -->
                                  </div>
                               </div>
                            </a>
@@ -830,7 +880,7 @@
                               </div>
                            </div>
                         </div>
-                        <div class="xones_list-item col l-1-4 m-2-4 c-2" title="Bolero">
+                        <div class="col l-1-4 m-2 c-2 m2-6 m2-5" title="Bolero">
                            <a class="xones_list-item-link main-page_list-item main_page-hover" href="#">
                               <div class="xones_list-item-link-img main-page_list-item_img" href="#">
                                  <img src="./img/mainRadio/Bolero.webp" alt="taylor" />
@@ -843,7 +893,8 @@
                               </div>
                               <div class="recently_list-item_hover">
                                  <div class="recently_btn-hover recently_btn-hover-play">
-                                    <span class="material-icons"> play_circle_outline </span>
+                                    <span> <ion-icon class="icon_play-btn" name="play-circle-outline"></ion-icon> </span>
+                                    <!-- <span> <ion-icon class="icon_pause-btn" name="pause-circle-outline"></ion-icon> </span> -->
                                  </div>
                               </div>
                            </a>
@@ -854,7 +905,7 @@
                               </div>
                            </div>
                         </div>
-                        <div class="xones_list-item col l-1-4 m-2-4 c-2" title="V-POP">
+                        <div class="col l-1-4 m-2 c-2 m2-6 m2-5" title="V-POP">
                            <a class="xones_list-item-link main-page_list-item main_page-hover" href="#">
                               <div class="xones_list-item-link-img main-page_list-item_img" href="#">
                                  <img src="./img/mainRadio/vPop.webp" alt="taylor" />
@@ -867,7 +918,8 @@
                               </div>
                               <div class="recently_list-item_hover">
                                  <div class="recently_btn-hover recently_btn-hover-play">
-                                    <span class="material-icons"> play_circle_outline </span>
+                                    <span> <ion-icon class="icon_play-btn" name="play-circle-outline"></ion-icon> </span>
+                                    <!-- <span> <ion-icon class="icon_pause-btn" name="pause-circle-outline"></ion-icon> </span> -->
                                  </div>
                               </div>
                            </a>
@@ -878,7 +930,7 @@
                               </div>
                            </div>
                         </div>
-                        <div class="xones_list-item col l-1-4 m-2-4 c-2" title="US-UK">
+                        <div class="col l-1-4 m-2 c-2 m2-6 m2-5" title="US-UK">
                            <a class="xones_list-item-link main-page_list-item main_page-hover" href="#">
                               <div class="xones_list-item-link-img main-page_list-item_img" href="#">
                                  <img src="./img/mainRadio/usukimg.webp" alt="taylor" />
@@ -891,7 +943,8 @@
                               </div>
                               <div class="recently_list-item_hover">
                                  <div class="recently_btn-hover recently_btn-hover-play">
-                                    <span class="material-icons"> play_circle_outline </span>
+                                    <span> <ion-icon class="icon_play-btn" name="play-circle-outline"></ion-icon> </span>
+                                    <!-- <span> <ion-icon class="icon_pause-btn" name="pause-circle-outline"></ion-icon> </span> -->
                                  </div>
                               </div>
                            </a>
@@ -902,7 +955,7 @@
                               </div>
                            </div>
                         </div>
-                        <div class="xones_list-item col l-1-4 m-2-4 c-2" title="Acoustic">
+                        <div class="col l-1-4 m-2 c-2 m2-6 m2-none" title="Acoustic">
                            <a class="xones_list-item-link main-page_list-item main_page-hover" href="#">
                               <div class="xones_list-item-link-img main-page_list-item_img" href="#">
                                  <img src="./img/mainRadio/vpopAcoustic.webp" alt="taylor" />
@@ -915,7 +968,8 @@
                               </div>
                               <div class="recently_list-item_hover">
                                  <div class="recently_btn-hover recently_btn-hover-play">
-                                    <span class="material-icons"> play_circle_outline </span>
+                                    <span> <ion-icon class="icon_play-btn" name="play-circle-outline"></ion-icon> </span>
+                                    <!-- <span> <ion-icon class="icon_pause-btn" name="pause-circle-outline"></ion-icon> </span> -->
                                  </div>
                               </div>
                            </a>
@@ -926,7 +980,7 @@
                               </div>
                            </div>
                         </div>
-                        <div class="xones_list-item col l-1-4 m-2-4 c-2" title="K-Pop">
+                        <div class="col l-1-4 m-none c-2" title="K-Pop">
                            <a class="xones_list-item-link main-page_list-item main_page-hover" href="#">
                               <div class="xones_list-item-link-img main-page_list-item_img" href="#">
                                  <img src="./img/mainRadio/logoRaidio/kpop.webp" alt="taylor" />
@@ -939,7 +993,8 @@
                               </div>
                               <div class="recently_list-item_hover">
                                  <div class="recently_btn-hover recently_btn-hover-play">
-                                    <span class="material-icons"> play_circle_outline </span>
+                                    <span> <ion-icon class="icon_play-btn" name="play-circle-outline"></ion-icon> </span>
+                                    <!-- <span> <ion-icon class="icon_pause-btn" name="pause-circle-outline"></ion-icon> </span> -->
                                  </div>
                               </div>
                            </a>
@@ -970,7 +1025,8 @@
                                     <span class="playing_title-hover">Thêm vào thư viện </span>
                                  </div>
                                  <div class="recently_btn-hover recently_btn-hover-play">
-                                    <span class="material-icons"> play_circle_outline </span>
+                                    <span> <ion-icon class="icon_play-btn" name="play-circle-outline"></ion-icon> </span>
+                                    <!-- <span> <ion-icon class="icon_pause-btn" name="pause-circle-outline"></ion-icon> </span> -->
                                  </div>
                                  <div class="recently_btn-hover player_btn">
                                     <span class="material-icons-outlined"> more_horiz </span>
@@ -997,7 +1053,8 @@
                                     <span class="playing_title-hover">Thêm vào thư viện </span>
                                  </div>
                                  <div class="recently_btn-hover recently_btn-hover-play">
-                                    <span class="material-icons"> play_circle_outline </span>
+                                    <span> <ion-icon class="icon_play-btn" name="play-circle-outline"></ion-icon> </span>
+                                    <!-- <span> <ion-icon class="icon_pause-btn" name="pause-circle-outline"></ion-icon> </span> -->
                                  </div>
                                  <div class="recently_btn-hover player_btn">
                                     <span class="material-icons-outlined"> more_horiz </span>
@@ -1023,7 +1080,8 @@
                                     <span class="playing_title-hover">Thêm vào thư viện </span>
                                  </div>
                                  <div class="recently_btn-hover recently_btn-hover-play">
-                                    <span class="material-icons"> play_circle_outline </span>
+                                    <span> <ion-icon class="icon_play-btn" name="play-circle-outline"></ion-icon> </span>
+                                    <!-- <span> <ion-icon class="icon_pause-btn" name="pause-circle-outline"></ion-icon> </span> -->
                                  </div>
                                  <div class="recently_btn-hover player_btn">
                                     <span class="material-icons-outlined"> more_horiz </span>
@@ -1049,7 +1107,8 @@
                                     <span class="playing_title-hover">Thêm vào thư viện </span>
                                  </div>
                                  <div class="recently_btn-hover recently_btn-hover-play">
-                                    <span class="material-icons"> play_circle_outline </span>
+                                    <span> <ion-icon class="icon_play-btn" name="play-circle-outline"></ion-icon> </span>
+                                    <!-- <span> <ion-icon class="icon_pause-btn" name="pause-circle-outline"></ion-icon> </span> -->
                                  </div>
                                  <div class="recently_btn-hover player_btn">
                                     <span class="material-icons-outlined"> more_horiz </span>
@@ -1064,7 +1123,7 @@
                               </div>
                            </div>
                         </div>
-                        <div class="everyday_list-item col l-2-4 m-3 c-2" title="C-Pop Tháng 3/2022">
+                        <div class="everyday_list-item col l-2-4 m-0 c-2" title="C-Pop Tháng 3/2022">
                            <a class="everyday_list-item-link main-page_list-item main_page-hover" href="#">
                               <div class="everyday_list-item-link main-page_list-item_img" href="#">
                                  <img src="./img/nhacmoimoingay/cpopt3.webp" alt="C-Pop Tháng 3/2022" />
@@ -1075,7 +1134,8 @@
                                     <span class="playing_title-hover">Thêm vào thư viện </span>
                                  </div>
                                  <div class="recently_btn-hover recently_btn-hover-play">
-                                    <span class="material-icons"> play_circle_outline </span>
+                                    <span> <ion-icon class="icon_play-btn" name="play-circle-outline"></ion-icon> </span>
+                                    <!-- <span> <ion-icon class="icon_pause-btn" name="pause-circle-outline"></ion-icon> </span> -->
                                  </div>
                                  <div class="recently_btn-hover player_btn">
                                     <span class="material-icons-outlined"> more_horiz </span>
@@ -1102,7 +1162,7 @@
                            </div>
                         </div>
                         <div class="row zing-chart_bottom">
-                           <div class="col l-4 m-12 c-12">
+                           <div class="col l-4 m-12 c-12 order-2">
                               <div class="zing-chart_list">
                                  <div class="zing-chart_item main_page-hover">
                                     <div class="zing-chart_item-left">
@@ -1115,7 +1175,12 @@
                                                 </div>
                                                 <div class="recently_list-item_hover">
                                                    <div class="recently_btn-hover recently_btn-hover-play">
-                                                      <span class="material-icons"> play_circle_outline </span>
+                                                      <span>
+                                                         <ion-icon class="icon_play-btn" name="play-circle-outline"></ion-icon>
+                                                      </span>
+                                                      <!-- <span>
+                                                         <ion-icon class="icon_pause-btn" name="pause-circle-outline"></ion-icon>
+                                                      </span> -->
                                                    </div>
                                                 </div>
                                              </div>
@@ -1141,7 +1206,12 @@
                                                 </div>
                                                 <div class="recently_list-item_hover">
                                                    <div class="recently_btn-hover recently_btn-hover-play">
-                                                      <span class="material-icons"> play_circle_outline </span>
+                                                      <span>
+                                                         <ion-icon class="icon_play-btn" name="play-circle-outline"></ion-icon>
+                                                      </span>
+                                                      <!-- <span>
+                                                         <ion-icon class="icon_pause-btn" name="pause-circle-outline"></ion-icon>
+                                                      </span> -->
                                                    </div>
                                                 </div>
                                              </div>
@@ -1169,7 +1239,12 @@
                                                 </div>
                                                 <div class="recently_list-item_hover">
                                                    <div class="recently_btn-hover recently_btn-hover-play">
-                                                      <span class="material-icons"> play_circle_outline </span>
+                                                      <span>
+                                                         <ion-icon class="icon_play-btn" name="play-circle-outline"></ion-icon>
+                                                      </span>
+                                                      <!-- <span>
+                                                         <ion-icon class="icon_pause-btn" name="pause-circle-outline"></ion-icon>
+                                                      </span> -->
                                                    </div>
                                                 </div>
                                              </div>
@@ -1189,6 +1264,7 @@
                                  </div>
                               </div>
                            </div>
+
                            <div class="col l-8 m-12 c-12">
                               <div class="zing-chart_right">
                                  <canvas id="myChart"></canvas>
@@ -1300,7 +1376,8 @@
                                     <span class="playing_title-hover">Thêm vào thư viện </span>
                                  </div>
                                  <div class="recently_btn-hover recently_btn-hover-play">
-                                    <span class="material-icons"> play_circle_outline </span>
+                                    <span> <ion-icon class="icon_play-btn" name="play-circle-outline"></ion-icon> </span>
+                                    <!-- <span> <ion-icon class="icon_pause-btn" name="pause-circle-outline"></ion-icon> </span> -->
                                  </div>
                                  <div class="recently_btn-hover player_btn">
                                     <span class="material-icons-outlined"> more_horiz </span>
@@ -1328,7 +1405,8 @@
                                     <span class="playing_title-hover">Thêm vào thư viện </span>
                                  </div>
                                  <div class="recently_btn-hover recently_btn-hover-play">
-                                    <span class="material-icons"> play_circle_outline </span>
+                                    <span> <ion-icon class="icon_play-btn" name="play-circle-outline"></ion-icon> </span>
+                                    <!-- <span> <ion-icon class="icon_pause-btn" name="pause-circle-outline"></ion-icon> </span> -->
                                  </div>
                                  <div class="recently_btn-hover player_btn">
                                     <span class="material-icons-outlined"> more_horiz </span>
@@ -1354,7 +1432,8 @@
                                     <span class="playing_title-hover">Thêm vào thư viện </span>
                                  </div>
                                  <div class="recently_btn-hover recently_btn-hover-play">
-                                    <span class="material-icons"> play_circle_outline </span>
+                                    <span> <ion-icon class="icon_play-btn" name="play-circle-outline"></ion-icon> </span>
+                                    <!-- <span> <ion-icon class="icon_pause-btn" name="pause-circle-outline"></ion-icon> </span> -->
                                  </div>
                                  <div class="recently_btn-hover player_btn">
                                     <span class="material-icons-outlined"> more_horiz </span>
@@ -1380,7 +1459,8 @@
                                     <span class="playing_title-hover">Thêm vào thư viện </span>
                                  </div>
                                  <div class="recently_btn-hover recently_btn-hover-play">
-                                    <span class="material-icons"> play_circle_outline </span>
+                                    <span> <ion-icon class="icon_play-btn" name="play-circle-outline"></ion-icon> </span>
+                                    <!-- <span> <ion-icon class="icon_pause-btn" name="pause-circle-outline"></ion-icon> </span> -->
                                  </div>
                                  <div class="recently_btn-hover player_btn">
                                     <span class="material-icons-outlined"> more_horiz </span>
@@ -1397,7 +1477,7 @@
                               </div>
                            </div>
                         </div>
-                        <div class="container_top100-list-item col l-2-4 m-3 c-2" title="Top 100 Nhạc Trữ Tìn Hay Nhất">
+                        <div class="container_top100-list-item col l-2-4 m-0 c-2" title="Top 100 Nhạc Trữ Tìn Hay Nhất">
                            <a class="todaychoice_list-item-link main-page_list-item main_page-hover" href="#">
                               <div class="todaychoice_list-item-link main-page_list-item_img" href="#">
                                  <img src="./img/container-top100/100trutinh.webp" alt="taylor" />
@@ -1408,7 +1488,8 @@
                                     <span class="playing_title-hover">Thêm vào thư viện </span>
                                  </div>
                                  <div class="recently_btn-hover recently_btn-hover-play">
-                                    <span class="material-icons"> play_circle_outline </span>
+                                    <span> <ion-icon class="icon_play-btn" name="play-circle-outline"></ion-icon> </span>
+                                    <!-- <span> <ion-icon class="icon_pause-btn" name="pause-circle-outline"></ion-icon> </span> -->
                                  </div>
                                  <div class="recently_btn-hover player_btn">
                                     <span class="material-icons-outlined"> more_horiz </span>
@@ -1451,7 +1532,8 @@
                                     <span class="playing_title-hover">Thêm vào thư viện </span>
                                  </div>
                                  <div class="recently_btn-hover recently_btn-hover-play">
-                                    <span class="material-icons"> play_circle_outline </span>
+                                    <span> <ion-icon class="icon_play-btn" name="play-circle-outline"></ion-icon> </span>
+                                    <!-- <span> <ion-icon class="icon_pause-btn" name="pause-circle-outline"></ion-icon> </span> -->
                                  </div>
                                  <div class="recently_btn-hover player_btn">
                                     <span class="material-icons-outlined"> more_horiz </span>
@@ -1477,7 +1559,8 @@
                                     <span class="playing_title-hover">Thêm vào thư viện </span>
                                  </div>
                                  <div class="recently_btn-hover recently_btn-hover-play">
-                                    <span class="material-icons"> play_circle_outline </span>
+                                    <span> <ion-icon class="icon_play-btn" name="play-circle-outline"></ion-icon> </span>
+                                    <!-- <span> <ion-icon class="icon_pause-btn" name="pause-circle-outline"></ion-icon> </span> -->
                                  </div>
                                  <div class="recently_btn-hover player_btn">
                                     <span class="material-icons-outlined"> more_horiz </span>
@@ -1503,7 +1586,8 @@
                                     <span class="playing_title-hover">Thêm vào thư viện </span>
                                  </div>
                                  <div class="recently_btn-hover recently_btn-hover-play">
-                                    <span class="material-icons"> play_circle_outline </span>
+                                    <span> <ion-icon class="icon_play-btn" name="play-circle-outline"></ion-icon> </span>
+                                    <!-- <span> <ion-icon class="icon_pause-btn" name="pause-circle-outline"></ion-icon> </span> -->
                                  </div>
                                  <div class="recently_btn-hover player_btn">
                                     <span class="material-icons-outlined"> more_horiz </span>
@@ -1529,7 +1613,8 @@
                                     <span class="playing_title-hover">Thêm vào thư viện </span>
                                  </div>
                                  <div class="recently_btn-hover recently_btn-hover-play">
-                                    <span class="material-icons"> play_circle_outline </span>
+                                    <span> <ion-icon class="icon_play-btn" name="play-circle-outline"></ion-icon> </span>
+                                    <!-- <span> <ion-icon class="icon_pause-btn" name="pause-circle-outline"></ion-icon> </span> -->
                                  </div>
                                  <div class="recently_btn-hover player_btn">
                                     <span class="material-icons-outlined"> more_horiz </span>
@@ -1544,7 +1629,7 @@
                               </div>
                            </div>
                         </div>
-                        <div class="care-list-item col l-2-4 m-3 c-2" title="EDM Nổi Bật">
+                        <div class="care-list-item col l-2-4 m-0 c-2" title="EDM Nổi Bật">
                            <a class="todaychoice_list-item-link main-page_list-item main_page-hover" href="#">
                               <div class="todaychoice_list-item-link main-page_list-item_img" href="#">
                                  <img src="./img/container-care/edmnoibat.webp" alt="taylor" />
@@ -1555,7 +1640,8 @@
                                     <span class="playing_title-hover">Thêm vào thư viện </span>
                                  </div>
                                  <div class="recently_btn-hover recently_btn-hover-play">
-                                    <span class="material-icons"> play_circle_outline </span>
+                                    <span> <ion-icon class="icon_play-btn" name="play-circle-outline"></ion-icon> </span>
+                                    <!-- <span> <ion-icon class="icon_pause-btn" name="pause-circle-outline"></ion-icon> </span> -->
                                  </div>
                                  <div class="recently_btn-hover player_btn">
                                     <span class="material-icons-outlined"> more_horiz </span>
@@ -1587,7 +1673,8 @@
                               </div>
                               <div class="recently_list-item_hover">
                                  <div class="recently_btn-hover recently_btn-hover-play">
-                                    <span class="material-icons"> play_circle_outline </span>
+                                    <span> <ion-icon class="icon_play-btn" name="play-circle-outline"></ion-icon> </span>
+                                    <!-- <span> <ion-icon class="icon_pause-btn" name="pause-circle-outline"></ion-icon> </span> -->
                                  </div>
                               </div>
                            </div>
@@ -1612,7 +1699,8 @@
                               </div>
                               <div class="recently_list-item_hover">
                                  <div class="recently_btn-hover recently_btn-hover-play">
-                                    <span class="material-icons"> play_circle_outline </span>
+                                    <span> <ion-icon class="icon_play-btn" name="play-circle-outline"></ion-icon> </span>
+                                    <!-- <span> <ion-icon class="icon_pause-btn" name="pause-circle-outline"></ion-icon> </span> -->
                                  </div>
                               </div>
                            </div>
@@ -1637,7 +1725,8 @@
                               </div>
                               <div class="recently_list-item_hover">
                                  <div class="recently_btn-hover recently_btn-hover-play">
-                                    <span class="material-icons"> play_circle_outline </span>
+                                    <span> <ion-icon class="icon_play-btn" name="play-circle-outline"></ion-icon> </span>
+                                    <!-- <span> <ion-icon class="icon_pause-btn" name="pause-circle-outline"></ion-icon> </span> -->
                                  </div>
                               </div>
                            </div>
@@ -1661,7 +1750,8 @@
                               </div>
                               <div class="recently_list-item_hover">
                                  <div class="recently_btn-hover recently_btn-hover-play">
-                                    <span class="material-icons"> play_circle_outline </span>
+                                    <span> <ion-icon class="icon_play-btn" name="play-circle-outline"></ion-icon> </span>
+                                    <!-- <span> <ion-icon class="icon_pause-btn" name="pause-circle-outline"></ion-icon> </span> -->
                                  </div>
                               </div>
                            </div>
@@ -1685,7 +1775,8 @@
                               </div>
                               <div class="recently_list-item_hover">
                                  <div class="recently_btn-hover recently_btn-hover-play">
-                                    <span class="material-icons"> play_circle_outline </span>
+                                    <span> <ion-icon class="icon_play-btn" name="play-circle-outline"></ion-icon> </span>
+                                    <!-- <span> <ion-icon class="icon_pause-btn" name="pause-circle-outline"></ion-icon> </span> -->
                                  </div>
                               </div>
                            </div>
@@ -1709,7 +1800,8 @@
                               </div>
                               <div class="recently_list-item_hover">
                                  <div class="recently_btn-hover recently_btn-hover-play">
-                                    <span class="material-icons"> play_circle_outline </span>
+                                    <span> <ion-icon class="icon_play-btn" name="play-circle-outline"></ion-icon> </span>
+                                    <!-- <span> <ion-icon class="icon_pause-btn" name="pause-circle-outline"></ion-icon> </span> -->
                                  </div>
                               </div>
                            </div>
@@ -1734,7 +1826,8 @@
                               </div>
                               <div class="recently_list-item_hover">
                                  <div class="recently_btn-hover recently_btn-hover-play">
-                                    <span class="material-icons"> play_circle_outline </span>
+                                    <span> <ion-icon class="icon_play-btn" name="play-circle-outline"></ion-icon> </span>
+                                    <!-- <span> <ion-icon class="icon_pause-btn" name="pause-circle-outline"></ion-icon> </span> -->
                                  </div>
                               </div>
                            </div>
@@ -1758,7 +1851,8 @@
                               </div>
                               <div class="recently_list-item_hover">
                                  <div class="recently_btn-hover recently_btn-hover-play">
-                                    <span class="material-icons"> play_circle_outline </span>
+                                    <span> <ion-icon class="icon_play-btn" name="play-circle-outline"></ion-icon> </span>
+                                    <!-- <span> <ion-icon class="icon_pause-btn" name="pause-circle-outline"></ion-icon> </span> -->
                                  </div>
                               </div>
                            </div>
@@ -1788,7 +1882,7 @@
                         <p>Nghệ Sĩ Yêu Thích</p>
                      </div>
                      <div class="favorite_list row">
-                        <div class="col l-4 m-4-c-4">
+                        <div class="col l-4 m-6 c-4">
                            <div class="favorite_list-item">
                               <a class="main-page_list-item main_page-hover" href="#">
                                  <div class="main-page_list-item_img" href="#">
@@ -1796,7 +1890,8 @@
                                  </div>
                                  <div class="recently_list-item_hover">
                                     <div class="recently_btn-hover recently_btn-hover-play">
-                                       <span class="material-icons"> play_circle_outline </span>
+                                       <span> <ion-icon class="icon_play-btn" name="play-circle-outline"></ion-icon> </span>
+                                       <!-- <span> <ion-icon class="icon_pause-btn" name="pause-circle-outline"></ion-icon> </span> -->
                                     </div>
                                  </div>
                                  <div class="favorite_content">
@@ -1829,7 +1924,7 @@
                               </a>
                            </div>
                         </div>
-                        <div class="col l-4 m-4-c-4">
+                        <div class="col l-4 m-6 c-4">
                            <div class="favorite_list-item">
                               <a class="main-page_list-item main_page-hover" href="#">
                                  <div class="main-page_list-item_img" href="#">
@@ -1837,7 +1932,8 @@
                                  </div>
                                  <div class="recently_list-item_hover">
                                     <div class="recently_btn-hover recently_btn-hover-play">
-                                       <span class="material-icons">play_circle_outline </span>
+                                       <span> <ion-icon class="icon_play-btn" name="play-circle-outline"></ion-icon> </span>
+                                       <!-- <span> <ion-icon class="icon_pause-btn" name="pause-circle-outline"></ion-icon> </span> -->
                                     </div>
                                  </div>
                                  <div class="favorite_content">
@@ -1870,7 +1966,7 @@
                               </a>
                            </div>
                         </div>
-                        <div class="col l-4 m-4-c-4">
+                        <div class="col l-4 m-0 c-4">
                            <div class="favorite_list-item">
                               <a class="main-page_list-item main_page-hover" href="#">
                                  <div class="main-page_list-item_img" href="#">
@@ -1878,7 +1974,8 @@
                                  </div>
                                  <div class="recently_list-item_hover">
                                     <div class="recently_btn-hover recently_btn-hover-play">
-                                       <span class="material-icons"> play_circle_outline </span>
+                                       <span> <ion-icon class="icon_play-btn" name="play-circle-outline"></ion-icon> </span>
+                                       <!-- <span> <ion-icon class="icon_pause-btn" name="pause-circle-outline"></ion-icon> </span> -->
                                     </div>
                                  </div>
                                  <div class="favorite_content">
@@ -2034,8 +2131,7 @@
                               <span class="material-icons-outlined"> skip_previous </span>
                            </div>
                            <div class="player_playing-input">
-                              <span class="material-icons-outlined"> play_circle_outline </span>
-                              <!-- <span class="material-icons-outlined"> pause_circle </span> -->
+                              <ion-icon class="icon_play-btn" name="play-circle-outline"></ion-icon>
                            </div>
                            <div class="player_btn playing_next">
                               <span class="material-icons-outlined"> skip_next </span>
@@ -2048,16 +2144,16 @@
                         <div class="player_bottom">
                            <p class="playing_time-left">00:00</p>
                            <div class="playing_time-up">
-                              <input type="range" value="0" min="1" max="100" />
+                              <input class="playing_time-up-input" type="range" value="0" min="1" max="100" />
                            </div>
                            <p class="playing_time-right">03:35</p>
                         </div>
                      </div>
                      <div class="player_controls-right">
-                        <div class="player_btn playing_mv">
+                        <!-- <div class="player_btn playing_mv none">
                            <span class="material-icons-outlined"> movie </span>
                            <div class="playing_title-hover">Xem MV</div>
-                        </div>
+                        </div> -->
                         <div class="player_btn playing_karaoke">
                            <span class="material-icons-outlined"> mic_external_on </span>
                            <div class="playing_title-hover">Xem Lời bài hát</div>
@@ -2070,10 +2166,15 @@
                            <div class="player_btn">
                               <span class="material-icons-outlined"> volume_up </span>
                            </div>
-                           <input type="range" value="1" min="1" max="100" />
+                           <div class="playing_volume-input">
+                              <input type="range" value="1" min="1" max="100" />
+                           </div>
                         </div>
-                        <div class="none player_device-column"></div>
-                        <div class="player_btn none playing_playlist"></div>
+                        <div class="player_device-column"></div>
+                        <div class="playing_playlist">
+                           <span class="material-icons-outlined playing_playlist-btn"> queue_music </span>
+                           <div class="playing_title-hover">Danh sách phát</div>
+                        </div>
                      </div>
                   </div>
                </div>
@@ -2095,6 +2196,11 @@
          referrerpolicy="no-referrer"
       ></script>
 
+      <!-- inicons -->
+      <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+      <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
       <script src="./js/main.js"></script>
+      <script src="./js/script.js"></script>
    </body>
 </html>

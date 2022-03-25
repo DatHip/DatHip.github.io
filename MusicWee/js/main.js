@@ -15,9 +15,9 @@ $(document).ready(function () {
     </button>`,
     responsive: [
       {
-        breakpoint: 1025,
+        breakpoint: 1040,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 2,
         },
       },
       {
@@ -32,7 +32,7 @@ $(document).ready(function () {
   });
 });
 
-
+//  Nghe si slider
 $(document).ready(function () {
   $('.choice_list').slick({
     slidesToShow: 7,
@@ -47,11 +47,33 @@ $(document).ready(function () {
     <button type='button' class='choice-btn-right slick-next slick-arrow'>
         <span class="material-icons-outlined">arrow_forward_ios</span>
     </button>`,
+    responsive: [
+      {
+        breakpoint: 1320,
+        settings: {
+          slidesToShow: 6,
+        },
+      },
+      {
+        breakpoint: 1220,
+        settings: {
+          slidesToShow: 5,
+        },
+      },
+      {
+        breakpoint: 800,
+        settings: {
+          slidesToShow: 4,
+        },
+      },
 
+    ],
   });
 });
 
 
+
+// Mới Phát Hành
 $(document).ready(function () {
   $('.release_list').slick({
     slidesToShow: 3,
@@ -65,6 +87,16 @@ $(document).ready(function () {
     <button type='button' class='release-btn-right slick-next slick-arrow'>
         <span class="material-icons-outlined">arrow_forward_ios</span>
     </button>`,
+    responsive: [
+      {
+        breakpoint: 1220,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        },
+      },
+
+    ],
   });
 });
 
@@ -161,10 +193,6 @@ var config = {
     }
   }
 };
-
-
 var ctx = document.getElementById("myChart").getContext("2d");
 window.myLine = new Chart(ctx, config);
-
-
 
