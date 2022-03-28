@@ -11,8 +11,8 @@
 .row {
     display: flex;
     flex-wrap: wrap;
-    margin-left: -4px;
-    margin-right: -4px;
+    margin-left: -6px;
+    margin-right: -6px;
 }
 
 .row.no-gutters {
@@ -21,8 +21,8 @@
 }
 
 .col {
-    padding-left: 4px;
-    padding-right: 4px;
+    padding-left: 6px;
+    padding-right: 6px;
 }
 
 .row.no-gutters .col {
@@ -43,6 +43,11 @@
     flex: 0 0 16.66667%;
     max-width: 16.66667%;
 }
+
+ .c-2-4 {
+        flex: 0 0 20%;
+        max-width: 20%;
+    }
 
 .c-3 {
     flex: 0 0 25%;

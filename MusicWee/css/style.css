@@ -277,7 +277,7 @@
   right: 330px;
   -webkit-box-shadow: 0 3px 5px var(--sticky-header-box-shadow);
           box-shadow: 0 3px 5px var(--sticky-header-box-shadow);
-  z-index: 99;
+  z-index: 109;
 }
 
 .header .header_content {
@@ -499,7 +499,7 @@
 
 .playing-bar {
   position: fixed;
-  z-index: 102;
+  z-index: 110;
   width: 100%;
   bottom: 0;
   -webkit-user-select: none;
@@ -725,7 +725,7 @@
 .playing-bar .player_controls-center .player_top .player_playing-input:hover ion-icon {
   -webkit-transition: 0.2s ease-in;
   transition: 0.2s ease-in;
-  color: var(--purple-primary);
+  opacity: .7;
 }
 
 .playing-bar .player_controls-center .player_top .player_playing-input span {
@@ -2037,7 +2037,6 @@
   max-width: 7rem;
   width: 100%;
   position: fixed;
-  background-color: var(--sidebar-popup-bg);
   z-index: 999;
   opacity: 1;
 }
@@ -2153,7 +2152,7 @@
 
 .navbar-exanded-active {
   position: fixed;
-  background-color: var(--sidebar-popup-bg);
+  background-color: var(--layout-bg);
 }
 
 .navbar-exanded-active .navbar-exanded-btn-left {
@@ -2230,5 +2229,25 @@
   font-size: 50px;
   color: #ffffff;
   --ionicon-stroke-width: 16px;
+}
+
+.header_content-btn-user-c {
+  display: none;
+}
+
+.main-page .container_zing-chart #myChart {
+  width: 100% !important;
+  height: auto;
+  max-width: unset;
+}
+
+.main-page .container_zing-chart .zing-chart_right {
+  max-height: unset;
+  max-width: 100%;
+  width: 100%;
+}
+
+.container_btn-icon-c {
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */

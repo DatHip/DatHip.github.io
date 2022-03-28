@@ -43,6 +43,17 @@
    </head>
 
    <body>
+      <div class="loading">
+         <div class="loader">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+            <div class="bar4"></div>
+            <div class="bar5"></div>
+            <div class="bar6"></div>
+         </div>
+      </div>
+
       <div class="main">
          <div style="background-image: url(./img/backgrimg/roseBgimg.jpg)" class="section">
             <!-- Left -->
@@ -135,9 +146,9 @@
                      </li>
                   </ul>
                </div>
-               <button class="sider_add-playlist">
+               <!-- <button class="sider_add-playlist">
                   <p><span class="material-icons-outlined">add</span> Tạo playlist mới</p>
-               </button>
+               </button> -->
 
                <button class="sider-navbar-exanded">
                   <span class="material-icons-outlined navbar-exanded-btn-left"> navigate_next </span>
@@ -147,6 +158,11 @@
             <!-- Top -->
             <header class="header">
                <div class="header_content">
+                  <div class="header_content-btn-user-c">
+                     <div class="setting_item setting_item-user">
+                        <span class="material-icons-outlined"> person </span>
+                     </div>
+                  </div>
                   <div class="header_content-left">
                      <button class="header_btn-back btn_disabled">
                         <span class="material-icons-outlined"> west </span>
@@ -208,6 +224,42 @@
                         <img src="./img/containersiler/vuduykhanh.jpg" alt="" />
                      </div>
                   </div>
+
+                  <div class="container_btn-icon-c">
+                     <div class="sider_menu-list row">
+                        <div title="Nhạc mới" class="sider_menu-item col c-2-4">
+                           <a href="#"
+                              ><span class="material-icons-outlined"> music_note </span>
+                              <span class="sider_menu-item-title">Nhạc Mới</span></a
+                           >
+                        </div>
+                        <div title="Thể Loại" class="sider_menu-item col c-2-4">
+                           <a href="#"
+                              ><span class="material-icons-outlined"> category </span>
+                              <span class="sider_menu-item-title">Thể Loại</span></a
+                           >
+                        </div>
+                        <div title="#Top100" class="sider_menu-item col c-2-4">
+                           <a href="#"
+                              ><span class="material-icons-outlined"> star_outline </span>
+                              <span class="sider_menu-item-title">Top 100</span></a
+                           >
+                        </div>
+                        <div title="MV" class="sider_menu-item col c-2-4">
+                           <a href="#">
+                              <span class="material-icons-outlined"> movie_filter </span>
+                              <span class="sider_menu-item-title">MV</span></a
+                           >
+                        </div>
+                        <div title="diamond" class="sider_menu-item col c-2-4">
+                           <a href="#">
+                              <span class="material-icons-outlined"> diamond </span>
+                              <span class="sider_menu-item-title">VIP</span></a
+                           >
+                        </div>
+                     </div>
+                  </div>
+
                   <!-- Xem Gần Đây -->
                   <div class="container_recently">
                      <div class="recently_title">
@@ -215,7 +267,7 @@
                         <a href="#">Tất Cả <span class="material-icons-outlined"> chevron_right </span></a>
                      </div>
                      <div class="recently_list row">
-                        <div title="Nhạc của Taylor Swift" class="col l-1-4 m-2 c-2 m2-6 m2-5">
+                        <div title="Nhạc của Taylor Swift" class="col l-1-4 m-2 c-4 m2-6 m2-5">
                            <a class="main-page_list-item main_page-hover" href="#">
                               <div class="main-page_list-item_img" href="#">
                                  <img src="./img/ngheganday/taylor.jpg" alt="taylor" />
@@ -239,7 +291,7 @@
                               <a class="main_title-text" title="Nhạc của Taylor Swift" href="#">Nhạc của Taylor Swift</a>
                            </div>
                         </div>
-                        <div title="Top 100 Pop Âu Mỹ Hay Nhất" class="col l-1-4 m-2 c-2 m2-6 m2-5">
+                        <div title="Top 100 Pop Âu Mỹ Hay Nhất" class="col l-1-4 m-2 c-4 m2-6 m2-5">
                            <a class="main-page_list-item main_page-hover" href="#">
                               <div class="main-page_list-item_img" href="#">
                                  <img src="./img/ngheganday/100popaumi.webp" alt="taylor" />
@@ -265,7 +317,7 @@
                               >
                            </div>
                         </div>
-                        <div title="Top 100 Nhạc Phim Việt Nam Hay Nhất" class="col l-1-4 m-2 c-2 m2-6 m2-5">
+                        <div title="Top 100 Nhạc Phim Việt Nam Hay Nhất" class="col l-1-4 m-2 c-4 m2-6 m2-5">
                            <a class="main-page_list-item main_page-hover" href="#">
                               <div class="main-page_list-item_img" href="#">
                                  <img src="./img/ngheganday/100vietnam.webp" alt="taylor" />
@@ -291,7 +343,7 @@
                               >
                            </div>
                         </div>
-                        <div title="Hot Rhythmic" class="col l-1-4 m-2 c-2 m2-6 m2-5">
+                        <div title="Hot Rhythmic" class="col l-1-4 m-2 c-4 m2-6 m2-5">
                            <a class="main-page_list-item main_page-hover" href="#">
                               <div class="main-page_list-item_img" href="#">
                                  <img src="./img/ngheganday/hotrhythmic.webp" alt="taylor" />
@@ -315,7 +367,7 @@
                               <a class="main_title-text" title="Hot Rhythmic" href="#">Hot Rhythmic</a>
                            </div>
                         </div>
-                        <div title="Top Hits US-UK" class="col l-1-4 m-2 c-2 m2-6 m2-5">
+                        <div title="Top Hits US-UK" class="col l-1-4 m-2 c-4 m2-6 m2-5">
                            <a class="main-page_list-item main_page-hover" href="#">
                               <div class="main-page_list-item_img" href="#">
                                  <img src="./img/ngheganday/tophis.webp" alt="taylor" />
@@ -339,7 +391,7 @@
                               <a class="main_title-text" title="Top Hits US-UK" href="#">Top Hits US-UK</a>
                            </div>
                         </div>
-                        <div title="Viral Hits" class="col l-1-4 m-2 c-2 m2-6 m2-none">
+                        <div title="Viral Hits" class="col l-1-4 m-2 c-4 m2-6 m2-none">
                            <a class="main-page_list-item main_page-hover" href="#">
                               <div class="main-page_list-item_img" href="#">
                                  <img src="./img/ngheganday/viralhits.webp" alt="taylor" />
@@ -363,7 +415,7 @@
                               <a class="main_title-text" title="Viral Hits" href="#">Viral Hits</a>
                            </div>
                         </div>
-                        <div title="Wekkend Jamz" class="col l-1-4 m-none c-2">
+                        <div title="Wekkend Jamz" class="col l-1-4 m-none c-4">
                            <a class="main-page_list-item main_page-hover" href="#">
                               <div class="main-page_list-item_img" href="#">
                                  <img src="./img/ngheganday/wekkendJamz.webp" alt="taylor" />
@@ -396,7 +448,7 @@
                         <p>Có Thể Bạn Muốn Nghe</p>
                      </div>
                      <div class="want_list row">
-                        <div class="want_list-item col l-2-4 m-3 c-2" title="Hits Quốc Dân">
+                        <div class="want_list-item col l-2-4 m-3 c-5" title="Hits Quốc Dân">
                            <a class="want_list-item-link main-page_list-item main_page-hover" href="#">
                               <div class="want_list-item-link main-page_list-item_img" href="#">
                                  <img src="./img/cothebanmuonnghe/hitsquocdan.webp" alt="taylor" />
@@ -423,7 +475,7 @@
                               </div>
                            </div>
                         </div>
-                        <div class="want_list-item col l-2-4 m-3 c-2" title="Hits Quốc Dân">
+                        <div class="want_list-item col l-2-4 m-3 c-5" title="Hits Quốc Dân">
                            <a class="want_list-item-link main-page_list-item main_page-hover" href="#">
                               <div class="want_list-item-link main-page_list-item_img" href="#">
                                  <img src="./img/cothebanmuonnghe/nghelaghien.webp" alt="taylor" />
@@ -450,7 +502,7 @@
                               </div>
                            </div>
                         </div>
-                        <div class="want_list-item col l-2-4 m-3 c-2" title="Hits Quốc Dân">
+                        <div class="want_list-item col l-2-4 m-3 c-5" title="Hits Quốc Dân">
                            <a class="want_list-item-link main-page_list-item main_page-hover" href="#">
                               <div class="want_list-item-link main-page_list-item_img" href="#">
                                  <img src="./img/cothebanmuonnghe/singlongusuk.webp" alt="taylor" />
@@ -477,7 +529,7 @@
                               </div>
                            </div>
                         </div>
-                        <div class="want_list-item col l-2-4 m-3 c-2" title="Hits Quốc Dân">
+                        <div class="want_list-item col l-2-4 m-3 c-5" title="Hits Quốc Dân">
                            <a class="want_list-item-link main-page_list-item main_page-hover" href="#">
                               <div class="want_list-item-link main-page_list-item_img" href="#">
                                  <img src="./img/cothebanmuonnghe/todaysedmhits.webp" alt="taylor" />
@@ -504,7 +556,7 @@
                               </div>
                            </div>
                         </div>
-                        <div class="want_list-item col l-2-4 m-0 c-2" title="Hits Quốc Dân">
+                        <div class="want_list-item col l-2-4 m-0 c-5" title="Hits Quốc Dân">
                            <a class="want_list-item-link main-page_list-item main_page-hover" href="#">
                               <div class="want_list-item-link main-page_list-item_img" href="#">
                                  <img src="./img/cothebanmuonnghe/usukTodayTophits.webp" alt="taylor" />
@@ -537,10 +589,10 @@
                   <!-- Lựa Chọn Hôm Nay -->
                   <div class="container_todaychoice">
                      <div class="want_title container_title">
-                        <p>Có Thể Bạn Muốn Nghe</p>
+                        <p>Lựa Chọn Hôm Nay</p>
                      </div>
                      <div class="todaychoice_list row">
-                        <div class="todaychoice_list-item col l-2-4 m-3 c-2" title="/Daebak Solo">
+                        <div class="todaychoice_list-item col l-2-4 m-3 c-5" title="/Daebak Solo">
                            <a class="todaychoice_list-item-link main-page_list-item main_page-hover" href="#">
                               <div class="todaychoice_list-item-link main-page_list-item_img" href="#">
                                  <img src="./img/luaChonHomNay/daebaksolo.webp" alt="taylor" />
@@ -563,12 +615,11 @@
                            <div class="todaychoice_list-item-title">
                               <a class="main_title-text" title="Daebak Solo" href="#">Daebak Solo</a>
                               <div class="main_subtitle">
-                                 <p>Luôn là tâm điểm khi ra solo hay</p>
-                                 <p>lúc ở trong nhóm nhạc</p>
+                                 <p>Luôn là tâm điểm khi ra solo hay lúc ở trong nhóm nhạc</p>
                               </div>
                            </div>
                         </div>
-                        <div class="todaychoice_list-item col l-2-4 m-3 c-2" title="Quý Cô Indie Việt ">
+                        <div class="todaychoice_list-item col l-2-4 m-3 c-5" title="Quý Cô Indie Việt ">
                            <a class="todaychoice_list-item-link main-page_list-item main_page-hover" href="#">
                               <div class="todaychoice_list-item-link main-page_list-item_img" href="#">
                                  <img src="./img/luaChonHomNay/quycoindeiVBiet.webp" alt="taylor" />
@@ -595,7 +646,7 @@
                               </div>
                            </div>
                         </div>
-                        <div class="todaychoice_list-item col l-2-4 m-3 c-2" title="Today's Pop Hits">
+                        <div class="todaychoice_list-item col l-2-4 m-3 c-5" title="Today's Pop Hits">
                            <a class="todaychoice_list-item-link main-page_list-item main_page-hover" href="#">
                               <div class="todaychoice_list-item-link main-page_list-item_img" href="#">
                                  <img src="./img/luaChonHomNay/todayspophits.webp" alt="taylor" />
@@ -622,7 +673,7 @@
                               </div>
                            </div>
                         </div>
-                        <div class="todaychoice_list-item col l-2-4 m-3 c-2" title="Vần Rap Thả Thính">
+                        <div class="todaychoice_list-item col l-2-4 m-3 c-5" title="Vần Rap Thả Thính">
                            <a class="todaychoice_list-item-link main-page_list-item main_page-hover" href="#">
                               <div class="todaychoice_list-item-link main-page_list-item_img" href="#">
                                  <img src="./img/luaChonHomNay/vanrapthathinh.webp" alt="taylor" />
@@ -649,7 +700,7 @@
                               </div>
                            </div>
                         </div>
-                        <div class="todaychoice_list-item col l-2-4 m-0 c-2" title="Anime Now">
+                        <div class="todaychoice_list-item col l-2-4 m-0 c-5" title="Anime Now">
                            <a class="todaychoice_list-item-link main-page_list-item main_page-hover" href="#">
                               <div class="todaychoice_list-item-link main-page_list-item_img" href="#">
                                  <img src="./img/luaChonHomNay/animenow.webp" alt="taylor" />
@@ -686,7 +737,7 @@
                         <p>XONE's CORNER</p>
                      </div>
                      <div class="xones_list row">
-                        <div class="xones_list-item col l-2-4 m-3 c-2" title="Asia Rap">
+                        <div class="xones_list-item col l-2-4 m-3 c-5" title="Asia Rap">
                            <a class="xones_list-item-link main-page_list-item main_page-hover" href="#">
                               <div class="xones_list-item-link main-page_list-item_img" href="#">
                                  <img src="./img/xone/asiaRap.webp" alt="taylor" />
@@ -713,7 +764,7 @@
                               </div>
                            </div>
                         </div>
-                        <div class="xones_list-item col l-2-4 m-3 c-2" title="Back In Time - Pop's HITs">
+                        <div class="xones_list-item col l-2-4 m-3 c-5" title="Back In Time - Pop's HITs">
                            <a class="xones_list-item-link main-page_list-item main_page-hover" href="#">
                               <div class="xones_list-item-link main-page_list-item_img" href="#">
                                  <img src="./img/xone/backintime.webp" alt="taylor" />
@@ -740,7 +791,7 @@
                               </div>
                            </div>
                         </div>
-                        <div class="xones_list-item col l-2-4 m-3 c-2" title="Best R&B HITs">
+                        <div class="xones_list-item col l-2-4 m-3 c-5" title="Best R&B HITs">
                            <a class="xones_list-item-link main-page_list-item main_page-hover" href="#">
                               <div class="xones_list-item-link main-page_list-item_img" href="#">
                                  <img src="./img/xone/bestrbhits.webp" alt="Best R&B HITs" />
@@ -767,7 +818,7 @@
                               </div>
                            </div>
                         </div>
-                        <div class="xones_list-item col l-2-4 m-3 c-2" title="feedinggood">
+                        <div class="xones_list-item col l-2-4 m-3 c-5" title="feedinggood">
                            <a class="xones_list-item-link main-page_list-item main_page-hover" href="#">
                               <div class="xones_list-item-link main-page_list-item_img" href="#">
                                  <img src="./img/xone/feedinggood.webp" alt="feedinggood" />
@@ -794,7 +845,7 @@
                               </div>
                            </div>
                         </div>
-                        <div class="xones_list-item col l-2-4 m-0 c-2" title="HWASA X ONEWE">
+                        <div class="xones_list-item col l-2-4 m-0 c-5" title="HWASA X ONEWE">
                            <a class="xones_list-item-link main-page_list-item main_page-hover" href="#">
                               <div class="xones_list-item-link main-page_list-item_img" href="#">
                                  <img src="./img/xone/hwasaXonewe.webp" alt="HWASA X ONEWE" />
@@ -830,7 +881,7 @@
                         <p>Radio Nổi Bật</p>
                      </div>
                      <div class="xones_list row">
-                        <div class="col l-1-4 m-2 c-2 m2-6 m2-5" title="XONE Raido">
+                        <div class="col l-1-4 m-2 c-5 m2-6 m2-5" title="XONE Raido">
                            <a class="xones_list-item-link main-page_list-item main_page-hover" href="#">
                               <div class="xones_list-item-link-img main-page_list-item_img" href="#">
                                  <img src="./img/mainRadio/xOne.webp" alt="taylor" />
@@ -855,7 +906,7 @@
                               </div>
                            </div>
                         </div>
-                        <div class="col l-1-4 m-2 c-2 m2-6 m2-5" title="On Ari">
+                        <div class="col l-1-4 m-2 c-5 m2-6 m2-5" title="On Ari">
                            <a class="xones_list-item-link main-page_list-item main_page-hover" href="#">
                               <div class="xones_list-item-link-img main-page_list-item_img" href="#">
                                  <img src="./img/mainRadio/onRadio.webp" alt="taylor" />
@@ -880,7 +931,7 @@
                               </div>
                            </div>
                         </div>
-                        <div class="col l-1-4 m-2 c-2 m2-6 m2-5" title="Bolero">
+                        <div class="col l-1-4 m-2 c-5 m2-6 m2-5" title="Bolero">
                            <a class="xones_list-item-link main-page_list-item main_page-hover" href="#">
                               <div class="xones_list-item-link-img main-page_list-item_img" href="#">
                                  <img src="./img/mainRadio/Bolero.webp" alt="taylor" />
@@ -905,7 +956,7 @@
                               </div>
                            </div>
                         </div>
-                        <div class="col l-1-4 m-2 c-2 m2-6 m2-5" title="V-POP">
+                        <div class="col l-1-4 m-2 c-5 m2-6 m2-5" title="V-POP">
                            <a class="xones_list-item-link main-page_list-item main_page-hover" href="#">
                               <div class="xones_list-item-link-img main-page_list-item_img" href="#">
                                  <img src="./img/mainRadio/vPop.webp" alt="taylor" />
@@ -930,7 +981,7 @@
                               </div>
                            </div>
                         </div>
-                        <div class="col l-1-4 m-2 c-2 m2-6 m2-5" title="US-UK">
+                        <div class="col l-1-4 m-2 c-5 m2-6 m2-5" title="US-UK">
                            <a class="xones_list-item-link main-page_list-item main_page-hover" href="#">
                               <div class="xones_list-item-link-img main-page_list-item_img" href="#">
                                  <img src="./img/mainRadio/usukimg.webp" alt="taylor" />
@@ -955,7 +1006,7 @@
                               </div>
                            </div>
                         </div>
-                        <div class="col l-1-4 m-2 c-2 m2-6 m2-none" title="Acoustic">
+                        <div class="col l-1-4 m-2 c-5 m2-6 m2-none" title="Acoustic">
                            <a class="xones_list-item-link main-page_list-item main_page-hover" href="#">
                               <div class="xones_list-item-link-img main-page_list-item_img" href="#">
                                  <img src="./img/mainRadio/vpopAcoustic.webp" alt="taylor" />
@@ -980,7 +1031,7 @@
                               </div>
                            </div>
                         </div>
-                        <div class="col l-1-4 m-none c-2" title="K-Pop">
+                        <div class="col l-1-4 m-none c-5" title="K-Pop">
                            <a class="xones_list-item-link main-page_list-item main_page-hover" href="#">
                               <div class="xones_list-item-link-img main-page_list-item_img" href="#">
                                  <img src="./img/mainRadio/logoRaidio/kpop.webp" alt="taylor" />
@@ -1014,7 +1065,7 @@
                         <p>Nhạc Mới Mỗi Ngày</p>
                      </div>
                      <div class="everyday_list row">
-                        <div class="everyday_list-item col l-2-4 m-3 c-2" title="V-Pop Tháng 3/2022">
+                        <div class="everyday_list-item col l-2-4 m-3 c-5" title="V-Pop Tháng 3/2022">
                            <a class="everyday_list-item-link main-page_list-item main_page-hover" href="#">
                               <div class="everyday_list-item-link main-page_list-item_img" href="#">
                                  <img src="./img/nhacmoimoingay/vpop.webp" alt="tV-Pop Tháng 3/2022" />
@@ -1042,7 +1093,7 @@
                            </div>
                         </div>
 
-                        <div class="everyday_list-item col l-2-4 m-3 c-2" title="Indie Việt Tháng 3/2022">
+                        <div class="everyday_list-item col l-2-4 m-3 c-5" title="Indie Việt Tháng 3/2022">
                            <a class="everyday_list-item-link main-page_list-item main_page-hover" href="#">
                               <div class="everyday_list-item-link main-page_list-item_img" href="#">
                                  <img src="./img/nhacmoimoingay/indieviett3.webp" alt="Indie Việt Tháng 3/2022" />
@@ -1069,7 +1120,7 @@
                               </div>
                            </div>
                         </div>
-                        <div class="everyday_list-item col l-2-4 m-3 c-2" title="K-Pop Tháng 3/2022">
+                        <div class="everyday_list-item col l-2-4 m-3 c-5" title="K-Pop Tháng 3/2022">
                            <a class="everyday_list-item-link main-page_list-item main_page-hover" href="#">
                               <div class="everyday_list-item-link main-page_list-item_img" href="#">
                                  <img src="./img/nhacmoimoingay/kpopt3.webp" alt="K-Pop Tháng 3/2022" />
@@ -1096,7 +1147,7 @@
                               </div>
                            </div>
                         </div>
-                        <div class="everyday_list-item col l-2-4 m-3 c-2" title="US-UK Tháng 3/2022">
+                        <div class="everyday_list-item col l-2-4 m-3 c-5" title="US-UK Tháng 3/2022">
                            <a class="everyday_list-item-link main-page_list-item main_page-hover" href="#">
                               <div class="everyday_list-item-link main-page_list-item_img" href="#">
                                  <img src="./img/nhacmoimoingay/usukthang3.webp" alt="US-UK Tháng 3/2022" />
@@ -1123,7 +1174,7 @@
                               </div>
                            </div>
                         </div>
-                        <div class="everyday_list-item col l-2-4 m-0 c-2" title="C-Pop Tháng 3/2022">
+                        <div class="everyday_list-item col l-2-4 m-0 c-5" title="C-Pop Tháng 3/2022">
                            <a class="everyday_list-item-link main-page_list-item main_page-hover" href="#">
                               <div class="everyday_list-item-link main-page_list-item_img" href="#">
                                  <img src="./img/nhacmoimoingay/cpopt3.webp" alt="C-Pop Tháng 3/2022" />
@@ -1277,21 +1328,21 @@
                   <!-- #zing chart Tuần  -->
                   <div class="container_chart-weekend">
                      <div class="chart-weekend_list row">
-                        <div class="chart-weekend_list-item col l-4 m-4 c-4">
+                        <div class="chart-weekend_list-item col l-4 m-4 c-5">
                            <a class="chart-weekend_list-item-link main-page_list-item main_page-hover" href="#">
                               <div class="chart-weekend_list-item-link main-page_list-item_img" href="#">
                                  <img src="./img/zingchartweeken/baihatvn.jpg" alt="" />
                               </div>
                            </a>
                         </div>
-                        <div class="chart-weekend_list-item col l-4 m-4 c-4">
+                        <div class="chart-weekend_list-item col l-4 m-4 c-5">
                            <a class="chart-weekend_list-item-link main-page_list-item main_page-hover" href="#">
                               <div class="chart-weekend_list-item-link main-page_list-item_img" href="#">
                                  <img src="./img/zingchartweeken/web_song_usuk.jpg" alt="" />
                               </div>
                            </a>
                         </div>
-                        <div class="chart-weekend_list-item col l-4 m-4 c-4">
+                        <div class="chart-weekend_list-item col l-4 m-4 c-5">
                            <a class="chart-weekend_list-item-link main-page_list-item main_page-hover" href="#">
                               <div class="chart-weekend_list-item-link main-page_list-item_img" href="#">
                                  <img src="./img/zingchartweeken/web_song_kpop.jpg" alt="" />
@@ -1365,7 +1416,7 @@
                         <a href="#">Tất Cả <span class="material-icons-outlined"> chevron_right </span></a>
                      </div>
                      <div class="container_top100-list row">
-                        <div class="container_top100-list-item col l-2-4 m-3 c-2" title="Top 100 Pop Âu Mỹ Hay Nhất">
+                        <div class="container_top100-list-item col l-2-4 m-3 c-5" title="Top 100 Pop Âu Mỹ Hay Nhất">
                            <a class="todaychoice_list-item-link main-page_list-item main_page-hover" href="#">
                               <div class="todaychoice_list-item-link main-page_list-item_img" href="#">
                                  <img src="./img/container-top100/aumi100.webp" alt="taylor" />
@@ -1394,7 +1445,7 @@
                               </div>
                            </div>
                         </div>
-                        <div class="container_top100-list-item col l-2-4 m-3 c-2" title="Top 100 Nhạc EDM Hay Nhất">
+                        <div class="container_top100-list-item col l-2-4 m-3 c-5" title="Top 100 Nhạc EDM Hay Nhất">
                            <a class="todaychoice_list-item-link main-page_list-item main_page-hover" href="#">
                               <div class="todaychoice_list-item-link main-page_list-item_img" href="#">
                                  <img src="./img/container-top100/100edm.webp" alt="taylor" />
@@ -1421,7 +1472,7 @@
                               </div>
                            </div>
                         </div>
-                        <div class="container_top100-list-item col l-2-4 m-3 c-2" title="Top 100 Nhạc Trẻ Hay Nhất">
+                        <div class="container_top100-list-item col l-2-4 m-3 c-5" title="Top 100 Nhạc Trẻ Hay Nhất">
                            <a class="todaychoice_list-item-link main-page_list-item main_page-hover" href="#">
                               <div class="todaychoice_list-item-link main-page_list-item_img" href="#">
                                  <img src="./img/container-top100/100nhactrer.webp" alt="taylor" />
@@ -1448,7 +1499,7 @@
                               </div>
                            </div>
                         </div>
-                        <div class="container_top100-list-item col l-2-4 m-3 c-2" title="Top 100 Nhạc Hàn Quốc Hay Nhất">
+                        <div class="container_top100-list-item col l-2-4 m-3 c-5" title="Top 100 Nhạc Hàn Quốc Hay Nhất">
                            <a class="todaychoice_list-item-link main-page_list-item main_page-hover" href="#">
                               <div class="todaychoice_list-item-link main-page_list-item_img" href="#">
                                  <img src="./img/container-top100/100hanquoc.webp" alt="taylor" />
@@ -1477,7 +1528,7 @@
                               </div>
                            </div>
                         </div>
-                        <div class="container_top100-list-item col l-2-4 m-0 c-2" title="Top 100 Nhạc Trữ Tìn Hay Nhất">
+                        <div class="container_top100-list-item col l-2-4 m-0 c-5" title="Top 100 Nhạc Trữ Tìn Hay Nhất">
                            <a class="todaychoice_list-item-link main-page_list-item main_page-hover" href="#">
                               <div class="todaychoice_list-item-link main-page_list-item_img" href="#">
                                  <img src="./img/container-top100/100trutinh.webp" alt="taylor" />
@@ -1521,7 +1572,7 @@
                         </div>
                      </div>
                      <div class="care_list row">
-                        <div class="care-list-item col l-2-4 m-3 c-2" title="K-EDM">
+                        <div class="care-list-item col l-2-4 m-3 c-5" title="K-EDM">
                            <a class="todaychoice_list-item-link main-page_list-item main_page-hover" href="#">
                               <div class="todaychoice_list-item-link main-page_list-item_img" href="#">
                                  <img src="./img/container-care/kedm.webp" alt="taylor" />
@@ -1548,7 +1599,7 @@
                               </div>
                            </div>
                         </div>
-                        <div class="care-list-item col l-2-4 m-3 c-2" title=" Everyday EDM">
+                        <div class="care-list-item col l-2-4 m-3 c-5" title=" Everyday EDM">
                            <a class="todaychoice_list-item-link main-page_list-item main_page-hover" href="#">
                               <div class="todaychoice_list-item-link main-page_list-item_img" href="#">
                                  <img src="./img/container-care/everydayedm.webp" alt="taylor" />
@@ -1575,7 +1626,7 @@
                               </div>
                            </div>
                         </div>
-                        <div class="care-list-item col l-2-4 m-3 c-2" title="It's a Trap">
+                        <div class="care-list-item col l-2-4 m-3 c-5" title="It's a Trap">
                            <a class="todaychoice_list-item-link main-page_list-item main_page-hover" href="#">
                               <div class="todaychoice_list-item-link main-page_list-item_img" href="#">
                                  <img src="./img/container-care/itsatrap.webp" alt="taylor" />
@@ -1602,7 +1653,7 @@
                               </div>
                            </div>
                         </div>
-                        <div class="care-list-item col l-2-4 m-3 c-2" title="Tropical House Hay Nhất">
+                        <div class="care-list-item col l-2-4 m-3 c-5" title="Tropical House Hay Nhất">
                            <a class="todaychoice_list-item-link main-page_list-item main_page-hover" href="#">
                               <div class="todaychoice_list-item-link main-page_list-item_img" href="#">
                                  <img src="./img/container-care/tropical.webp" alt="taylor" />
@@ -1629,7 +1680,7 @@
                               </div>
                            </div>
                         </div>
-                        <div class="care-list-item col l-2-4 m-0 c-2" title="EDM Nổi Bật">
+                        <div class="care-list-item col l-2-4 m-0 c-5" title="EDM Nổi Bật">
                            <a class="todaychoice_list-item-link main-page_list-item main_page-hover" href="#">
                               <div class="todaychoice_list-item-link main-page_list-item_img" href="#">
                                  <img src="./img/container-care/edmnoibat.webp" alt="taylor" />
@@ -1882,7 +1933,7 @@
                         <p>Nghệ Sĩ Yêu Thích</p>
                      </div>
                      <div class="favorite_list row">
-                        <div class="col l-4 m-6 c-4">
+                        <div class="col l-4 m-6 c-5">
                            <div class="favorite_list-item">
                               <a class="main-page_list-item main_page-hover" href="#">
                                  <div class="main-page_list-item_img" href="#">
@@ -1898,22 +1949,22 @@
                                     <p class="favorite_content-title">BẠN ĐÃ NGHE GẦN ĐÂY</p>
                                     <p class="favorite_content-name">Justin Bieber</p>
                                     <div class="favorite_content-list row">
-                                       <div class="col l-3 m-3 c-6">
+                                       <div class="col l-3 m-3 c-3">
                                           <div class="favorite_content-img">
                                              <img src="./img/nghesiyeuthich/jutinplay/stay.webp" alt="" />
                                           </div>
                                        </div>
-                                       <div class="col l-3 m-3 c-6">
+                                       <div class="col l-3 m-3 c-3">
                                           <div class="favorite_content-img">
                                              <img src="./img/nghesiyeuthich/jutinplay/mood.webp" alt="" />
                                           </div>
                                        </div>
-                                       <div class="col l-3 m-3 c-6">
+                                       <div class="col l-3 m-3 c-3">
                                           <div class="favorite_content-img">
                                              <img src="./img/nghesiyeuthich/jutinplay/3.webp" alt="" />
                                           </div>
                                        </div>
-                                       <div class="col l-3 m-3 c-6">
+                                       <div class="col l-3 m-3 c-3">
                                           <div class="favorite_content-img">
                                              <img src="./img/nghesiyeuthich/jutinplay/4.webp" alt="" />
                                           </div>
@@ -1924,7 +1975,7 @@
                               </a>
                            </div>
                         </div>
-                        <div class="col l-4 m-6 c-4">
+                        <div class="col l-4 m-6 c-5">
                            <div class="favorite_list-item">
                               <a class="main-page_list-item main_page-hover" href="#">
                                  <div class="main-page_list-item_img" href="#">
@@ -1940,22 +1991,22 @@
                                     <p class="favorite_content-title">BẠN ĐÃ NGHE GẦN ĐÂY</p>
                                     <p class="favorite_content-name">Black Pink</p>
                                     <div class="favorite_content-list row">
-                                       <div class="col l-3 m-3 c-6">
+                                       <div class="col l-3 m-3 c-3">
                                           <div class="favorite_content-img">
                                              <img src="./img/nghesiyeuthich/blackpinkimg/1.webp" alt="" />
                                           </div>
                                        </div>
-                                       <div class="col l-3 m-3 c-6">
+                                       <div class="col l-3 m-3 c-3">
                                           <div class="favorite_content-img">
                                              <img src="./img/nghesiyeuthich/blackpinkimg/5.webp" alt="" />
                                           </div>
                                        </div>
-                                       <div class="col l-3 m-3 c-6">
+                                       <div class="col l-3 m-3 c-3">
                                           <div class="favorite_content-img">
                                              <img src="./img/nghesiyeuthich/blackpinkimg/3.webp" alt="" />
                                           </div>
                                        </div>
-                                       <div class="col l-3 m-3 c-6">
+                                       <div class="col l-3 m-3 c-3">
                                           <div class="favorite_content-img">
                                              <img src="./img/nghesiyeuthich/blackpinkimg/4.webp" alt="" />
                                           </div>
@@ -1966,7 +2017,7 @@
                               </a>
                            </div>
                         </div>
-                        <div class="col l-4 m-0 c-4">
+                        <div class="col l-4 m-0 c-5">
                            <div class="favorite_list-item">
                               <a class="main-page_list-item main_page-hover" href="#">
                                  <div class="main-page_list-item_img" href="#">
@@ -1982,22 +2033,22 @@
                                     <p class="favorite_content-title">BẠN ĐÃ NGHE GẦN ĐÂY</p>
                                     <p class="favorite_content-name">IU</p>
                                     <div class="favorite_content-list row">
-                                       <div class="col l-3 m-3 c-6">
+                                       <div class="col l-3 m-3 c-3">
                                           <div class="favorite_content-img">
                                              <img src="./img/nghesiyeuthich/iu/1.webp" alt="" />
                                           </div>
                                        </div>
-                                       <div class="col l-3 m-3 c-6">
+                                       <div class="col l-3 m-3 c-3">
                                           <div class="favorite_content-img">
                                              <img src="./img/nghesiyeuthich/iu/2.webp" alt="" />
                                           </div>
                                        </div>
-                                       <div class="col l-3 m-3 c-6">
+                                       <div class="col l-3 m-3 c-3">
                                           <div class="favorite_content-img">
                                              <img src="./img/nghesiyeuthich/iu/3.webp" alt="" />
                                           </div>
                                        </div>
-                                       <div class="col l-3 m-3 c-6">
+                                       <div class="col l-3 m-3 c-3">
                                           <div class="favorite_content-img">
                                              <img src="./img/nghesiyeuthich/iu/4.webp" alt="" />
                                           </div>
@@ -2010,10 +2061,22 @@
                         </div>
                      </div>
                   </div>
-
-                  <!-- copy  -->
-                  <div class="container_copy">
-                     <h3>Copy Of <a target="_blank" href="https://zingmp3.vn/">Zing Mp3</a></h3>
+               </div>
+               <div class="main_personal none">
+                  <div class="personal_user">
+                     <div class="personal_user-img">
+                        <span class="material-icons-outlined"> person </span>
+                     </div>
+                     <h3>Tên Người Dùng</h3>
+                  </div>
+                  <div class="personal_navbar-menu">
+                     <div class="personal_menu-item personal_menu-actie">TỔNG QUAN</div>
+                     <div class="personal_menu-item">BÀI HÁT</div>
+                     <div class="personal_menu-item">pLAYlIST</div>
+                     <div class="personal_menu-item"><span class="material-icons-outlined"> more_horiz </span></div>
+                  </div>
+                  <div class="personal_container">
+                     <div class="personal_overview"></div>
                   </div>
                </div>
             </div>
@@ -2182,6 +2245,8 @@
          </div>
       </div>
 
+  
+
       <!-- js slick -->
       <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
       <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
@@ -2202,5 +2267,6 @@
 
       <script src="./js/main.js"></script>
       <script src="./js/script.js"></script>
-   </body>
+      <script src="./index.js"></script>
+   </boy>
 </html>

@@ -243,7 +243,7 @@
   left: 240px;
   right: 330px;
   box-shadow: 0 3px 5px var(--sticky-header-box-shadow);
-  z-index: 99;
+  z-index: 109;
 
   .header_content {
     width: 100%;
@@ -403,7 +403,7 @@
 // Bottom Playing
 .playing-bar {
   position: fixed;
-  z-index: 102;
+  z-index: 110;
   width: 100%;
   bottom: 0;
   user-select: none;
@@ -576,7 +576,7 @@
         &:hover ion-icon {
 
           transition: 0.2s ease-in;
-          color: var(--purple-primary);
+          opacity: .7;
         }
 
         span {
@@ -1715,7 +1715,7 @@
   max-width: 7rem;
   width: 100%;
   position: fixed;
-  background-color: var(--sidebar-popup-bg);
+
   z-index: 999;
   opacity: 1;
 
@@ -1815,7 +1815,8 @@
 // Thanh navleft change is active
 .navbar-exanded-active {
   position: fixed;
-  background-color: var(--sidebar-popup-bg);
+  // background-color: var(--sidebar-popup-bg);
+  background-color: var(--layout-bg);
 
   .navbar-exanded-btn-left {
     display: none;
@@ -1887,4 +1888,24 @@
   font-size: 50px;
   color: #ffffff;
   --ionicon-stroke-width: 16px;
+}
+
+.header_content-btn-user-c {
+  display: none;
+}
+
+.main-page .container_zing-chart #myChart {
+  width: 100% !important;
+  height: auto;
+  max-width: unset;
+}
+
+.main-page .container_zing-chart .zing-chart_right {
+  max-height: unset;
+  max-width: 100%;
+  width: 100%;
+}
+
+.container_btn-icon-c {
+  display: none;
 }
