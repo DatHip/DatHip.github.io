@@ -66,6 +66,8 @@ a {
     0 1px 6px rgba(0, 0, 0, 0.3),
     inset 0 1px 1px rgba(25, 255, 255, 0.05);
   --queue-player-popup-bg: #223c75;
+  --empty-episode-icon: url(https://zmp3-static.zmdcdn.me/skins/zmp3-v6.1/images/icons/episode-empty-1.png);
+  --song-item-action: hsla(0, 0%, 100%, 0.5);
 }
 
 img {
@@ -300,9 +302,7 @@ li {
   z-index: 98;
 }
 
-.zing-chart-top1,
-.zing-chart-top2,
-.zing-chart-top3 {
+.zing-chart-top {
   font-size: 32px;
   font-weight: 900;
   line-height: 1;
@@ -311,20 +311,28 @@ li {
   font-family: "Roboto",
     sans-serif;
   white-space: nowrap;
-
+  -webkit-text-stroke: 1.5px var(--white);
 }
 
-.zing-chart-top1 {
-  -webkit-text-stroke: 1px #4a90e2;
+.zing-chart_item:first-child {
+  .zing-chart-top {
+    -webkit-text-stroke: 1.5px #4a90e2;
+  }
 }
 
-.zing-chart-top2 {
-  -webkit-text-stroke: 1px #50e3c2;
+.zing-chart_item:nth-child(2) {
+  .zing-chart-top {
+    -webkit-text-stroke: 1.5px #50e3c2;
+  }
 }
 
-.zing-chart-top3 {
-  -webkit-text-stroke: 1px #e35050;
+.zing-chart_item:nth-child(3) {
+  .zing-chart-top {
+    -webkit-text-stroke: 1.5px #e35050;
+  }
 }
+
+
 
 // loading 
 .loading {

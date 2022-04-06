@@ -253,8 +253,127 @@ let config = {
     }
   }
 };
+
+let config2 = {
+  type: 'line',
+  data: {
+    labels: lineY,
+    datasets: [
+      {
+        label: "Nhạt Nhòa Mưa Phai",
+        backgroundColor: '#fff',
+        borderColor: '#4A90E2',
+        data: [44, 40, 36, 38, 40, 32, 30, 28, 19, 16, 36],
+        fill: false,
+        tension: .4,
+        borderWidth: 3,
+        pointBorderWidth: 4,
+        pointRadius: 5,
+        pointHoverBackgroundColor: "#4A90E2",
+        pointHoverBorderColor: '#fff',
+        pointHoverBorderWidth: 3,
+        pointHoverRadius: 8,
+        oder: 1,
+
+      }, {
+        label: "Thương Em Thiệt Không ",
+        fill: false,
+        backgroundColor: '#fff',
+        borderColor: '#27BD9C',
+        data: [38, 34, 24, 29, 34, 26, 20, 19, 14, 12, 30],
+        tension: .4,
+        borderWidth: 3,
+        pointBorderWidth: 4,
+        pointRadius: 5,
+        pointHoverBackgroundColor: "#27BD9C",
+        pointHoverBorderColor: '#fff',
+        pointHoverBorderWidth: 3,
+        pointHoverRadius: 8,
+        oder: 2,
+      }, {
+        label: "Lung Lay",
+        fill: false,
+        backgroundColor: '#fff',
+        borderColor: '#A64250',
+        data: [29, 30, 20, 24, 28, 22, 17, 12, 10, 9, 22],
+        tension: .4,
+        borderWidth: 3,
+        pointBorderWidth: 4,
+        pointRadius: 5,
+        pointHoverBackgroundColor: "#A64250", 
+        pointHoverBorderColor: '#fff',
+        pointHoverBorderWidth: 3,
+        pointHoverRadius: 8,
+        oder: 3,
+      }
+    ]
+  },
+  options: {
+    plugins: {
+      legend: {
+        display:false,
+        fullSize : false,
+        maxHeight: '50',
+        align: "center",
+        fullSize: false,
+        maxWidth: "100%",
+        labels: {
+          color: 'white',
+          padding: 20,
+          font: {
+            size: 12  
+          }
+        }
+      }
+    },
+
+    responsive: true,
+    title: {
+      display: true,
+      text: 'Chart.js Line Chart'
+    },
+    tooltips: {
+      mode: 'label',
+    },
+    hover: {
+      mode: 'nearest',
+      intersect: true
+    },
+    scales: {
+      y: {
+        beginAtZero: true,
+        min: 5,
+        max: 50,
+        color: "#fff",
+        display: false,
+
+      },
+      x: {
+        beginAtZero: true,
+
+        ticks: {
+          padding: 3,
+          textStrokeColor: "#fff",
+          color: '#96979B'
+        },
+        alignToPixels: true
+      }
+
+    }
+  }
+};
+
+
 let ctx = document.getElementById("myChart").getContext("2d");
+let ctx2 = document.getElementById("myChart2").getContext("2d");
+
+
+
 window.myLine = new Chart(ctx, config);
+window.myLine = new Chart(ctx2, config2);
+
+
+
 
 // Loading page
 window.addEventListener("load", () => {

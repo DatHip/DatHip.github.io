@@ -131,8 +131,8 @@
   }
 
   .main-page .container {
-    margin-left: 3rem;
-    margin-right: 3rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
   }
 
   .main-page .container_choice .choice-btn-left {
@@ -449,7 +449,7 @@
   // center
 
   .main-page .container {
-    margin: 1.2rem 1.6rem 3rem;
+    padding: 1.2rem 1.6rem 3rem;
     // overflow-x: clip;
   }
 
@@ -932,4 +932,44 @@
       }
     }
   }
+
+  .zing-chart_item-center {
+    display: none !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .main_personal .personal_navbar-menu .personal_menu-item {
+    padding-left: .4rem;
+    padding-right: .4rem;
+
+    font-size: 1.15rem;
+    font-weight: 400;
+  }
+
+}
+
+@media (max-width: 360px) {
+
+  .main_personal .personal_navbar-menu .personal_menu-item {
+    padding-left: 2px;
+    padding-right: 2px;
+
+    font-size: 1rem;
+
+  }
+
+  .main_personal {
+
+    h3 {
+      font-size: 2rem;
+    }
+
+    .personal_overview-item .personal_overview-title-right a {
+      font-size: 1rem;
+    }
+  }
+
+
+
 }

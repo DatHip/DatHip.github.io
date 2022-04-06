@@ -1073,7 +1073,7 @@
 }
 
 .main-page .container {
-  margin: 2rem 6rem 6rem;
+  padding: 2rem 6rem 6rem;
 }
 
 .main-page .slider_list:hover .slider_list-btn-left,
@@ -2249,5 +2249,581 @@
 
 .container_btn-icon-c {
   display: none;
+}
+
+.main-page {
+  width: 100%;
+}
+
+.main_personal {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.main_personal .main_subtitle {
+  display: block;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  height: 18px;
+  overflow: hidden;
+}
+
+.main_personal .personal_user {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 5rem;
+}
+
+.main_personal .personal_user .personal_user-img {
+  padding: 1.4rem;
+  background-color: var(--alpha-bg);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 99rem;
+  margin-bottom: 1rem;
+}
+
+.main_personal .personal_user .personal_user-img span {
+  font-size: 3rem;
+}
+
+.main_personal .personal_user h3 {
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+
+.main_personal .personal_navbar-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: var(--alpha-bg);
+  padding: .4px;
+  margin-bottom: 3.6rem;
+  border-radius: 999px;
+  z-index: 100;
+}
+
+.main_personal .personal_navbar-menu .personal_menu-item {
+  padding: 0.4rem 1.4rem;
+  cursor: pointer;
+  font-size: 1.2rem;
+  border-radius: 999px;
+  color: var(--text-item-hover);
+  font-weight: 400;
+  margin: 0 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main_personal .personal_navbar-menu .personal_menu-item.active {
+  background-color: var(--purple-primary);
+}
+
+.main_personal .personal_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+.main_personal .personal_overview-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main_personal .personal_overview-item h3 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.main_personal .personal_overview-item .personal_overview-title-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main_personal .personal_overview-item .personal_overview-title-right a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: .2rem 1rem;
+  border: 1px solid var(--border-primary);
+  background-color: var(--alpha-bg);
+  margin-left: 1rem;
+  border-radius: 99rem;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.main_personal .personal_overview-item .personal_overview-title-right a:first-child {
+  padding-left: 1.4rem;
+}
+
+.main_personal .personal_overview-item .personal_overview-title-right a:last-child {
+  padding-left: 1.4rem;
+}
+
+.main_personal .personal_overview-main,
+.main_personal .personal_thesong-main,
+.main_personal .personal_playlist-main {
+  width: 100%;
+}
+
+.main_personal .personal_overview-main .personal_overview-thesong,
+.main_personal .personal_thesong-main .personal_overview-thesong,
+.main_personal .personal_playlist-main .personal_overview-thesong {
+  width: 100%;
+}
+
+.main_personal .personal_overview-main .personal_add-playlist,
+.main_personal .personal_thesong-main .personal_add-playlist,
+.main_personal .personal_playlist-main .personal_add-playlist {
+  max-width: 100%;
+  height: 100% !important;
+  color: var(--text-item-hover);
+  cursor: pointer;
+  padding-bottom: calc(100% + 45px);
+  border-radius: 4px;
+  border: 1px solid var(--border-primary);
+  font-size: 15px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main_personal .personal_overview-main .personal_add-playlist > div,
+.main_personal .personal_thesong-main .personal_add-playlist > div,
+.main_personal .personal_playlist-main .personal_add-playlist > div {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main_personal .personal_overview-main .personal_add-playlist > div span:last-child,
+.main_personal .personal_thesong-main .personal_add-playlist > div span:last-child,
+.main_personal .personal_playlist-main .personal_add-playlist > div span:last-child {
+  margin-top: .6rem;
+}
+
+.main_personal .personal_overview-main .personal_overview-playlist,
+.main_personal .personal_thesong-main .personal_overview-playlist,
+.main_personal .personal_playlist-main .personal_overview-playlist {
+  margin-top: 3.6rem;
+}
+
+.main_personal .personal_overview-main .personal_overview-container,
+.main_personal .personal_thesong-main .personal_overview-container,
+.main_personal .personal_playlist-main .personal_overview-container {
+  margin-top: 2rem;
+  width: 100%;
+}
+
+.main_personal .personal_overview-main .personal_overview-container .playing_title-hover,
+.main_personal .personal_thesong-main .personal_overview-container .playing_title-hover,
+.main_personal .personal_playlist-main .personal_overview-container .playing_title-hover {
+  display: none !important;
+}
+
+.main_personal .personal_overview-main .personal_overview-container ul,
+.main_personal .personal_thesong-main .personal_overview-container ul,
+.main_personal .personal_playlist-main .personal_overview-container ul {
+  max-height: 30rem;
+  overflow-y: auto;
+}
+
+.main_personal .personal_overview-main .personal_overview-container ul::-webkit-scrollbar-track,
+.main_personal .personal_thesong-main .personal_overview-container ul::-webkit-scrollbar-track,
+.main_personal .personal_playlist-main .personal_overview-container ul::-webkit-scrollbar-track {
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.main_personal .personal_overview-main .personal_overview-container ul::-webkit-scrollbar,
+.main_personal .personal_thesong-main .personal_overview-container ul::-webkit-scrollbar,
+.main_personal .personal_playlist-main .personal_overview-container ul::-webkit-scrollbar {
+  width: 3px;
+  cursor: pointer;
+}
+
+.main_personal .personal_overview-main .personal_overview-container ul::-webkit-scrollbar-thumb,
+.main_personal .personal_thesong-main .personal_overview-container ul::-webkit-scrollbar-thumb,
+.main_personal .personal_playlist-main .personal_overview-container ul::-webkit-scrollbar-thumb {
+  border-radius: 2px;
+  background-color: var(--scroll-bar);
+  cursor: pointer;
+}
+
+.main_personal .personal_overview-main .personal_overview-container ul::-webkit-scrollbar-thumb:hover,
+.main_personal .personal_thesong-main .personal_overview-container ul::-webkit-scrollbar-thumb:hover,
+.main_personal .personal_playlist-main .personal_overview-container ul::-webkit-scrollbar-thumb:hover {
+  opacity: 0.7;
+}
+
+.main_personal .personal_overview-main .personal_overview-container ul .player_queue-active,
+.main_personal .personal_thesong-main .personal_overview-container ul .player_queue-active,
+.main_personal .personal_playlist-main .personal_overview-container ul .player_queue-active {
+  background-color: var(--alpha-bg) !important;
+}
+
+.main_personal .personal_overview-main .personal_overview-container ul .player_queue-active .player_queue-img-hover,
+.main_personal .personal_thesong-main .personal_overview-container ul .player_queue-active .player_queue-img-hover,
+.main_personal .personal_playlist-main .personal_overview-container ul .player_queue-active .player_queue-img-hover {
+  visibility: visible !important;
+}
+
+.main_personal .personal_overview-main .personal_overview-container ul li,
+.main_personal .personal_thesong-main .personal_overview-container ul li,
+.main_personal .personal_playlist-main .personal_overview-container ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1rem 1.4rem;
+  border-radius: .4rem;
+  border-bottom: 1px solid var(--border-primary);
+}
+
+.main_personal .personal_overview-main .personal_overview-container ul li .player_queue-music,
+.main_personal .personal_thesong-main .personal_overview-container ul li .player_queue-music,
+.main_personal .personal_playlist-main .personal_overview-container ul li .player_queue-music {
+  color: var(--player-text);
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+.main_personal .personal_overview-main .personal_overview-container ul li .player_queue-name,
+.main_personal .personal_thesong-main .personal_overview-container ul li .player_queue-name,
+.main_personal .personal_playlist-main .personal_overview-container ul li .player_queue-name {
+  color: var(--text-secondary);
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.main_personal .personal_overview-main .personal_overview-container ul li:hover,
+.main_personal .personal_thesong-main .personal_overview-container ul li:hover,
+.main_personal .personal_playlist-main .personal_overview-container ul li:hover {
+  background: var(--alpha-bg);
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.main_personal .personal_overview-main .personal_overview-container ul li:hover .player_queue-img-hover,
+.main_personal .personal_thesong-main .personal_overview-container ul li:hover .player_queue-img-hover,
+.main_personal .personal_playlist-main .personal_overview-container ul li:hover .player_queue-img-hover {
+  visibility: visible !important;
+}
+
+.main_personal .personal_overview-main .personal_overview-container ul li .player_queue-item-left,
+.main_personal .personal_thesong-main .personal_overview-container ul li .player_queue-item-left,
+.main_personal .personal_playlist-main .personal_overview-container ul li .player_queue-item-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main_personal .personal_overview-main .personal_overview-container ul li .player_queue-left,
+.main_personal .personal_thesong-main .personal_overview-container ul li .player_queue-left,
+.main_personal .personal_playlist-main .personal_overview-container ul li .player_queue-left {
+  cursor: pointer;
+  border-radius: 8px;
+  width: 4.6rem;
+  height: 4.6rem;
+  border-radius: 4px;
+  overflow: hidden;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 8px;
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 8px;
+  margin-right: 1rem;
+  position: relative;
+}
+
+.main_personal .personal_overview-main .personal_overview-container ul li .player_queue-left .player_queue-img-hover,
+.main_personal .personal_thesong-main .personal_overview-container ul li .player_queue-left .player_queue-img-hover,
+.main_personal .personal_playlist-main .personal_overview-container ul li .player_queue-left .player_queue-img-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  cursor: pointer;
+  border-radius: 8px;
+  width: 4.6rem;
+  height: 4.6rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  visibility: hidden;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.main_personal .personal_overview-main .personal_overview-container ul li .player_queue-left img,
+.main_personal .personal_thesong-main .personal_overview-container ul li .player_queue-left img,
+.main_personal .personal_playlist-main .personal_overview-container ul li .player_queue-left img {
+  border-radius: 4px;
+  width: 100%;
+  height: auto;
+}
+
+.main_personal .personal_overview-main .personal_overview-container ul li .player_queue-item-right,
+.main_personal .personal_thesong-main .personal_overview-container ul li .player_queue-item-right,
+.main_personal .personal_playlist-main .personal_overview-container ul li .player_queue-item-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main_personal .personal_thesong-main .personal_overview-container ul {
+  max-height: unset;
+}
+
+.main_personal .personal_playlist-main .col {
+  margin-bottom: 24px;
+}
+
+.main_personal .personal_podcast-main .personal_podcast-img {
+  height: 120px;
+  background-size: cover;
+  width: 120px;
+  background-image: var(--empty-episode-icon);
+}
+
+.main_personal .personal_podcast-main .personal_podcast-text {
+  font-size: 14px;
+  margin-top: 16px;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.main_personal .personal_overview-main,
+.main_personal .personal_thesong-main,
+.main_personal .personal_playlist-main,
+.main_personal .personal_podcast-main {
+  display: none;
+}
+
+.main_personal .active {
+  display: block;
+}
+
+.main_personal .want_list-item {
+  height: 100%;
+}
+
+.main-page .main_topchart.container {
+  padding-top: 0;
+}
+
+.main-page .main_topchart #myChart2 {
+  margin-bottom: 4rem;
+  max-height: 360px !important;
+}
+
+.main-page .main_topchart .container_zing-chart {
+  background: unset !important;
+}
+
+.main-page .main_topchart .container_zing-chart-pos {
+  background: unset !important;
+}
+
+.main-page .main_topchart .container_zing-chart-pos {
+  margin-top: 0;
+}
+
+.main-page .main_topchart .container_zing-chart .zing-chart_top a {
+  font-size: 34px;
+}
+
+.main-page .main_topchart .recently_list-item_hover .recently_btn-hover-play span .icon_play-btn {
+  font-size: 4rem;
+}
+
+.main-page .main_topchart .zing-chart_item-center p {
+  color: var(--song-item-action);
+  font-size: 12px;
+  white-space: nowrap;
+  font-weight: 400;
+}
+
+.main-page .main_topchart .zing-chart_item-center p:hover {
+  color: var(--link-text-hover);
+  text-decoration: underline;
+}
+
+.main-page .main_topchart .container_zing-chart .zing-chart_list .zing-chart_item .zing-chart_item-right p {
+  color: var(--song-item-action);
+  font-size: 14px;
+  white-space: nowrap;
+  font-weight: 400;
+}
+
+.main-page .main_topchart .zing-chart-top {
+  margin-right: 1rem;
+}
+
+.main-page .container_zing-chart .zing-chart_list .zing-chart_item {
+  background: none;
+  border-bottom: 1px solid var(--border-primary);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+.main-page .container_zing-chart .zing-chart_list .zing-chart_item .zing-chart_item-left {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.main-page .container_zing-chart .zing-chart_list .zing-chart_item .zing-chart_item-center,
+.main-page .container_zing-chart .zing-chart_list .zing-chart_item .zing-chart_item-right {
+  width: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main-page .container_zing-chart .zing-chart_list .zing-chart_item .zing-chart_item-center {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.main-page .container_zing-chart .zing-chart_list .zing-chart_item .zing-chart_item-right {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding-right: 2rem;
 }
 /*# sourceMappingURL=style.css.map */
