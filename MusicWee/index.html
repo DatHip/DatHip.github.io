@@ -66,44 +66,44 @@
             </div>
             <div class="sider_menu sider_menu-c">
                <ul class="sider_menu-list">
-                  <li title="Cá nhân" class="sider_menu-item">
+                  <li title="Cá nhân" class="sider_menu-item sider_menu-item-acitve">
                      <a href="#">
                         <span class="material-icons-outlined"> music_video </span>
                         <span class="sider_menu-item-title">Cá Nhân</span>
                      </a>
                   </li>
-                  <li title="Khám phá" class="sider_menu-item sider_active">
+                  <li title="Khám phá" class="sider_menu-item sider_menu-item-acitve sider_active">
                      <a href="#">
                         <span class="material-icons-outlined"> album </span>
                         <span class="sider_menu-item-title">Khám Phá</span></a>
                   </li>
-                  <li title="#topchart" class="sider_menu-item">
+                  <li title="#topchart" class="sider_menu-item sider_menu-item-acitve">
                      <a href="#">
                         <span class="material-icons-two-tone"> timeline </span>
                         <span class="sider_menu-item-title">Top Chart</span></a>
                   </li>
-                  <li title="Radio" class="sider_menu-item">
+                  <!-- <li title="Radio" class="sider_menu-item sider_menu-item-acitve">
                      <a href="#" class="sider_menu"><span class="material-icons-outlined"> radio </span>
                         <span class="sider_menu-item-title">Radio</span></a>
-                  </li>
+                  </li> -->
                </ul>
             </div>
             <div class="sider_divide"></div>
             <div class="sider_menu sider_menu-bottom">
                <ul class="sider_menu-list">
-                  <li title="Nhạc mới" class="sider_menu-item">
+                  <li title="Nhạc mới" class="sider_menu-item sider_menu-item-acitve">
                      <a href="#"><span class="material-icons-outlined"> music_note </span>
                         <span class="sider_menu-item-title">Nhạc Mới</span></a>
                   </li>
-                  <li title="Thể Loại" class="sider_menu-item">
+                  <!-- <li title="Thể Loại" class="sider_menu-item sider_menu-item-acitve">
                      <a href="#"><span class="material-icons-outlined"> category </span>
                         <span class="sider_menu-item-title">Thể Loại</span></a>
-                  </li>
-                  <li title="#Top100" class="sider_menu-item">
+                  </li> -->
+                  <li title="#Top100" class="sider_menu-item sider_menu-item-acitve">
                      <a href="#"><span class="material-icons-outlined"> star_outline </span>
                         <span class="sider_menu-item-title">Top 100</span></a>
                   </li>
-                  <li title="MV" class="sider_menu-item">
+                  <li title="MV" class="sider_menu-item sider_menu-item-acitve">
                      <a href="#">
                         <span class="material-icons-outlined"> movie_filter </span>
                         <span class="sider_menu-item-title">MV</span></a>
@@ -188,7 +188,830 @@
          </header>
          <!-- Center -->
          <div class="main-page">
-            <div class="container ">
+            <!-- Main Cá Nhân  -->
+            <div class="main_personal container  main-page-item">
+               <div class="main_personal-2">
+                  <!-- top user   -->
+                  <div class="personal_user">
+                     <div class="personal_user-img">
+                        <span class="material-icons-outlined"> person </span>
+                     </div>
+                     <h3>Tên Người Dùng</h3>
+                  </div>
+
+                  <!-- nav menu -->
+                  <div class="personal_navbar-menu">
+                     <div class="personal_menu-item active">TỔNG QUAN</div>
+                     <div class="personal_menu-item ">BÀI HÁT</div>
+                     <div class="personal_menu-item">PLAYlIST</div>
+                     <div class="personal_menu-item">PODCAST</div>
+                     <div class="personal_menu-item">
+                        <span class="material-icons-outlined"> more_horiz </span>
+                     </div>
+                  </div>
+
+                  <!-- container -->
+                  <div class="personal_container ">
+                     <!-- Tổng quan -->
+                     <div class="personal_overview-main personal_container-main active">
+                        <div class="personal_overview-thesong">
+                           <div class="personal_overview-item personal_overview">
+                              <h3>Bài Hát</h3>
+                              <div class=" personal_overview-title-right">
+                                 <a href="#" class="personal_play-all">
+                                    Phát Tất Cả
+                                    <span class="material-icons">
+                                       play_arrow
+                                    </span>
+                                 </a>
+                                 <a href="#">Tất Cả <span class="material-icons-outlined">
+                                       chevron_right
+                                    </span></a>
+                              </div>
+                           </div>
+                           <div class="personal_overview-container ">
+                              <ul>
+                                 <li class="player_queue-item player_queue-active">
+                                    <div class="player_queue-item-left">
+                                       <div class="player_queue-left">
+                                          <img class="player_queue-img" src="./img/casy/adede.webp" alt="" />
+                                          <div class="player_queue-img-hover">
+                                             <span class="material-icons"> play_arrow </span>
+                                             <!-- <span class="material-icons"> pause </span> -->
+                                          </div>
+                                       </div>
+                                       <div class="player_queue-music-info">
+                                          <div class="player_queue-music">Easy On Me</div>
+                                          <div class="player_queue-name">Adele</div>
+                                       </div>
+                                    </div>
+
+                                    <div class="player_queue-item-right">
+                                       <div class="player_queue-btn player_btn">
+                                          <span class="material-icons-outlined"> favorite_border </span>
+                                          <span class="playing_title-hover">Thêm vào thư viện </span>
+                                       </div>
+                                       <div class="player_queue-btn player_btn">
+                                          <span class="material-icons-outlined"> more_horiz </span>
+                                          <span class="playing_title-hover">Xem thêm</span>
+                                       </div>
+                                    </div>
+                                 </li>
+                                 <li class="player_queue-item">
+                                    <div class="player_queue-item-left">
+                                       <div class="player_queue-left">
+                                          <img class="player_queue-img" src="./img/casy/adede.webp" alt="" />
+                                          <div class="player_queue-img-hover">
+                                             <span class="material-icons"> play_arrow </span>
+                                             <!-- <span class="material-icons"> pause </span> -->
+                                          </div>
+                                       </div>
+                                       <div class="player_queue-music-info">
+                                          <div class="player_queue-music">Easy On Me</div>
+                                          <div class="player_queue-name">Adele</div>
+                                       </div>
+                                    </div>
+
+                                    <div class="player_queue-item-right">
+                                       <div class="player_queue-btn player_btn">
+                                          <span class="material-icons-outlined"> favorite_border </span>
+                                          <span class="playing_title-hover">Thêm vào thư viện </span>
+                                       </div>
+                                       <div class="player_queue-btn player_btn">
+                                          <span class="material-icons-outlined"> more_horiz </span>
+                                          <span class="playing_title-hover">Xem thêm</span>
+                                       </div>
+                                    </div>
+                                 </li>
+                                 <li class="player_queue-item">
+                                    <div class="player_queue-item-left">
+                                       <div class="player_queue-left">
+                                          <img class="player_queue-img" src="./img/casy/adede.webp" alt="" />
+                                          <div class="player_queue-img-hover">
+                                             <span class="material-icons"> play_arrow </span>
+                                             <!-- <span class="material-icons"> pause </span> -->
+                                          </div>
+                                       </div>
+                                       <div class="player_queue-music-info">
+                                          <div class="player_queue-music">Easy On Me</div>
+                                          <div class="player_queue-name">Adele</div>
+                                       </div>
+                                    </div>
+
+                                    <div class="player_queue-item-right">
+                                       <div class="player_queue-btn player_btn">
+                                          <span class="material-icons-outlined"> favorite_border </span>
+                                          <span class="playing_title-hover">Thêm vào thư viện </span>
+                                       </div>
+                                       <div class="player_queue-btn player_btn">
+                                          <span class="material-icons-outlined"> more_horiz </span>
+                                          <span class="playing_title-hover">Xem thêm</span>
+                                       </div>
+                                    </div>
+                                 </li>
+                                 <li class="player_queue-item ">
+                                    <div class="player_queue-item-left">
+                                       <div class="player_queue-left">
+                                          <img class="player_queue-img" src="./img/casy/adede.webp" alt="" />
+                                          <div class="player_queue-img-hover">
+                                             <span class="material-icons"> play_arrow </span>
+                                             <!-- <span class="material-icons"> pause </span> -->
+                                          </div>
+                                       </div>
+                                       <div class="player_queue-music-info">
+                                          <div class="player_queue-music">Easy On Me</div>
+                                          <div class="player_queue-name">Adele</div>
+                                       </div>
+                                    </div>
+
+                                    <div class="player_queue-item-right">
+                                       <div class="player_queue-btn player_btn">
+                                          <span class="material-icons-outlined"> favorite_border </span>
+                                          <span class="playing_title-hover">Thêm vào thư viện </span>
+                                       </div>
+                                       <div class="player_queue-btn player_btn">
+                                          <span class="material-icons-outlined"> more_horiz </span>
+                                          <span class="playing_title-hover">Xem thêm</span>
+                                       </div>
+                                    </div>
+                                 </li>
+                                 <li class="player_queue-item">
+                                    <div class="player_queue-item-left">
+                                       <div class="player_queue-left">
+                                          <img class="player_queue-img" src="./img/casy/adede.webp" alt="" />
+                                          <div class="player_queue-img-hover">
+                                             <span class="material-icons"> play_arrow </span>
+                                             <!-- <span class="material-icons"> pause </span> -->
+                                          </div>
+                                       </div>
+                                       <div class="player_queue-music-info">
+                                          <div class="player_queue-music">Easy On Me</div>
+                                          <div class="player_queue-name">Adele</div>
+                                       </div>
+                                    </div>
+
+                                    <div class="player_queue-item-right">
+                                       <div class="player_queue-btn player_btn">
+                                          <span class="material-icons-outlined"> favorite_border </span>
+                                          <span class="playing_title-hover">Thêm vào thư viện </span>
+                                       </div>
+                                       <div class="player_queue-btn player_btn">
+                                          <span class="material-icons-outlined"> more_horiz </span>
+                                          <span class="playing_title-hover">Xem thêm</span>
+                                       </div>
+                                    </div>
+                                 </li>
+                                 <li class="player_queue-item">
+                                    <div class="player_queue-item-left">
+                                       <div class="player_queue-left">
+                                          <img class="player_queue-img" src="./img/casy/adede.webp" alt="" />
+                                          <div class="player_queue-img-hover">
+                                             <span class="material-icons"> play_arrow </span>
+                                             <!-- <span class="material-icons"> pause </span> -->
+                                          </div>
+                                       </div>
+                                       <div class="player_queue-music-info">
+                                          <div class="player_queue-music">Easy On Me</div>
+                                          <div class="player_queue-name">Adele</div>
+                                       </div>
+                                    </div>
+
+                                    <div class="player_queue-item-right">
+                                       <div class="player_queue-btn player_btn">
+                                          <span class="material-icons-outlined"> favorite_border </span>
+                                          <span class="playing_title-hover">Thêm vào thư viện </span>
+                                       </div>
+                                       <div class="player_queue-btn player_btn">
+                                          <span class="material-icons-outlined"> more_horiz </span>
+                                          <span class="playing_title-hover">Xem thêm</span>
+                                       </div>
+                                    </div>
+                                 </li>
+                              </ul>
+                           </div>
+                        </div>
+
+                        <div class="personal_overview-playlist">
+                           <div class="personal_overview-item personal_overview">
+                              <h3>Playlist</h3>
+                              <div class=" personal_overview-title-right">
+                                 <a href="#">Tất Cả <span class="material-icons-outlined">
+                                       chevron_right
+                                    </span></a>
+                              </div>
+                           </div>
+                           <div class="personal_overview-container">
+                              <div class="want_list row">
+                                 <div class="want_list-item col l-2-4 m-3 c-5" title="Hits Quốc Dân">
+                                    <div class="personal_add-playlist">
+                                       <div class="">
+                                          <span class="material-icons-outlined">
+                                             add
+                                          </span>
+
+                                          <span>
+                                             Tạo Playlist Mới
+                                          </span>
+
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="want_list-item col l-2-4 m-3 c-5" title="Hits Quốc Dân">
+                                    <a class="want_list-item-link main-page_list-item main_page-hover" href="#">
+                                       <div class="want_list-item-link main-page_list-item_img" href="#">
+                                          <img src="./img/cothebanmuonnghe/nghelaghien.webp" alt="taylor" />
+                                       </div>
+                                       <div class="recently_list-item_hover">
+                                          <div class="recently_btn-hover player_btn">
+                                             <span class="material-icons-outlined"> favorite_border </span>
+                                             <span class="playing_title-hover">Thêm vào thư viện </span>
+                                          </div>
+                                          <div class="recently_btn-hover recently_btn-hover-play">
+                                             <span>
+                                                <ion-icon class="icon_play-btn" name="play-circle-outline"></ion-icon>
+                                             </span>
+                                             <!-- <span> <ion-icon class="icon_pause-btn" name="pause-circle-outline"></ion-icon> </span> -->
+                                          </div>
+                                          <div class="recently_btn-hover player_btn">
+                                             <span class="material-icons-outlined"> more_horiz </span>
+                                             <span class="playing_title-hover">Xem thêm</span>
+                                          </div>
+                                       </div>
+                                    </a>
+                                    <div class="want_list-item-title">
+                                       <a class="main_title-text" title="Hits Quốc Dân" href="#">Nghe Là Ghiền</a>
+                                       <div class="main_subtitle">
+                                          <a href="#">The Kid LAROI</a>, <a href="#">Justin Bieber</a>, <a href="#">Imagine Dragons</a>...
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="want_list-item col l-2-4 m-3 c-5" title="Hits Quốc Dân">
+                                    <a class="want_list-item-link main-page_list-item main_page-hover" href="#">
+                                       <div class="want_list-item-link main-page_list-item_img" href="#">
+                                          <img src="./img/cothebanmuonnghe/singlongusuk.webp" alt="taylor" />
+                                       </div>
+                                       <div class="recently_list-item_hover">
+                                          <div class="recently_btn-hover player_btn">
+                                             <span class="material-icons-outlined"> favorite_border </span>
+                                             <span class="playing_title-hover">Thêm vào thư viện </span>
+                                          </div>
+                                          <div class="recently_btn-hover recently_btn-hover-play">
+                                             <span>
+                                                <ion-icon class="icon_play-btn" name="play-circle-outline"></ion-icon>
+                                             </span>
+                                             <!-- <span> <ion-icon class="icon_pause-btn" name="pause-circle-outline"></ion-icon> </span> -->
+                                          </div>
+                                          <div class="recently_btn-hover player_btn">
+                                             <span class="material-icons-outlined"> more_horiz </span>
+                                             <span class="playing_title-hover">Xem thêm</span>
+                                          </div>
+                                       </div>
+                                    </a>
+                                    <div class="want_list-item-title">
+                                       <a class="main_title-text" title="Hits Quốc Dân" href="#">US-UK: Sing A Long </a>
+                                       <div class="main_subtitle">
+                                          <a href="#">Katy Perry</a>, <a href="#">Taylor Swift</a>, <a href="#">Maroon 5</a>...
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="want_list-item col l-2-4 m-3 c-5" title="Hits Quốc Dân">
+                                    <a class="want_list-item-link main-page_list-item main_page-hover" href="#">
+                                       <div class="want_list-item-link main-page_list-item_img" href="#">
+                                          <img src="./img/cothebanmuonnghe/todaysedmhits.webp" alt="taylor" />
+                                       </div>
+                                       <div class="recently_list-item_hover">
+                                          <div class="recently_btn-hover player_btn">
+                                             <span class="material-icons-outlined"> favorite_border </span>
+                                             <span class="playing_title-hover">Thêm vào thư viện </span>
+                                          </div>
+                                          <div class="recently_btn-hover recently_btn-hover-play">
+                                             <span>
+                                                <ion-icon class="icon_play-btn" name="play-circle-outline"></ion-icon>
+                                             </span>
+                                             <!-- <span> <ion-icon class="icon_pause-btn" name="pause-circle-outline"></ion-icon> </span> -->
+                                          </div>
+                                          <div class="recently_btn-hover player_btn">
+                                             <span class="material-icons-outlined"> more_horiz </span>
+                                             <span class="playing_title-hover">Xem thêm</span>
+                                          </div>
+                                       </div>
+                                    </a>
+                                    <div class="want_list-item-title">
+                                       <a class="main_title-text" title="Hits Quốc Dân" href="#">Today's EDM Hits</a>
+                                       <div class="main_subtitle">
+                                          <a href="#">The Chainsmokers</a>, <a href="#">Alan Walker</a>, <a href="#">Alesso</a>...
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="want_list-item col l-2-4 m-0 c-5" title="Hits Quốc Dân">
+                                    <a class="want_list-item-link main-page_list-item main_page-hover" href="#">
+                                       <div class="want_list-item-link main-page_list-item_img" href="#">
+                                          <img src="./img/cothebanmuonnghe/usukTodayTophits.webp" alt="taylor" />
+                                       </div>
+                                       <div class="recently_list-item_hover">
+                                          <div class="recently_btn-hover player_btn">
+                                             <span class="material-icons-outlined"> favorite_border </span>
+                                             <span class="playing_title-hover">Thêm vào thư viện </span>
+                                          </div>
+                                          <div class="recently_btn-hover recently_btn-hover-play">
+                                             <span>
+                                                <ion-icon class="icon_play-btn" name="play-circle-outline"></ion-icon>
+                                             </span>
+                                             <!-- <span> <ion-icon class="icon_pause-btn" name="pause-circle-outline"></ion-icon> </span> -->
+                                          </div>
+                                          <div class="recently_btn-hover player_btn">
+                                             <span class="material-icons-outlined"> more_horiz </span>
+                                             <span class="playing_title-hover">Xem thêm</span>
+                                          </div>
+                                       </div>
+                                    </a>
+                                    <div class="want_list-item-title">
+                                       <a class="main_title-text" title="Hits Quốc Dân" href="#">Today's Top Hits</a>
+                                       <div class="main_subtitle">
+                                          <a href="#">Glass Animals</a>, <a href="#">Adele</a>, <a href="#">Doja Cat</a>...
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+
+                     <div class="personal_thesong-main personal_container-main ">
+                        <div class="personal_overview-thesong">
+                           <div class="personal_overview-item personal_overview">
+                              <h3>Bài Hát</h3>
+                              <div class=" personal_overview-title-right">
+                                 <a href="#" class="personal_play-all">
+                                    Phát Tất Cả
+                                    <span class="material-icons">
+                                       play_arrow
+                                    </span>
+                                 </a>
+
+                              </div>
+                           </div>
+                           <div class="personal_overview-container ">
+                              <ul>
+                                 <li class="player_queue-item player_queue-active">
+                                    <div class="player_queue-item-left">
+                                       <div class="player_queue-left">
+                                          <img class="player_queue-img" src="./img/casy/adede.webp" alt="" />
+                                          <div class="player_queue-img-hover">
+                                             <span class="material-icons"> play_arrow </span>
+                                             <!-- <span class="material-icons"> pause </span> -->
+                                          </div>
+                                       </div>
+                                       <div class="player_queue-music-info">
+                                          <div class="player_queue-music">Easy On Me</div>
+                                          <div class="player_queue-name">Adele</div>
+                                       </div>
+                                    </div>
+
+                                    <div class="player_queue-item-right">
+                                       <div class="player_queue-btn player_btn">
+                                          <span class="material-icons-outlined"> favorite_border </span>
+                                          <span class="playing_title-hover">Thêm vào thư viện </span>
+                                       </div>
+                                       <div class="player_queue-btn player_btn">
+                                          <span class="material-icons-outlined"> more_horiz </span>
+                                          <span class="playing_title-hover">Xem thêm</span>
+                                       </div>
+                                    </div>
+                                 </li>
+                                 <li class="player_queue-item">
+                                    <div class="player_queue-item-left">
+                                       <div class="player_queue-left">
+                                          <img class="player_queue-img" src="./img/casy/adede.webp" alt="" />
+                                          <div class="player_queue-img-hover">
+                                             <span class="material-icons"> play_arrow </span>
+                                             <!-- <span class="material-icons"> pause </span> -->
+                                          </div>
+                                       </div>
+                                       <div class="player_queue-music-info">
+                                          <div class="player_queue-music">Easy On Me</div>
+                                          <div class="player_queue-name">Adele</div>
+                                       </div>
+                                    </div>
+
+                                    <div class="player_queue-item-right">
+                                       <div class="player_queue-btn player_btn">
+                                          <span class="material-icons-outlined"> favorite_border </span>
+                                          <span class="playing_title-hover">Thêm vào thư viện </span>
+                                       </div>
+                                       <div class="player_queue-btn player_btn">
+                                          <span class="material-icons-outlined"> more_horiz </span>
+                                          <span class="playing_title-hover">Xem thêm</span>
+                                       </div>
+                                    </div>
+                                 </li>
+                                 <li class="player_queue-item">
+                                    <div class="player_queue-item-left">
+                                       <div class="player_queue-left">
+                                          <img class="player_queue-img" src="./img/casy/adede.webp" alt="" />
+                                          <div class="player_queue-img-hover">
+                                             <span class="material-icons"> play_arrow </span>
+                                             <!-- <span class="material-icons"> pause </span> -->
+                                          </div>
+                                       </div>
+                                       <div class="player_queue-music-info">
+                                          <div class="player_queue-music">Easy On Me</div>
+                                          <div class="player_queue-name">Adele</div>
+                                       </div>
+                                    </div>
+
+                                    <div class="player_queue-item-right">
+                                       <div class="player_queue-btn player_btn">
+                                          <span class="material-icons-outlined"> favorite_border </span>
+                                          <span class="playing_title-hover">Thêm vào thư viện </span>
+                                       </div>
+                                       <div class="player_queue-btn player_btn">
+                                          <span class="material-icons-outlined"> more_horiz </span>
+                                          <span class="playing_title-hover">Xem thêm</span>
+                                       </div>
+                                    </div>
+                                 </li>
+                                 <li class="player_queue-item ">
+                                    <div class="player_queue-item-left">
+                                       <div class="player_queue-left">
+                                          <img class="player_queue-img" src="./img/casy/adede.webp" alt="" />
+                                          <div class="player_queue-img-hover">
+                                             <span class="material-icons"> play_arrow </span>
+                                             <!-- <span class="material-icons"> pause </span> -->
+                                          </div>
+                                       </div>
+                                       <div class="player_queue-music-info">
+                                          <div class="player_queue-music">Easy On Me</div>
+                                          <div class="player_queue-name">Adele</div>
+                                       </div>
+                                    </div>
+
+                                    <div class="player_queue-item-right">
+                                       <div class="player_queue-btn player_btn">
+                                          <span class="material-icons-outlined"> favorite_border </span>
+                                          <span class="playing_title-hover">Thêm vào thư viện </span>
+                                       </div>
+                                       <div class="player_queue-btn player_btn">
+                                          <span class="material-icons-outlined"> more_horiz </span>
+                                          <span class="playing_title-hover">Xem thêm</span>
+                                       </div>
+                                    </div>
+                                 </li>
+                                 <li class="player_queue-item">
+                                    <div class="player_queue-item-left">
+                                       <div class="player_queue-left">
+                                          <img class="player_queue-img" src="./img/casy/adede.webp" alt="" />
+                                          <div class="player_queue-img-hover">
+                                             <span class="material-icons"> play_arrow </span>
+                                             <!-- <span class="material-icons"> pause </span> -->
+                                          </div>
+                                       </div>
+                                       <div class="player_queue-music-info">
+                                          <div class="player_queue-music">Easy On Me</div>
+                                          <div class="player_queue-name">Adele</div>
+                                       </div>
+                                    </div>
+
+                                    <div class="player_queue-item-right">
+                                       <div class="player_queue-btn player_btn">
+                                          <span class="material-icons-outlined"> favorite_border </span>
+                                          <span class="playing_title-hover">Thêm vào thư viện </span>
+                                       </div>
+                                       <div class="player_queue-btn player_btn">
+                                          <span class="material-icons-outlined"> more_horiz </span>
+                                          <span class="playing_title-hover">Xem thêm</span>
+                                       </div>
+                                    </div>
+                                 </li>
+                                 <li class="player_queue-item">
+                                    <div class="player_queue-item-left">
+                                       <div class="player_queue-left">
+                                          <img class="player_queue-img" src="./img/casy/adede.webp" alt="" />
+                                          <div class="player_queue-img-hover">
+                                             <span class="material-icons"> play_arrow </span>
+                                             <!-- <span class="material-icons"> pause </span> -->
+                                          </div>
+                                       </div>
+                                       <div class="player_queue-music-info">
+                                          <div class="player_queue-music">Easy On Me</div>
+                                          <div class="player_queue-name">Adele</div>
+                                       </div>
+                                    </div>
+
+                                    <div class="player_queue-item-right">
+                                       <div class="player_queue-btn player_btn">
+                                          <span class="material-icons-outlined"> favorite_border </span>
+                                          <span class="playing_title-hover">Thêm vào thư viện </span>
+                                       </div>
+                                       <div class="player_queue-btn player_btn">
+                                          <span class="material-icons-outlined"> more_horiz </span>
+                                          <span class="playing_title-hover">Xem thêm</span>
+                                       </div>
+                                    </div>
+                                 </li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="personal_playlist-main personal_container-main ">
+                        <div class="personal_overview-container">
+                           <div class="want_list row">
+                              <div class="want_list-item col l-2-4 m-3 c-5" title="Hits Quốc Dân">
+                                 <div class="personal_add-playlist">
+                                    <div class="">
+                                       <span class="material-icons-outlined">
+                                          add
+                                       </span>
+
+                                       <span>
+                                          Tạo Playlist Mới
+                                       </span>
+
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="want_list-item col l-2-4 m-3 c-5" title="Hits Quốc Dân">
+                                 <a class="want_list-item-link main-page_list-item main_page-hover" href="#">
+                                    <div class="want_list-item-link main-page_list-item_img" href="#">
+                                       <img src="./img/cothebanmuonnghe/nghelaghien.webp" alt="taylor" />
+                                    </div>
+                                    <div class="recently_list-item_hover">
+                                       <div class="recently_btn-hover player_btn">
+                                          <span class="material-icons-outlined"> favorite_border </span>
+                                          <span class="playing_title-hover">Thêm vào thư viện </span>
+                                       </div>
+                                       <div class="recently_btn-hover recently_btn-hover-play">
+                                          <span>
+                                             <ion-icon class="icon_play-btn" name="play-circle-outline"></ion-icon>
+                                          </span>
+                                          <!-- <span> <ion-icon class="icon_pause-btn" name="pause-circle-outline"></ion-icon> </span> -->
+                                       </div>
+                                       <div class="recently_btn-hover player_btn">
+                                          <span class="material-icons-outlined"> more_horiz </span>
+                                          <span class="playing_title-hover">Xem thêm</span>
+                                       </div>
+                                    </div>
+                                 </a>
+                                 <div class="want_list-item-title">
+                                    <a class="main_title-text" title="Hits Quốc Dân" href="#">Nghe Là Ghiền</a>
+                                    <div class="main_subtitle">
+                                       <a href="#">The Kid LAROI</a>, <a href="#">Justin Bieber</a>, <a href="#">Imagine Dragons</a>...
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="want_list-item col l-2-4 m-3 c-5" title="Hits Quốc Dân">
+                                 <a class="want_list-item-link main-page_list-item main_page-hover" href="#">
+                                    <div class="want_list-item-link main-page_list-item_img" href="#">
+                                       <img src="./img/cothebanmuonnghe/singlongusuk.webp" alt="taylor" />
+                                    </div>
+                                    <div class="recently_list-item_hover">
+                                       <div class="recently_btn-hover player_btn">
+                                          <span class="material-icons-outlined"> favorite_border </span>
+                                          <span class="playing_title-hover">Thêm vào thư viện </span>
+                                       </div>
+                                       <div class="recently_btn-hover recently_btn-hover-play">
+                                          <span>
+                                             <ion-icon class="icon_play-btn" name="play-circle-outline"></ion-icon>
+                                          </span>
+                                          <!-- <span> <ion-icon class="icon_pause-btn" name="pause-circle-outline"></ion-icon> </span> -->
+                                       </div>
+                                       <div class="recently_btn-hover player_btn">
+                                          <span class="material-icons-outlined"> more_horiz </span>
+                                          <span class="playing_title-hover">Xem thêm</span>
+                                       </div>
+                                    </div>
+                                 </a>
+                                 <div class="want_list-item-title">
+                                    <a class="main_title-text" title="Hits Quốc Dân" href="#">US-UK: Sing A Long </a>
+                                    <div class="main_subtitle">
+                                       <a href="#">Katy Perry</a>, <a href="#">Taylor Swift</a>, <a href="#">Maroon 5</a>...
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="want_list-item col l-2-4 m-3 c-5" title="Hits Quốc Dân">
+                                 <a class="want_list-item-link main-page_list-item main_page-hover" href="#">
+                                    <div class="want_list-item-link main-page_list-item_img" href="#">
+                                       <img src="./img/cothebanmuonnghe/todaysedmhits.webp" alt="taylor" />
+                                    </div>
+                                    <div class="recently_list-item_hover">
+                                       <div class="recently_btn-hover player_btn">
+                                          <span class="material-icons-outlined"> favorite_border </span>
+                                          <span class="playing_title-hover">Thêm vào thư viện </span>
+                                       </div>
+                                       <div class="recently_btn-hover recently_btn-hover-play">
+                                          <span>
+                                             <ion-icon class="icon_play-btn" name="play-circle-outline"></ion-icon>
+                                          </span>
+                                          <!-- <span> <ion-icon class="icon_pause-btn" name="pause-circle-outline"></ion-icon> </span> -->
+                                       </div>
+                                       <div class="recently_btn-hover player_btn">
+                                          <span class="material-icons-outlined"> more_horiz </span>
+                                          <span class="playing_title-hover">Xem thêm</span>
+                                       </div>
+                                    </div>
+                                 </a>
+                                 <div class="want_list-item-title">
+                                    <a class="main_title-text" title="Hits Quốc Dân" href="#">Today's EDM Hits</a>
+                                    <div class="main_subtitle">
+                                       <a href="#">The Chainsmokers</a>, <a href="#">Alan Walker</a>, <a href="#">Alesso</a>...
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="want_list-item col l-2-4 m-0 c-5" title="Hits Quốc Dân">
+                                 <a class="want_list-item-link main-page_list-item main_page-hover" href="#">
+                                    <div class="want_list-item-link main-page_list-item_img" href="#">
+                                       <img src="./img/cothebanmuonnghe/usukTodayTophits.webp" alt="taylor" />
+                                    </div>
+                                    <div class="recently_list-item_hover">
+                                       <div class="recently_btn-hover player_btn">
+                                          <span class="material-icons-outlined"> favorite_border </span>
+                                          <span class="playing_title-hover">Thêm vào thư viện </span>
+                                       </div>
+                                       <div class="recently_btn-hover recently_btn-hover-play">
+                                          <span>
+                                             <ion-icon class="icon_play-btn" name="play-circle-outline"></ion-icon>
+                                          </span>
+                                          <!-- <span> <ion-icon class="icon_pause-btn" name="pause-circle-outline"></ion-icon> </span> -->
+                                       </div>
+                                       <div class="recently_btn-hover player_btn">
+                                          <span class="material-icons-outlined"> more_horiz </span>
+                                          <span class="playing_title-hover">Xem thêm</span>
+                                       </div>
+                                    </div>
+                                 </a>
+                                 <div class="want_list-item-title">
+                                    <a class="main_title-text" title="Hits Quốc Dân" href="#">Today's Top Hits</a>
+                                    <div class="main_subtitle">
+                                       <a href="#">Glass Animals</a>, <a href="#">Adele</a>, <a href="#">Doja Cat</a>...
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="xones_list-item col l-2-4 m-3 c-5" title="Asia Rap">
+                                 <a class="xones_list-item-link main-page_list-item main_page-hover" href="#">
+                                    <div class="xones_list-item-link main-page_list-item_img" href="#">
+                                       <img src="./img/xone/asiaRap.webp" alt="taylor" />
+                                    </div>
+                                    <div class="recently_list-item_hover">
+                                       <div class="recently_btn-hover player_btn">
+                                          <span class="material-icons-outlined"> favorite_border </span>
+                                          <span class="playing_title-hover">Thêm vào thư viện </span>
+                                       </div>
+                                       <div class="recently_btn-hover recently_btn-hover-play">
+                                          <span>
+                                             <ion-icon class="icon_play-btn" name="play-circle-outline"></ion-icon>
+                                          </span>
+                                          <!-- <span> <ion-icon class="icon_pause-btn" name="pause-circle-outline"></ion-icon> </span> -->
+                                       </div>
+                                       <div class="recently_btn-hover player_btn">
+                                          <span class="material-icons-outlined"> more_horiz </span>
+                                          <span class="playing_title-hover">Xem thêm</span>
+                                       </div>
+                                    </div>
+                                 </a>
+                                 <div class="xones_list-item-title">
+                                    <a class="main_title-text" title="Asia Rap" href="#">Asia Rap</a>
+                                    <div class="main_subtitle">
+                                       <p>RAPPER Châu Á vươn ra thế giới</p>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="xones_list-item col l-2-4 m-3 c-5" title="Back In Time - Pop's HITs">
+                                 <a class="xones_list-item-link main-page_list-item main_page-hover" href="#">
+                                    <div class="xones_list-item-link main-page_list-item_img" href="#">
+                                       <img src="./img/xone/backintime.webp" alt="taylor" />
+                                    </div>
+                                    <div class="recently_list-item_hover">
+                                       <div class="recently_btn-hover player_btn">
+                                          <span class="material-icons-outlined"> favorite_border </span>
+                                          <span class="playing_title-hover">Thêm vào thư viện </span>
+                                       </div>
+                                       <div class="recently_btn-hover recently_btn-hover-play">
+                                          <span>
+                                             <ion-icon class="icon_play-btn" name="play-circle-outline"></ion-icon>
+                                          </span>
+                                          <!-- <span> <ion-icon class="icon_pause-btn" name="pause-circle-outline"></ion-icon> </span> -->
+                                       </div>
+                                       <div class="recently_btn-hover player_btn">
+                                          <span class="material-icons-outlined"> more_horiz </span>
+                                          <span class="playing_title-hover">Xem thêm</span>
+                                       </div>
+                                    </div>
+                                 </a>
+                                 <div class="xones_list-item-title">
+                                    <a class="main_title-text" title="Back In Time - Pop's HITs" href="#">Back In Time - Pop's HITs</a>
+                                    <div class="main_subtitle">
+                                       <p>Top nhạc US-UK huyền thoại</p>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="xones_list-item col l-2-4 m-3 c-5" title="Best R&B HITs">
+                                 <a class="xones_list-item-link main-page_list-item main_page-hover" href="#">
+                                    <div class="xones_list-item-link main-page_list-item_img" href="#">
+                                       <img src="./img/xone/bestrbhits.webp" alt="Best R&B HITs" />
+                                    </div>
+                                    <div class="recently_list-item_hover">
+                                       <div class="recently_btn-hover player_btn">
+                                          <span class="material-icons-outlined"> favorite_border </span>
+                                          <span class="playing_title-hover">Thêm vào thư viện </span>
+                                       </div>
+                                       <div class="recently_btn-hover recently_btn-hover-play">
+                                          <span>
+                                             <ion-icon class="icon_play-btn" name="play-circle-outline"></ion-icon>
+                                          </span>
+                                          <!-- <span> <ion-icon class="icon_pause-btn" name="pause-circle-outline"></ion-icon> </span> -->
+                                       </div>
+                                       <div class="recently_btn-hover player_btn">
+                                          <span class="material-icons-outlined"> more_horiz </span>
+                                          <span class="playing_title-hover">Xem thêm</span>
+                                       </div>
+                                    </div>
+                                 </a>
+                                 <div class="xones_list-item-title">
+                                    <a class="main_title-text" title="Best RnB HITs" href="#">Best RnB HITs</a>
+                                    <div class="main_subtitle">
+                                       <p>Những bài hát RnB thịnh hành nhất</p>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="xones_list-item col l-2-4 m-3 c-5" title="feedinggood">
+                                 <a class="xones_list-item-link main-page_list-item main_page-hover" href="#">
+                                    <div class="xones_list-item-link main-page_list-item_img" href="#">
+                                       <img src="./img/xone/feedinggood.webp" alt="feedinggood" />
+                                    </div>
+                                    <div class="recently_list-item_hover">
+                                       <div class="recently_btn-hover player_btn">
+                                          <span class="material-icons-outlined"> favorite_border </span>
+                                          <span class="playing_title-hover">Thêm vào thư viện </span>
+                                       </div>
+                                       <div class="recently_btn-hover recently_btn-hover-play">
+                                          <span>
+                                             <ion-icon class="icon_play-btn" name="play-circle-outline"></ion-icon>
+                                          </span>
+                                          <!-- <span> <ion-icon class="icon_pause-btn" name="pause-circle-outline"></ion-icon> </span> -->
+                                       </div>
+                                       <div class="recently_btn-hover player_btn">
+                                          <span class="material-icons-outlined"> more_horiz </span>
+                                          <span class="playing_title-hover">Xem thêm</span>
+                                       </div>
+                                    </div>
+                                 </a>
+                                 <div class="xones_list-item-title">
+                                    <a class="main_title-text" title="FEELING GOOD" href="#">FEELING GOOD</a>
+                                    <div class="main_subtitle">
+                                       <p>Marie Webb, Taeyeon, Lil Nas X....</p>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="xones_list-item col l-2-4 m-0 c-5" title="HWASA X ONEWE">
+                                 <a class="xones_list-item-link main-page_list-item main_page-hover" href="#">
+                                    <div class="xones_list-item-link main-page_list-item_img" href="#">
+                                       <img src="./img/xone/hwasaXonewe.webp" alt="HWASA X ONEWE" />
+                                    </div>
+                                    <div class="recently_list-item_hover">
+                                       <div class="recently_btn-hover player_btn">
+                                          <span class="material-icons-outlined"> favorite_border </span>
+                                          <span class="playing_title-hover">Thêm vào thư viện </span>
+                                       </div>
+                                       <div class="recently_btn-hover recently_btn-hover-play">
+                                          <span>
+                                             <ion-icon class="icon_play-btn" name="play-circle-outline"></ion-icon>
+                                          </span>
+                                          <!-- <span> <ion-icon class="icon_pause-btn" name="pause-circle-outline"></ion-icon> </span> -->
+                                       </div>
+                                       <div class="recently_btn-hover player_btn">
+                                          <span class="material-icons-outlined"> more_horiz </span>
+                                          <span class="playing_title-hover">Xem thêm</span>
+                                       </div>
+                                    </div>
+                                 </a>
+                                 <div class="xones_list-item-title">
+                                    <a class="main_title-text" title="HWASA X ONEWE" href="#">HWASA X ONEWE</a>
+                                    <div class="main_subtitle">
+                                       <p>IDOL GEN 3 khuấy đảo K-Pop</p>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+
+                     <div class="personal_podcast-main personal_container-main ">
+                        <div class="personal_podcast-img">
+
+                        </div>
+                        <div class="personal_podcast-text">
+                           Không có tập mới
+                        </div>
+                     </div>
+                  </div>
+
+
+               </div>
+
+            </div>
+
+            <!-- Main Home -->
+            <div class="main_home container main-page-item active ">
                <!-- Thanh Slider -->
                <div class="slider_list">
                   <div class="slider_list-item">
@@ -731,8 +1554,8 @@
                         <div class="todaychoice_list-item-title">
                            <a class="main_title-text" title="Anime Now" href="#">Anime Now</a>
                            <div class="main_subtitle">
-                              <p>Nhạc Anime mới nhất ở thời điểm</p>
-                              <p>hiện tại có ngay tại đây</p>
+                              <p>Nhạc Anime mới nhất ở thời điểm hiện tại có ngay tại đây</p>
+
                            </div>
                         </div>
                      </div>
@@ -1249,7 +2072,8 @@
                <!-- Zing Chart -->
                <div class="container_zing-chart">
                   <div class="container_zing-chart-pos">
-                     <div class="zing-chart_top">
+                     <div title="Top chart là BXH thời gian thực, phản ánh số lượng người nghe nhạc trên hệ thống D4T MP3 theo từng giờ đối với từng sản phẩm âm nhạc. Top chart phản ánh rõ xu hướng và biến động trong thị trường âm nhạc."
+                        class="zing-chart_top">
                         <div class="zing-chart_top-item">
                            <a href="#">Top Chart <span class="material-icons-round"> play_circle </span></a>
                         </div>
@@ -1259,7 +2083,7 @@
                            <div class="zing-chart_list">
                               <div class="zing-chart_item main_page-hover">
                                  <div class="zing-chart_item-left">
-                                    <div class="zing-chart_item-oder"><span class="zing-chart-top1">1</span></div>
+                                    <div class="zing-chart_item-oder"><span class="zing-chart-top">1</span></div>
                                     <div class="zing-chart_item-info">
                                        <div class="zing-chart_item-img">
                                           <div class="main-page_list-item_img">
@@ -1290,7 +2114,7 @@
                               </div>
                               <div class="zing-chart_item main_page-hover">
                                  <div class="zing-chart_item-left">
-                                    <div class="zing-chart_item-oder"><span class="zing-chart-top2">2</span></div>
+                                    <div class="zing-chart_item-oder"><span class="zing-chart-top">2</span></div>
                                     <div class="zing-chart_item-info">
                                        <div class="zing-chart_item-img">
                                           <div class="main-page_list-item_img">
@@ -1323,7 +2147,7 @@
                               </div>
                               <div class="zing-chart_item main_page-hover">
                                  <div class="zing-chart_item-left">
-                                    <div class="zing-chart_item-oder"><span class="zing-chart-top3">3</span></div>
+                                    <div class="zing-chart_item-oder"><span class="zing-chart-top">3</span></div>
                                     <div class="zing-chart_item-info">
                                        <div class="zing-chart_item-img">
                                           <div class="main-page_list-item_img">
@@ -1360,6 +2184,9 @@
 
                         <div class="col l-8 m-12 c-12">
                            <div class="zing-chart_right">
+                              <div class="zing-chart_right-top">
+
+                              </div>
                               <canvas id="myChart"></canvas>
                            </div>
                         </div>
@@ -1568,7 +2395,7 @@
                            </div>
                         </a>
                         <div class="todaychoice_list-item-title">
-                           <a class="main_title-text" title="Top 100 Nhạc Hàn Quốc Hay Nhất" href="#">Top 100 Nhạc Hàn Quốc Hay...</a>
+                           <a class="main_title-text" title="Top 100 Nhạc Hàn Quốc Hay Nhất" href="#">Top 100 Nhạc Hàn Quốc Hay Nhất</a>
                            <div class="main_subtitle">
                               <a href="#">TAEYEON</a>, <a href="#">IVE</a>, <a href="#">GOT the beat</a>...
                            </div>
@@ -1597,7 +2424,7 @@
                            </div>
                         </a>
                         <div class="todaychoice_list-item-title">
-                           <a class="main_title-text" title="Top 100 Nhạc Trữ Tình Hay Nhất" href="#">Top 100 Nhạc Trữ Tình Hay...</a>
+                           <a class="main_title-text" title="Top 100 Nhạc Trữ Tình Hay Nhất" href="#">Top 100 Nhạc Trữ Tình Hay Nhất</a>
                            <div class="main_subtitle">
                               <a href="#">Lưu Ánh Loan</a>, <a href="#">Phi Nhung</a>, <a href="#">Như Quỳnh</a>...
                            </div>
@@ -2140,825 +2967,9 @@
                   </div>
                </div>
             </div>
-            <div class="main_personal container ">
-               <!-- top user   -->
-               <div class="personal_user">
-                  <div class="personal_user-img">
-                     <span class="material-icons-outlined"> person </span>
-                  </div>
-                  <h3>Tên Người Dùng</h3>
-               </div>
 
-               <!-- nav menu -->
-               <div class="personal_navbar-menu">
-                  <div class="personal_menu-item active">TỔNG QUAN</div>
-                  <div class="personal_menu-item ">BÀI HÁT</div>
-                  <div class="personal_menu-item">PLAYlIST</div>
-                  <div class="personal_menu-item">PODCAST</div>
-                  <div class="personal_menu-item">
-                     <span class="material-icons-outlined"> more_horiz </span>
-                  </div>
-               </div>
-
-               <!-- container -->
-               <div class="personal_container ">
-                  <!-- Tổng quan -->
-                  <div class="personal_overview-main personal_container-main active">
-                     <div class="personal_overview-thesong">
-                        <div class="personal_overview-item personal_overview">
-                           <h3>Bài Hát</h3>
-                           <div class=" personal_overview-title-right">
-                              <a href="#" class="personal_play-all">
-                                 Phát Tất Cả
-                                 <span class="material-icons">
-                                    play_arrow
-                                 </span>
-                              </a>
-                              <a href="#">Tất Cả <span class="material-icons-outlined">
-                                    chevron_right
-                                 </span></a>
-                           </div>
-                        </div>
-                        <div class="personal_overview-container ">
-                           <ul>
-                              <li class="player_queue-item player_queue-active">
-                                 <div class="player_queue-item-left">
-                                    <div class="player_queue-left">
-                                       <img class="player_queue-img" src="./img/casy/adede.webp" alt="" />
-                                       <div class="player_queue-img-hover">
-                                          <span class="material-icons"> play_arrow </span>
-                                          <!-- <span class="material-icons"> pause </span> -->
-                                       </div>
-                                    </div>
-                                    <div class="player_queue-music-info">
-                                       <div class="player_queue-music">Easy On Me</div>
-                                       <div class="player_queue-name">Adele</div>
-                                    </div>
-                                 </div>
-
-                                 <div class="player_queue-item-right">
-                                    <div class="player_queue-btn player_btn">
-                                       <span class="material-icons-outlined"> favorite_border </span>
-                                       <span class="playing_title-hover">Thêm vào thư viện </span>
-                                    </div>
-                                    <div class="player_queue-btn player_btn">
-                                       <span class="material-icons-outlined"> more_horiz </span>
-                                       <span class="playing_title-hover">Xem thêm</span>
-                                    </div>
-                                 </div>
-                              </li>
-                              <li class="player_queue-item">
-                                 <div class="player_queue-item-left">
-                                    <div class="player_queue-left">
-                                       <img class="player_queue-img" src="./img/casy/adede.webp" alt="" />
-                                       <div class="player_queue-img-hover">
-                                          <span class="material-icons"> play_arrow </span>
-                                          <!-- <span class="material-icons"> pause </span> -->
-                                       </div>
-                                    </div>
-                                    <div class="player_queue-music-info">
-                                       <div class="player_queue-music">Easy On Me</div>
-                                       <div class="player_queue-name">Adele</div>
-                                    </div>
-                                 </div>
-
-                                 <div class="player_queue-item-right">
-                                    <div class="player_queue-btn player_btn">
-                                       <span class="material-icons-outlined"> favorite_border </span>
-                                       <span class="playing_title-hover">Thêm vào thư viện </span>
-                                    </div>
-                                    <div class="player_queue-btn player_btn">
-                                       <span class="material-icons-outlined"> more_horiz </span>
-                                       <span class="playing_title-hover">Xem thêm</span>
-                                    </div>
-                                 </div>
-                              </li>
-                              <li class="player_queue-item">
-                                 <div class="player_queue-item-left">
-                                    <div class="player_queue-left">
-                                       <img class="player_queue-img" src="./img/casy/adede.webp" alt="" />
-                                       <div class="player_queue-img-hover">
-                                          <span class="material-icons"> play_arrow </span>
-                                          <!-- <span class="material-icons"> pause </span> -->
-                                       </div>
-                                    </div>
-                                    <div class="player_queue-music-info">
-                                       <div class="player_queue-music">Easy On Me</div>
-                                       <div class="player_queue-name">Adele</div>
-                                    </div>
-                                 </div>
-
-                                 <div class="player_queue-item-right">
-                                    <div class="player_queue-btn player_btn">
-                                       <span class="material-icons-outlined"> favorite_border </span>
-                                       <span class="playing_title-hover">Thêm vào thư viện </span>
-                                    </div>
-                                    <div class="player_queue-btn player_btn">
-                                       <span class="material-icons-outlined"> more_horiz </span>
-                                       <span class="playing_title-hover">Xem thêm</span>
-                                    </div>
-                                 </div>
-                              </li>
-                              <li class="player_queue-item ">
-                                 <div class="player_queue-item-left">
-                                    <div class="player_queue-left">
-                                       <img class="player_queue-img" src="./img/casy/adede.webp" alt="" />
-                                       <div class="player_queue-img-hover">
-                                          <span class="material-icons"> play_arrow </span>
-                                          <!-- <span class="material-icons"> pause </span> -->
-                                       </div>
-                                    </div>
-                                    <div class="player_queue-music-info">
-                                       <div class="player_queue-music">Easy On Me</div>
-                                       <div class="player_queue-name">Adele</div>
-                                    </div>
-                                 </div>
-
-                                 <div class="player_queue-item-right">
-                                    <div class="player_queue-btn player_btn">
-                                       <span class="material-icons-outlined"> favorite_border </span>
-                                       <span class="playing_title-hover">Thêm vào thư viện </span>
-                                    </div>
-                                    <div class="player_queue-btn player_btn">
-                                       <span class="material-icons-outlined"> more_horiz </span>
-                                       <span class="playing_title-hover">Xem thêm</span>
-                                    </div>
-                                 </div>
-                              </li>
-                              <li class="player_queue-item">
-                                 <div class="player_queue-item-left">
-                                    <div class="player_queue-left">
-                                       <img class="player_queue-img" src="./img/casy/adede.webp" alt="" />
-                                       <div class="player_queue-img-hover">
-                                          <span class="material-icons"> play_arrow </span>
-                                          <!-- <span class="material-icons"> pause </span> -->
-                                       </div>
-                                    </div>
-                                    <div class="player_queue-music-info">
-                                       <div class="player_queue-music">Easy On Me</div>
-                                       <div class="player_queue-name">Adele</div>
-                                    </div>
-                                 </div>
-
-                                 <div class="player_queue-item-right">
-                                    <div class="player_queue-btn player_btn">
-                                       <span class="material-icons-outlined"> favorite_border </span>
-                                       <span class="playing_title-hover">Thêm vào thư viện </span>
-                                    </div>
-                                    <div class="player_queue-btn player_btn">
-                                       <span class="material-icons-outlined"> more_horiz </span>
-                                       <span class="playing_title-hover">Xem thêm</span>
-                                    </div>
-                                 </div>
-                              </li>
-                              <li class="player_queue-item">
-                                 <div class="player_queue-item-left">
-                                    <div class="player_queue-left">
-                                       <img class="player_queue-img" src="./img/casy/adede.webp" alt="" />
-                                       <div class="player_queue-img-hover">
-                                          <span class="material-icons"> play_arrow </span>
-                                          <!-- <span class="material-icons"> pause </span> -->
-                                       </div>
-                                    </div>
-                                    <div class="player_queue-music-info">
-                                       <div class="player_queue-music">Easy On Me</div>
-                                       <div class="player_queue-name">Adele</div>
-                                    </div>
-                                 </div>
-
-                                 <div class="player_queue-item-right">
-                                    <div class="player_queue-btn player_btn">
-                                       <span class="material-icons-outlined"> favorite_border </span>
-                                       <span class="playing_title-hover">Thêm vào thư viện </span>
-                                    </div>
-                                    <div class="player_queue-btn player_btn">
-                                       <span class="material-icons-outlined"> more_horiz </span>
-                                       <span class="playing_title-hover">Xem thêm</span>
-                                    </div>
-                                 </div>
-                              </li>
-                           </ul>
-                        </div>
-                     </div>
-
-                     <div class="personal_overview-playlist">
-                        <div class="personal_overview-item personal_overview">
-                           <h3>Playlist</h3>
-                           <div class=" personal_overview-title-right">
-                              <a href="#">Tất Cả <span class="material-icons-outlined">
-                                    chevron_right
-                                 </span></a>
-                           </div>
-                        </div>
-                        <div class="personal_overview-container">
-                           <div class="want_list row">
-                              <div class="want_list-item col l-2-4 m-3 c-5" title="Hits Quốc Dân">
-                                 <div class="personal_add-playlist">
-                                    <div class="">
-                                       <span class="material-icons-outlined">
-                                          add
-                                       </span>
-
-                                       <span>
-                                          Tạo Playlist Mới
-                                       </span>
-
-                                    </div>
-                                 </div>
-                              </div>
-                              <div class="want_list-item col l-2-4 m-3 c-5" title="Hits Quốc Dân">
-                                 <a class="want_list-item-link main-page_list-item main_page-hover" href="#">
-                                    <div class="want_list-item-link main-page_list-item_img" href="#">
-                                       <img src="./img/cothebanmuonnghe/nghelaghien.webp" alt="taylor" />
-                                    </div>
-                                    <div class="recently_list-item_hover">
-                                       <div class="recently_btn-hover player_btn">
-                                          <span class="material-icons-outlined"> favorite_border </span>
-                                          <span class="playing_title-hover">Thêm vào thư viện </span>
-                                       </div>
-                                       <div class="recently_btn-hover recently_btn-hover-play">
-                                          <span>
-                                             <ion-icon class="icon_play-btn" name="play-circle-outline"></ion-icon>
-                                          </span>
-                                          <!-- <span> <ion-icon class="icon_pause-btn" name="pause-circle-outline"></ion-icon> </span> -->
-                                       </div>
-                                       <div class="recently_btn-hover player_btn">
-                                          <span class="material-icons-outlined"> more_horiz </span>
-                                          <span class="playing_title-hover">Xem thêm</span>
-                                       </div>
-                                    </div>
-                                 </a>
-                                 <div class="want_list-item-title">
-                                    <a class="main_title-text" title="Hits Quốc Dân" href="#">Nghe Là Ghiền</a>
-                                    <div class="main_subtitle">
-                                       <a href="#">The Kid LAROI</a>, <a href="#">Justin Bieber</a>, <a href="#">Imagine Dragons</a>...
-                                    </div>
-                                 </div>
-                              </div>
-                              <div class="want_list-item col l-2-4 m-3 c-5" title="Hits Quốc Dân">
-                                 <a class="want_list-item-link main-page_list-item main_page-hover" href="#">
-                                    <div class="want_list-item-link main-page_list-item_img" href="#">
-                                       <img src="./img/cothebanmuonnghe/singlongusuk.webp" alt="taylor" />
-                                    </div>
-                                    <div class="recently_list-item_hover">
-                                       <div class="recently_btn-hover player_btn">
-                                          <span class="material-icons-outlined"> favorite_border </span>
-                                          <span class="playing_title-hover">Thêm vào thư viện </span>
-                                       </div>
-                                       <div class="recently_btn-hover recently_btn-hover-play">
-                                          <span>
-                                             <ion-icon class="icon_play-btn" name="play-circle-outline"></ion-icon>
-                                          </span>
-                                          <!-- <span> <ion-icon class="icon_pause-btn" name="pause-circle-outline"></ion-icon> </span> -->
-                                       </div>
-                                       <div class="recently_btn-hover player_btn">
-                                          <span class="material-icons-outlined"> more_horiz </span>
-                                          <span class="playing_title-hover">Xem thêm</span>
-                                       </div>
-                                    </div>
-                                 </a>
-                                 <div class="want_list-item-title">
-                                    <a class="main_title-text" title="Hits Quốc Dân" href="#">US-UK: Sing A Long </a>
-                                    <div class="main_subtitle">
-                                       <a href="#">Katy Perry</a>, <a href="#">Taylor Swift</a>, <a href="#">Maroon 5</a>...
-                                    </div>
-                                 </div>
-                              </div>
-                              <div class="want_list-item col l-2-4 m-3 c-5" title="Hits Quốc Dân">
-                                 <a class="want_list-item-link main-page_list-item main_page-hover" href="#">
-                                    <div class="want_list-item-link main-page_list-item_img" href="#">
-                                       <img src="./img/cothebanmuonnghe/todaysedmhits.webp" alt="taylor" />
-                                    </div>
-                                    <div class="recently_list-item_hover">
-                                       <div class="recently_btn-hover player_btn">
-                                          <span class="material-icons-outlined"> favorite_border </span>
-                                          <span class="playing_title-hover">Thêm vào thư viện </span>
-                                       </div>
-                                       <div class="recently_btn-hover recently_btn-hover-play">
-                                          <span>
-                                             <ion-icon class="icon_play-btn" name="play-circle-outline"></ion-icon>
-                                          </span>
-                                          <!-- <span> <ion-icon class="icon_pause-btn" name="pause-circle-outline"></ion-icon> </span> -->
-                                       </div>
-                                       <div class="recently_btn-hover player_btn">
-                                          <span class="material-icons-outlined"> more_horiz </span>
-                                          <span class="playing_title-hover">Xem thêm</span>
-                                       </div>
-                                    </div>
-                                 </a>
-                                 <div class="want_list-item-title">
-                                    <a class="main_title-text" title="Hits Quốc Dân" href="#">Today's EDM Hits</a>
-                                    <div class="main_subtitle">
-                                       <a href="#">The Chainsmokers</a>, <a href="#">Alan Walker</a>, <a href="#">Alesso</a>...
-                                    </div>
-                                 </div>
-                              </div>
-                              <div class="want_list-item col l-2-4 m-0 c-5" title="Hits Quốc Dân">
-                                 <a class="want_list-item-link main-page_list-item main_page-hover" href="#">
-                                    <div class="want_list-item-link main-page_list-item_img" href="#">
-                                       <img src="./img/cothebanmuonnghe/usukTodayTophits.webp" alt="taylor" />
-                                    </div>
-                                    <div class="recently_list-item_hover">
-                                       <div class="recently_btn-hover player_btn">
-                                          <span class="material-icons-outlined"> favorite_border </span>
-                                          <span class="playing_title-hover">Thêm vào thư viện </span>
-                                       </div>
-                                       <div class="recently_btn-hover recently_btn-hover-play">
-                                          <span>
-                                             <ion-icon class="icon_play-btn" name="play-circle-outline"></ion-icon>
-                                          </span>
-                                          <!-- <span> <ion-icon class="icon_pause-btn" name="pause-circle-outline"></ion-icon> </span> -->
-                                       </div>
-                                       <div class="recently_btn-hover player_btn">
-                                          <span class="material-icons-outlined"> more_horiz </span>
-                                          <span class="playing_title-hover">Xem thêm</span>
-                                       </div>
-                                    </div>
-                                 </a>
-                                 <div class="want_list-item-title">
-                                    <a class="main_title-text" title="Hits Quốc Dân" href="#">Today's Top Hits</a>
-                                    <div class="main_subtitle">
-                                       <a href="#">Glass Animals</a>, <a href="#">Adele</a>, <a href="#">Doja Cat</a>...
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-
-                  <div class="personal_thesong-main personal_container-main ">
-                     <div class="personal_overview-thesong">
-                        <div class="personal_overview-item personal_overview">
-                           <h3>Bài Hát</h3>
-                           <div class=" personal_overview-title-right">
-                              <a href="#" class="personal_play-all">
-                                 Phát Tất Cả
-                                 <span class="material-icons">
-                                    play_arrow
-                                 </span>
-                              </a>
-
-                           </div>
-                        </div>
-                        <div class="personal_overview-container ">
-                           <ul>
-                              <li class="player_queue-item player_queue-active">
-                                 <div class="player_queue-item-left">
-                                    <div class="player_queue-left">
-                                       <img class="player_queue-img" src="./img/casy/adede.webp" alt="" />
-                                       <div class="player_queue-img-hover">
-                                          <span class="material-icons"> play_arrow </span>
-                                          <!-- <span class="material-icons"> pause </span> -->
-                                       </div>
-                                    </div>
-                                    <div class="player_queue-music-info">
-                                       <div class="player_queue-music">Easy On Me</div>
-                                       <div class="player_queue-name">Adele</div>
-                                    </div>
-                                 </div>
-
-                                 <div class="player_queue-item-right">
-                                    <div class="player_queue-btn player_btn">
-                                       <span class="material-icons-outlined"> favorite_border </span>
-                                       <span class="playing_title-hover">Thêm vào thư viện </span>
-                                    </div>
-                                    <div class="player_queue-btn player_btn">
-                                       <span class="material-icons-outlined"> more_horiz </span>
-                                       <span class="playing_title-hover">Xem thêm</span>
-                                    </div>
-                                 </div>
-                              </li>
-                              <li class="player_queue-item">
-                                 <div class="player_queue-item-left">
-                                    <div class="player_queue-left">
-                                       <img class="player_queue-img" src="./img/casy/adede.webp" alt="" />
-                                       <div class="player_queue-img-hover">
-                                          <span class="material-icons"> play_arrow </span>
-                                          <!-- <span class="material-icons"> pause </span> -->
-                                       </div>
-                                    </div>
-                                    <div class="player_queue-music-info">
-                                       <div class="player_queue-music">Easy On Me</div>
-                                       <div class="player_queue-name">Adele</div>
-                                    </div>
-                                 </div>
-
-                                 <div class="player_queue-item-right">
-                                    <div class="player_queue-btn player_btn">
-                                       <span class="material-icons-outlined"> favorite_border </span>
-                                       <span class="playing_title-hover">Thêm vào thư viện </span>
-                                    </div>
-                                    <div class="player_queue-btn player_btn">
-                                       <span class="material-icons-outlined"> more_horiz </span>
-                                       <span class="playing_title-hover">Xem thêm</span>
-                                    </div>
-                                 </div>
-                              </li>
-                              <li class="player_queue-item">
-                                 <div class="player_queue-item-left">
-                                    <div class="player_queue-left">
-                                       <img class="player_queue-img" src="./img/casy/adede.webp" alt="" />
-                                       <div class="player_queue-img-hover">
-                                          <span class="material-icons"> play_arrow </span>
-                                          <!-- <span class="material-icons"> pause </span> -->
-                                       </div>
-                                    </div>
-                                    <div class="player_queue-music-info">
-                                       <div class="player_queue-music">Easy On Me</div>
-                                       <div class="player_queue-name">Adele</div>
-                                    </div>
-                                 </div>
-
-                                 <div class="player_queue-item-right">
-                                    <div class="player_queue-btn player_btn">
-                                       <span class="material-icons-outlined"> favorite_border </span>
-                                       <span class="playing_title-hover">Thêm vào thư viện </span>
-                                    </div>
-                                    <div class="player_queue-btn player_btn">
-                                       <span class="material-icons-outlined"> more_horiz </span>
-                                       <span class="playing_title-hover">Xem thêm</span>
-                                    </div>
-                                 </div>
-                              </li>
-                              <li class="player_queue-item ">
-                                 <div class="player_queue-item-left">
-                                    <div class="player_queue-left">
-                                       <img class="player_queue-img" src="./img/casy/adede.webp" alt="" />
-                                       <div class="player_queue-img-hover">
-                                          <span class="material-icons"> play_arrow </span>
-                                          <!-- <span class="material-icons"> pause </span> -->
-                                       </div>
-                                    </div>
-                                    <div class="player_queue-music-info">
-                                       <div class="player_queue-music">Easy On Me</div>
-                                       <div class="player_queue-name">Adele</div>
-                                    </div>
-                                 </div>
-
-                                 <div class="player_queue-item-right">
-                                    <div class="player_queue-btn player_btn">
-                                       <span class="material-icons-outlined"> favorite_border </span>
-                                       <span class="playing_title-hover">Thêm vào thư viện </span>
-                                    </div>
-                                    <div class="player_queue-btn player_btn">
-                                       <span class="material-icons-outlined"> more_horiz </span>
-                                       <span class="playing_title-hover">Xem thêm</span>
-                                    </div>
-                                 </div>
-                              </li>
-                              <li class="player_queue-item">
-                                 <div class="player_queue-item-left">
-                                    <div class="player_queue-left">
-                                       <img class="player_queue-img" src="./img/casy/adede.webp" alt="" />
-                                       <div class="player_queue-img-hover">
-                                          <span class="material-icons"> play_arrow </span>
-                                          <!-- <span class="material-icons"> pause </span> -->
-                                       </div>
-                                    </div>
-                                    <div class="player_queue-music-info">
-                                       <div class="player_queue-music">Easy On Me</div>
-                                       <div class="player_queue-name">Adele</div>
-                                    </div>
-                                 </div>
-
-                                 <div class="player_queue-item-right">
-                                    <div class="player_queue-btn player_btn">
-                                       <span class="material-icons-outlined"> favorite_border </span>
-                                       <span class="playing_title-hover">Thêm vào thư viện </span>
-                                    </div>
-                                    <div class="player_queue-btn player_btn">
-                                       <span class="material-icons-outlined"> more_horiz </span>
-                                       <span class="playing_title-hover">Xem thêm</span>
-                                    </div>
-                                 </div>
-                              </li>
-                              <li class="player_queue-item">
-                                 <div class="player_queue-item-left">
-                                    <div class="player_queue-left">
-                                       <img class="player_queue-img" src="./img/casy/adede.webp" alt="" />
-                                       <div class="player_queue-img-hover">
-                                          <span class="material-icons"> play_arrow </span>
-                                          <!-- <span class="material-icons"> pause </span> -->
-                                       </div>
-                                    </div>
-                                    <div class="player_queue-music-info">
-                                       <div class="player_queue-music">Easy On Me</div>
-                                       <div class="player_queue-name">Adele</div>
-                                    </div>
-                                 </div>
-
-                                 <div class="player_queue-item-right">
-                                    <div class="player_queue-btn player_btn">
-                                       <span class="material-icons-outlined"> favorite_border </span>
-                                       <span class="playing_title-hover">Thêm vào thư viện </span>
-                                    </div>
-                                    <div class="player_queue-btn player_btn">
-                                       <span class="material-icons-outlined"> more_horiz </span>
-                                       <span class="playing_title-hover">Xem thêm</span>
-                                    </div>
-                                 </div>
-                              </li>
-                           </ul>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="personal_playlist-main personal_container-main ">
-                     <div class="personal_overview-container">
-                        <div class="want_list row">
-                           <div class="want_list-item col l-2-4 m-3 c-5" title="Hits Quốc Dân">
-                              <div class="personal_add-playlist">
-                                 <div class="">
-                                    <span class="material-icons-outlined">
-                                       add
-                                    </span>
-
-                                    <span>
-                                       Tạo Playlist Mới
-                                    </span>
-
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="want_list-item col l-2-4 m-3 c-5" title="Hits Quốc Dân">
-                              <a class="want_list-item-link main-page_list-item main_page-hover" href="#">
-                                 <div class="want_list-item-link main-page_list-item_img" href="#">
-                                    <img src="./img/cothebanmuonnghe/nghelaghien.webp" alt="taylor" />
-                                 </div>
-                                 <div class="recently_list-item_hover">
-                                    <div class="recently_btn-hover player_btn">
-                                       <span class="material-icons-outlined"> favorite_border </span>
-                                       <span class="playing_title-hover">Thêm vào thư viện </span>
-                                    </div>
-                                    <div class="recently_btn-hover recently_btn-hover-play">
-                                       <span>
-                                          <ion-icon class="icon_play-btn" name="play-circle-outline"></ion-icon>
-                                       </span>
-                                       <!-- <span> <ion-icon class="icon_pause-btn" name="pause-circle-outline"></ion-icon> </span> -->
-                                    </div>
-                                    <div class="recently_btn-hover player_btn">
-                                       <span class="material-icons-outlined"> more_horiz </span>
-                                       <span class="playing_title-hover">Xem thêm</span>
-                                    </div>
-                                 </div>
-                              </a>
-                              <div class="want_list-item-title">
-                                 <a class="main_title-text" title="Hits Quốc Dân" href="#">Nghe Là Ghiền</a>
-                                 <div class="main_subtitle">
-                                    <a href="#">The Kid LAROI</a>, <a href="#">Justin Bieber</a>, <a href="#">Imagine Dragons</a>...
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="want_list-item col l-2-4 m-3 c-5" title="Hits Quốc Dân">
-                              <a class="want_list-item-link main-page_list-item main_page-hover" href="#">
-                                 <div class="want_list-item-link main-page_list-item_img" href="#">
-                                    <img src="./img/cothebanmuonnghe/singlongusuk.webp" alt="taylor" />
-                                 </div>
-                                 <div class="recently_list-item_hover">
-                                    <div class="recently_btn-hover player_btn">
-                                       <span class="material-icons-outlined"> favorite_border </span>
-                                       <span class="playing_title-hover">Thêm vào thư viện </span>
-                                    </div>
-                                    <div class="recently_btn-hover recently_btn-hover-play">
-                                       <span>
-                                          <ion-icon class="icon_play-btn" name="play-circle-outline"></ion-icon>
-                                       </span>
-                                       <!-- <span> <ion-icon class="icon_pause-btn" name="pause-circle-outline"></ion-icon> </span> -->
-                                    </div>
-                                    <div class="recently_btn-hover player_btn">
-                                       <span class="material-icons-outlined"> more_horiz </span>
-                                       <span class="playing_title-hover">Xem thêm</span>
-                                    </div>
-                                 </div>
-                              </a>
-                              <div class="want_list-item-title">
-                                 <a class="main_title-text" title="Hits Quốc Dân" href="#">US-UK: Sing A Long </a>
-                                 <div class="main_subtitle">
-                                    <a href="#">Katy Perry</a>, <a href="#">Taylor Swift</a>, <a href="#">Maroon 5</a>...
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="want_list-item col l-2-4 m-3 c-5" title="Hits Quốc Dân">
-                              <a class="want_list-item-link main-page_list-item main_page-hover" href="#">
-                                 <div class="want_list-item-link main-page_list-item_img" href="#">
-                                    <img src="./img/cothebanmuonnghe/todaysedmhits.webp" alt="taylor" />
-                                 </div>
-                                 <div class="recently_list-item_hover">
-                                    <div class="recently_btn-hover player_btn">
-                                       <span class="material-icons-outlined"> favorite_border </span>
-                                       <span class="playing_title-hover">Thêm vào thư viện </span>
-                                    </div>
-                                    <div class="recently_btn-hover recently_btn-hover-play">
-                                       <span>
-                                          <ion-icon class="icon_play-btn" name="play-circle-outline"></ion-icon>
-                                       </span>
-                                       <!-- <span> <ion-icon class="icon_pause-btn" name="pause-circle-outline"></ion-icon> </span> -->
-                                    </div>
-                                    <div class="recently_btn-hover player_btn">
-                                       <span class="material-icons-outlined"> more_horiz </span>
-                                       <span class="playing_title-hover">Xem thêm</span>
-                                    </div>
-                                 </div>
-                              </a>
-                              <div class="want_list-item-title">
-                                 <a class="main_title-text" title="Hits Quốc Dân" href="#">Today's EDM Hits</a>
-                                 <div class="main_subtitle">
-                                    <a href="#">The Chainsmokers</a>, <a href="#">Alan Walker</a>, <a href="#">Alesso</a>...
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="want_list-item col l-2-4 m-0 c-5" title="Hits Quốc Dân">
-                              <a class="want_list-item-link main-page_list-item main_page-hover" href="#">
-                                 <div class="want_list-item-link main-page_list-item_img" href="#">
-                                    <img src="./img/cothebanmuonnghe/usukTodayTophits.webp" alt="taylor" />
-                                 </div>
-                                 <div class="recently_list-item_hover">
-                                    <div class="recently_btn-hover player_btn">
-                                       <span class="material-icons-outlined"> favorite_border </span>
-                                       <span class="playing_title-hover">Thêm vào thư viện </span>
-                                    </div>
-                                    <div class="recently_btn-hover recently_btn-hover-play">
-                                       <span>
-                                          <ion-icon class="icon_play-btn" name="play-circle-outline"></ion-icon>
-                                       </span>
-                                       <!-- <span> <ion-icon class="icon_pause-btn" name="pause-circle-outline"></ion-icon> </span> -->
-                                    </div>
-                                    <div class="recently_btn-hover player_btn">
-                                       <span class="material-icons-outlined"> more_horiz </span>
-                                       <span class="playing_title-hover">Xem thêm</span>
-                                    </div>
-                                 </div>
-                              </a>
-                              <div class="want_list-item-title">
-                                 <a class="main_title-text" title="Hits Quốc Dân" href="#">Today's Top Hits</a>
-                                 <div class="main_subtitle">
-                                    <a href="#">Glass Animals</a>, <a href="#">Adele</a>, <a href="#">Doja Cat</a>...
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="xones_list-item col l-2-4 m-3 c-5" title="Asia Rap">
-                              <a class="xones_list-item-link main-page_list-item main_page-hover" href="#">
-                                 <div class="xones_list-item-link main-page_list-item_img" href="#">
-                                    <img src="./img/xone/asiaRap.webp" alt="taylor" />
-                                 </div>
-                                 <div class="recently_list-item_hover">
-                                    <div class="recently_btn-hover player_btn">
-                                       <span class="material-icons-outlined"> favorite_border </span>
-                                       <span class="playing_title-hover">Thêm vào thư viện </span>
-                                    </div>
-                                    <div class="recently_btn-hover recently_btn-hover-play">
-                                       <span>
-                                          <ion-icon class="icon_play-btn" name="play-circle-outline"></ion-icon>
-                                       </span>
-                                       <!-- <span> <ion-icon class="icon_pause-btn" name="pause-circle-outline"></ion-icon> </span> -->
-                                    </div>
-                                    <div class="recently_btn-hover player_btn">
-                                       <span class="material-icons-outlined"> more_horiz </span>
-                                       <span class="playing_title-hover">Xem thêm</span>
-                                    </div>
-                                 </div>
-                              </a>
-                              <div class="xones_list-item-title">
-                                 <a class="main_title-text" title="Asia Rap" href="#">Asia Rap</a>
-                                 <div class="main_subtitle">
-                                    <p>RAPPER Châu Á vươn ra thế giới</p>
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="xones_list-item col l-2-4 m-3 c-5" title="Back In Time - Pop's HITs">
-                              <a class="xones_list-item-link main-page_list-item main_page-hover" href="#">
-                                 <div class="xones_list-item-link main-page_list-item_img" href="#">
-                                    <img src="./img/xone/backintime.webp" alt="taylor" />
-                                 </div>
-                                 <div class="recently_list-item_hover">
-                                    <div class="recently_btn-hover player_btn">
-                                       <span class="material-icons-outlined"> favorite_border </span>
-                                       <span class="playing_title-hover">Thêm vào thư viện </span>
-                                    </div>
-                                    <div class="recently_btn-hover recently_btn-hover-play">
-                                       <span>
-                                          <ion-icon class="icon_play-btn" name="play-circle-outline"></ion-icon>
-                                       </span>
-                                       <!-- <span> <ion-icon class="icon_pause-btn" name="pause-circle-outline"></ion-icon> </span> -->
-                                    </div>
-                                    <div class="recently_btn-hover player_btn">
-                                       <span class="material-icons-outlined"> more_horiz </span>
-                                       <span class="playing_title-hover">Xem thêm</span>
-                                    </div>
-                                 </div>
-                              </a>
-                              <div class="xones_list-item-title">
-                                 <a class="main_title-text" title="Back In Time - Pop's HITs" href="#">Back In Time - Pop's HITs</a>
-                                 <div class="main_subtitle">
-                                    <p>Top nhạc US-UK huyền thoại</p>
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="xones_list-item col l-2-4 m-3 c-5" title="Best R&B HITs">
-                              <a class="xones_list-item-link main-page_list-item main_page-hover" href="#">
-                                 <div class="xones_list-item-link main-page_list-item_img" href="#">
-                                    <img src="./img/xone/bestrbhits.webp" alt="Best R&B HITs" />
-                                 </div>
-                                 <div class="recently_list-item_hover">
-                                    <div class="recently_btn-hover player_btn">
-                                       <span class="material-icons-outlined"> favorite_border </span>
-                                       <span class="playing_title-hover">Thêm vào thư viện </span>
-                                    </div>
-                                    <div class="recently_btn-hover recently_btn-hover-play">
-                                       <span>
-                                          <ion-icon class="icon_play-btn" name="play-circle-outline"></ion-icon>
-                                       </span>
-                                       <!-- <span> <ion-icon class="icon_pause-btn" name="pause-circle-outline"></ion-icon> </span> -->
-                                    </div>
-                                    <div class="recently_btn-hover player_btn">
-                                       <span class="material-icons-outlined"> more_horiz </span>
-                                       <span class="playing_title-hover">Xem thêm</span>
-                                    </div>
-                                 </div>
-                              </a>
-                              <div class="xones_list-item-title">
-                                 <a class="main_title-text" title="Best RnB HITs" href="#">Best RnB HITs</a>
-                                 <div class="main_subtitle">
-                                    <p>Những bài hát RnB thịnh hành nhất</p>
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="xones_list-item col l-2-4 m-3 c-5" title="feedinggood">
-                              <a class="xones_list-item-link main-page_list-item main_page-hover" href="#">
-                                 <div class="xones_list-item-link main-page_list-item_img" href="#">
-                                    <img src="./img/xone/feedinggood.webp" alt="feedinggood" />
-                                 </div>
-                                 <div class="recently_list-item_hover">
-                                    <div class="recently_btn-hover player_btn">
-                                       <span class="material-icons-outlined"> favorite_border </span>
-                                       <span class="playing_title-hover">Thêm vào thư viện </span>
-                                    </div>
-                                    <div class="recently_btn-hover recently_btn-hover-play">
-                                       <span>
-                                          <ion-icon class="icon_play-btn" name="play-circle-outline"></ion-icon>
-                                       </span>
-                                       <!-- <span> <ion-icon class="icon_pause-btn" name="pause-circle-outline"></ion-icon> </span> -->
-                                    </div>
-                                    <div class="recently_btn-hover player_btn">
-                                       <span class="material-icons-outlined"> more_horiz </span>
-                                       <span class="playing_title-hover">Xem thêm</span>
-                                    </div>
-                                 </div>
-                              </a>
-                              <div class="xones_list-item-title">
-                                 <a class="main_title-text" title="FEELING GOOD" href="#">FEELING GOOD</a>
-                                 <div class="main_subtitle">
-                                    <p>Marie Webb, Taeyeon, Lil Nas X....</p>
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="xones_list-item col l-2-4 m-0 c-5" title="HWASA X ONEWE">
-                              <a class="xones_list-item-link main-page_list-item main_page-hover" href="#">
-                                 <div class="xones_list-item-link main-page_list-item_img" href="#">
-                                    <img src="./img/xone/hwasaXonewe.webp" alt="HWASA X ONEWE" />
-                                 </div>
-                                 <div class="recently_list-item_hover">
-                                    <div class="recently_btn-hover player_btn">
-                                       <span class="material-icons-outlined"> favorite_border </span>
-                                       <span class="playing_title-hover">Thêm vào thư viện </span>
-                                    </div>
-                                    <div class="recently_btn-hover recently_btn-hover-play">
-                                       <span>
-                                          <ion-icon class="icon_play-btn" name="play-circle-outline"></ion-icon>
-                                       </span>
-                                       <!-- <span> <ion-icon class="icon_pause-btn" name="pause-circle-outline"></ion-icon> </span> -->
-                                    </div>
-                                    <div class="recently_btn-hover player_btn">
-                                       <span class="material-icons-outlined"> more_horiz </span>
-                                       <span class="playing_title-hover">Xem thêm</span>
-                                    </div>
-                                 </div>
-                              </a>
-                              <div class="xones_list-item-title">
-                                 <a class="main_title-text" title="HWASA X ONEWE" href="#">HWASA X ONEWE</a>
-                                 <div class="main_subtitle">
-                                    <p>IDOL GEN 3 khuấy đảo K-Pop</p>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-
-                  <div class="personal_podcast-main personal_container-main ">
-                     <div class="personal_podcast-img">
-
-                     </div>
-                     <div class="personal_podcast-text">
-                        Không có tập mới
-                     </div>
-                  </div>
-               </div>
-
-
-            </div>
-
-            <div class="main_topchart container">
+            <!-- Tab top chart -->
+            <div class="main_topchart container   main-page-item">
                <div class="container_zing-chart">
                   <div class="container_zing-chart-pos">
                      <div class="zing-chart_top">
@@ -2966,19 +2977,43 @@
                            <a href="#">Top Chart <span class="material-icons-round"> play_circle </span></a>
                         </div>
                      </div>
+
+                     <p class="main_topchart-title">Top chart là BXH thời gian thực, phản ánh số lượng người nghe nhạc trên hệ thống D4T MP3 theo từng giờ đối với từng sản phẩm âm nhạc. Top chart phản ánh rõ xu hướng và biến động trong thị trường âm
+                        nhạc.
+                     </p>
+
                      <div class="row zing-chart_bottom">
-
-
                         <div class="col l-12 m-12 c-12">
                            <div class="zing-chart_right">
+                              <div class="zing-chart_right-top">
+
+                              </div>
                               <canvas id="myChart2"></canvas>
                            </div>
                         </div>
                         <div class="col l-12 m-12 c-12 ">
                            <div class="zing-chart_list">
-                              <div class="zing-chart_item main_page-hover">
+                              <!-- <div class="zing-chart_item main_page-hover">
                                  <div class="zing-chart_item-left ">
-                                    <div class="zing-chart_item-oder"><span class="zing-chart-top">1</span></div>
+                                    <div class="zing-chart_item-oder">
+                                       <span class="zing-chart-top">1</span>
+                                       <div class="zing-chart-rank">
+                                          <div class="zing-chart-rank-status">
+                                             <span class="material-icons-outlined line">
+                                                minimize
+                                             </span>
+                                             <span class="material-icons-outlined down">
+                                                arrow_drop_down
+                                             </span>
+                                             <span class="material-icons-outlined up">
+                                                arrow_drop_up
+                                             </span>
+                                          </div>
+                                          <div class="zing-chart-rank-num">
+                                             1
+                                          </div>
+                                       </div>
+                                    </div>
                                     <div class="zing-chart_item-info">
                                        <div class="zing-chart_item-img">
                                           <div class="main-page_list-item_img">
@@ -2990,15 +3025,15 @@
                                                    <span>
                                                       <ion-icon class="icon_play-btn" name="play-circle-outline"></ion-icon>
                                                    </span>
-                                                   <!-- <span>
-                                                         <ion-icon class="icon_pause-btn" name="pause-circle-outline"></ion-icon>
-                                                      </span> -->
+                                                   <span>
+                                                      <ion-icon class="icon_pause-btn" name="pause-circle-outline"></ion-icon>
+                                                   </span>
                                                 </div>
                                              </div>
                                           </div>
                                        </div>
                                        <div class="zing-chart_item-text">
-                                          <div class="zing-chart_item-name">Nhạt Nhòa Mưa Phai</div>
+                                          <div class="zing-chart_item-name">Nhạt Nhòa Mưa Phai Nhạt Nhòa Mưa Phai</div>
                                           <div class="zing-chart_item-artist"><a href="#">Hương Ly</a></div>
                                        </div>
                                     </div>
@@ -3010,17 +3045,281 @@
                                  <div class="zing-chart_item-right">
                                     <p class="thesong_time">2:55</p>
                                  </div>
-                              </div>
+                              </div> -->
 
-                              <div class="zing-chart_item-bottom">
-                                 <a class="zing-chart_btn" href="#">Xem Thêm</a>
-                              </div>
+                           </div>
+                           <div class="zing-chart_item-bottom">
+                              <button id="btn_chart-more100" class="zing-chart_btn" href="#">Xem Top 100</button>
                            </div>
                         </div>
                      </div>
                   </div>
                </div>
+               <div class="main_topchart-week">
+                  <h3>Bảng Xếp Hạng Tuần</h3>
+                  <div class="main_topchart-week3 row">
+                     <div class="col l-4 m-12 c-12">
+                        <div class="week-chart-box vn">
+                           <div class="week-chart-box-title">
+                              <p>Việt Nam</p>
+                              <span class="material-icons-round"> play_circle </span>
+                           </div>
+                           <div class="container_zing-chart">
+                              <div class="zing-chart_list week">
 
+                              </div>
+                           </div>
+
+                        </div>
+                     </div>
+                     <div class="col l-4 m-12 c-12">
+                        <div class="week-chart-box usuk">
+                           <div class="week-chart-box-title">
+                              <p>US-UK</p>
+                              <span class="material-icons-round"> play_circle </span>
+                           </div>
+                           <div class="container_zing-chart">
+                              <div class="zing-chart_list week">
+
+                              </div>
+                           </div>
+
+                        </div>
+                     </div>
+                     <div class="col l-4 m-12 c-12">
+                        <div class="week-chart-box kpop">
+                           <div class="week-chart-box-title">
+                              <p>Korea</p>
+                              <span class="material-icons-round"> play_circle </span>
+                           </div>
+                           <div class="container_zing-chart">
+                              <div class="zing-chart_list week">
+
+                              </div>
+                           </div>
+
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+            <!--  NavBar Bottom-->
+            <!--  main Mới PHát Hành -->
+            <div class="main_songnew container  main-page-item">
+               <div class="main_topchart songnew">
+                  <div class="container_zing-chart">
+                     <div class="container_zing-chart-pos">
+                        <div class="zing-chart_top">
+                           <div class="zing-chart_top-item">
+                              <a href="#">Mới Phát Hành <span class="material-icons-round"> play_circle </span></a>
+                           </div>
+                        </div>
+                        <div class="zing-chart_bottom">
+                           <div class="zing-chart_list">
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+            <!-- Main Top 100  -->
+            <div class="main_songnew main-page-item">
+               <div class="main_songnew-title">
+                  <div class="main_songnew-img"></div>
+                  <div class="main_songnew-title-apha"></div>
+                  <div class="main_songnew-title-apha2"> </div>
+
+                  <svg width="625" height="166" viewBox="0 0 625 166">
+                     <defs>
+                        <linearGradient id="csl6gbytxb" x1="0%" x2="102%" y1="49.434%" y2="50.578%">
+                           <stop offset="0%" stop-color="#3023AE"></stop>
+                           <stop offset="100%" stop-color="#C86DD7"></stop>
+                        </linearGradient>
+                        <linearGradient id="nhmksuo1gc" x1="0%" x2="102%" y1="26.937%" y2="73.525%">
+                           <stop offset="0%" stop-color="#3023AE"></stop>
+                           <stop offset="100%" stop-color="#C86DD7"></stop>
+                        </linearGradient>
+                        <path id="dxhld9pu1a"
+                           d="M7.99 88.712V74.768h3.966v-3.09H.566v3.09h3.992v13.944h3.431zm74.837.316c2.604 0 4.721-.851 6.4-2.53 1.63-1.68 2.458-3.772 2.458-6.303 0-2.507-.827-4.6-2.458-6.279-1.679-1.703-3.82-2.555-6.4-2.555-2.58 0-4.721.852-6.4 2.555-1.63 1.68-2.458 3.772-2.458 6.279 0 2.53.827 4.623 2.458 6.302 1.679 1.68 3.796 2.531 6.4 2.531zm0-3.212c-1.533 0-2.799-.535-3.796-1.582-.998-1.046-1.485-2.409-1.485-4.04 0-1.605.487-2.944 1.485-4.015.997-1.07 2.263-1.606 3.796-1.606s2.799.536 3.796 1.606c.998 1.071 1.485 2.41 1.485 4.016 0 1.63-.487 2.993-1.485 4.04-.997 1.046-2.263 1.581-3.796 1.581zm76.128 2.896v-6.351h2.02c1.606 0 2.944-.512 3.99-1.51 1.047-.997 1.582-2.287 1.582-3.869 0-1.606-.51-2.895-1.557-3.869-1.022-.949-2.36-1.436-4.04-1.436h-5.427v17.035h3.432zm1.533-9.32h-1.533v-4.746h1.582c.73 0 1.314.22 1.776.633.462.438.706.998.706 1.703 0 .706-.244 1.29-.706 1.753-.462.438-1.07.657-1.825.657z">
+                        </path>
+                     </defs>
+                     <g fill="none" fill-rule="evenodd" opacity="0.653">
+                        <g>
+                           <g>
+                              <g>
+                                 <g fill-rule="nonzero" transform="translate(-504 -92) translate(239) translate(265 92)">
+                                    <use fill="url(#csl6gbytxb)" xlink:href="#dxhld9pu1a"></use>
+                                 </g>
+                                 <path d="M434 45H625V124H434z" transform="translate(-504 -92) translate(239) translate(265 92)"></path>
+                                 <path fill="url(#nhmksuo1gc)"
+                                    d="M368.977 146.84c-32.595 0-59.113-26.5-59.113-59.073l-.001-.016.001-.066c0-21.715-17.679-39.382-39.409-39.382-14.823 0-27.756 8.225-34.483 20.343V56.073c8.862-9.649 21.338-15.154 34.483-15.154 25.805 0 46.798 20.98 46.798 46.766h.009c-.001.028-.009.054-.009.082 0 28.501 23.204 51.689 51.724 51.689 28.521 0 51.725-23.188 51.725-51.689 0-28.5-23.204-51.688-51.725-51.688-16.88 0-32.297 7.978-42.01 21.53-1.25-2.335-2.639-4.585-4.159-6.737 11.292-14.118 28.018-22.177 46.17-22.177 32.595 0 59.113 26.5 59.113 59.072 0 32.573-26.518 59.073-59.114 59.073m-98.522-24.696c-19.014 0-34.483-15.458-34.483-34.459 0-19 15.47-34.46 34.483-34.46 19.014 0 34.483 15.46 34.483 34.46 0 19.001-15.469 34.46-34.483 34.46m98.522-68.837c19.014 0 34.483 15.459 34.483 34.46 0 19-15.469 34.458-34.483 34.458-19.013 0-34.482-15.458-34.482-34.459 0-19 15.469-34.459 34.482-34.459m-98.522-24.696c32.595 0 59.114 26.5 59.114 59.073h.001l-.001.082c0 21.715 17.678 39.382 39.408 39.382s39.41-17.667 39.41-39.382c0-21.715-17.68-39.382-39.41-39.382-16.305 0-30.33 9.948-36.315 24.09-.82-3.351-1.901-6.6-3.227-9.721C338.079 49.116 352.785 41 368.977 41c25.805 0 46.799 20.98 46.799 46.766 0 25.787-20.994 46.766-46.799 46.766-25.804 0-46.798-20.979-46.798-46.766 0-.028-.007-.054-.008-.082h.008c0-28.5-23.203-51.689-51.724-51.689-12.814 0-25.053 4.733-34.483 13.165v-9.44c10.1-7.268 21.982-11.109 34.483-11.109m49.278 18.248c-11.756-14.146-29.482-23.17-49.278-23.17-12.374 0-24.189 3.467-34.483 10.069V2.545c0-.85-.44-1.641-1.163-2.09-.723-.45-1.627-.494-2.39-.117l-40.887 20.184c-1.22.602-1.72 2.078-1.118 3.296.603 1.22 2.08 1.72 3.3 1.117l37.332-18.428v81.26c0 .01.003.018.003.028.06 21.665 17.713 39.272 39.406 39.272 16.306 0 30.33-9.947 36.316-24.089.82 3.35 1.901 6.6 3.227 9.72-8.644 13.638-23.351 21.753-39.543 21.753-25.804 0-46.798-20.979-46.798-46.766v-65.39c0-.853-.442-1.645-1.168-2.094-.726-.449-1.633-.489-2.396-.107L191.52 34.369c-1.217.608-1.71 2.087-1.101 3.303.608 1.216 2.088 1.708 3.304 1.1l25.007-12.495v63.364c0 .182.023.36.061.531 1.303 27.35 23.977 49.202 51.663 49.202 16.88 0 32.297-7.98 42.01-21.53 1.25 2.334 2.639 4.584 4.158 6.735-11.29 14.116-28.025 22.179-46.168 22.179-32.595 0-59.113-26.5-59.113-59.073V41.001c0-.853-.442-1.645-1.169-2.093-.725-.449-1.632-.49-2.396-.108l-16.748 8.369c-1.217.607-1.71 2.086-1.102 3.302.608 1.216 2.088 1.708 3.304 1.1l13.185-6.587v117.914c0 1.36 1.103 2.461 2.463 2.461s2.463-1.102 2.463-2.461v-50.606c1.897 4.534 4.302 8.805 7.143 12.741v37.865c0 1.36 1.103 2.461 2.463 2.461s2.463-1.102 2.463-2.461v-31.842c2.137 2.313 4.443 4.468 6.896 6.447v25.395c0 1.36 1.103 2.461 2.463 2.461s2.463-1.102 2.463-2.461v-21.794c10.112 6.68 22.22 10.577 35.222 10.577 19.249 0 37.029-8.38 49.245-23.089 11.755 14.146 29.48 23.17 49.277 23.17 35.312 0 64.04-28.708 64.04-63.995s-28.728-63.995-64.04-63.995c-19.257 0-37.03 8.378-49.244 23.088z"
+                                    transform="translate(-504 -92) translate(239) translate(265 92)"></path>
+                              </g>
+                           </g>
+                        </g>
+                     </g>
+                  </svg>
+
+               </div>
+               <div class="main_songnew-list container">
+                  <div class="container_top100">
+                     <div class="top100_title container_title">
+                        <p>Nổi Bật</p>
+                     </div>
+                     <div id="outstanding" class="container_top100-list row">
+
+                     </div>
+                  </div>
+                  <div class="container_top100">
+                     <div class="top100_title container_title">
+                        <p>Nhạc Việt Nam</p>
+                     </div>
+                     <div id="musicVn" class="container_top100-list row">
+                     </div>
+                  </div>
+                  <div class="container_top100">
+                     <div class="top100_title container_title">
+                        <p>Nhạc Châu Á</p>
+                     </div>
+                     <div id="musicAsian" class="container_top100-list row">
+                     </div>
+                  </div>
+                  <div class="container_top100">
+                     <div class="top100_title container_title">
+                        <p>Nhạc Châu Mỹ</p>
+                     </div>
+                     <div id="musicUsUk" class="container_top100-list row">
+                     </div>
+                  </div>
+                  <div class="container_top100">
+                     <div class="top100_title container_title">
+                        <p>Nhạc Hòa Tấu</p>
+                     </div>
+                     <div id="musicConcert" class="container_top100-list row">
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+            <!-- Main MV -->
+            <div class="main_mv main-page-item">
+               <div class="main_mv-header">
+                  <h3>MV</h3>
+                  <div class="main_mv-header_navbar">
+                     <div class="main_mv-header-item active">
+                        Việt Nam
+                     </div>
+                     <div class="main_mv-header-item">
+                        US-UK
+                     </div>
+                     <div class="main_mv-header-item">
+                        KPOP
+                     </div>
+                     <div id="navHoaTau" class="main_mv-header-item">
+                        HÒA TẤu
+                     </div>
+                     <div class="main_mv-line"></div>
+                  </div>
+               </div>
+               <div class="main_mv-container container">
+
+                  <div class="main_mv-container_vn  main_mv-container_item active">
+                     <div class="main_mv-search-navbar">
+                        <div class="main_mv-search-dropdown">
+                           <div class="main_mv-search-dropdown-btn vn">
+                              <span class="material-icons-outlined">music_note</span>
+                              <p>Tất Cả</p>
+                              <span class="material-icons-outlined down">
+                                 expand_more
+                              </span>
+                              <span class="material-icons-outlined up">
+                                 expand_less
+                              </span>
+                           </div>
+                           <div id="mainMvList" class="main_mv-dropdown-list vn">
+
+                           </div>
+                        </div>
+                        <div class="container_top100-list row">
+
+                        </div>
+                     </div>
+                  </div>
+                  <div class="main_mv-container_usuk main_mv-container_item">
+                     <div class="main_mv-search-navbar">
+                        <div class="main_mv-search-dropdown">
+                           <div class="main_mv-search-dropdown-btn usuk">
+                              <span class="material-icons-outlined">music_note</span>
+                              <p>Tất Cả</p>
+                              <span class="material-icons-outlined down">
+                                 expand_more
+                              </span>
+                              <span class="material-icons-outlined up">
+                                 expand_less
+                              </span>
+                           </div>
+
+                           <div id="mainMvList1" class="main_mv-dropdown-list usuk">
+
+
+                           </div>
+                        </div>
+
+                        <div class="container_top100-list row">
+                        </div>
+                     </div>
+                  </div>
+                  <div class="main_mv-container_kpop main_mv-container_item">
+                     <div class="main_mv-search-navbar">
+                        <div class="main_mv-search-dropdown">
+                           <div class="main_mv-search-dropdown-btn kpop">
+                              <span class="material-icons-outlined">music_note</span>
+                              <p>Tất Cả</p>
+                              <span class="material-icons-outlined down">
+                                 expand_more
+                              </span>
+                              <span class="material-icons-outlined up">
+                                 expand_less
+                              </span>
+                           </div>
+
+                           <div id="mainMvList2" class="main_mv-dropdown-list kpop">
+
+
+                           </div>
+                        </div>
+
+                        <div class="container_top100-list row">
+                        </div>
+                     </div>
+                  </div>
+                  <div id="navHoaTauContent" class="main_mv-container_hoatau main_mv-container_item">
+                     <div class="main_mv-search-navbar">
+                        <div class="main_mv-search-dropdown">
+                           <div class="main_mv-search-dropdown-btn hoatau">
+                              <span class="material-icons-outlined">music_note</span>
+                              <p>Tất Cả</p>
+                              <span class="material-icons-outlined down">
+                                 expand_more
+                              </span>
+                              <span class="material-icons-outlined up">
+                                 expand_less
+                              </span>
+                           </div>
+
+                           <div id="mainMvList3" class="main_mv-dropdown-list hoatau">
+
+
+                           </div>
+                        </div>
+
+                        <div class="container_top100-list row">
+                        </div>
+                     </div>
+                  </div>
+               </div>
             </div>
          </div>
       </div>
@@ -3205,9 +3504,12 @@
    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
+
    <script src="./js/main.js"></script>
    <script src="./js/script.js"></script>
    <script type="modue" src="./index.js"></script>
-   </boy>
+
+
+</body>
 
 </html>

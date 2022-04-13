@@ -34,10 +34,9 @@ a {
 }
 
 :root {
-  --main-color: hotpink;
   --background-image: "../img/backgrimg/roseBgimg.jpg";
   --navigation-text: #d4d4d4;
-  --alpha-bg: hsla(0, 0%, 100%, 0.1);
+  --alpha-bg: rgba(255, 255, 255, 0.1);
   /* active */
   --alpha-bg: hsla(0, 0%, 100%, 0.1);
   --text-hover: rgb(255, 255, 255);
@@ -70,6 +69,8 @@ a {
   --queue-player-popup-bg: #223c75;
   --empty-episode-icon: url(https://zmp3-static.zmdcdn.me/skins/zmp3-v6.1/images/icons/episode-empty-1.png);
   --song-item-action: hsla(0, 0%, 100%, 0.5);
+  --text-primary: #fff;
+  --primary-bg: #192f60;
 }
 
 img {
@@ -450,5 +451,23 @@ li {
     transform: scaleY(1);
     -webkit-transform: scaleY(1);
   }
+}
+
+.recently_list-item-title,
+.main_subtitle {
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  height: auto;
+  overflow: hidden;
+}
+
+.main-page .main-page-item {
+  display: none;
+}
+
+.main-page .main-page-item.active {
+  display: block;
 }
 /*# sourceMappingURL=main.css.map */
