@@ -1,41 +1,3 @@
-$(document).ready(function () {
-  $('.slider_list').slick({
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 3500,
-    draggable: false,
-    prevArrow: `<button type='button' class='slider_list-btn-left slick-prev slick-arrow'><span span class= "material-icons-outlined" >
-            arrow_back_ios
-        </span ></button>`,
-    nextArrow: `
-    <button type='button' class='slider_list-btn-right slick-next slick-arrow'>
-        <span class="material-icons-outlined">arrow_forward_ios</span>
-    </button>`,
-    responsive: [{
-        breakpoint: 1040,
-        settings: {
-          slidesToShow: 2,
-          autoplaySpeed: 3000,
-          draggable: true
-        }
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 1,
-          arrows: false,
-          infinite: true,
-          autoplaySpeed: 2800,
-          dots: true,
-          adaptiveHeight: true,
-          draggable: true
-        }
-      }
-    ]
-  })
-})
-
 //  Nghe si slider
 $(document).ready(function () {
   $('.choice_list').slick({
@@ -86,44 +48,42 @@ $(document).ready(function () {
   })
 })
 
-// Mới Phát Hành
-$(document).ready(function () {
-  $('.release_list').slick({
-    slidesToShow: 3,
-    slidesToScroll: 3,
-    draggable: false,
-    infinite: true,
-    prevArrow: `<button type='button' class='release-btn-left slick-prev slick-arrow'><span span class= "material-icons-outlined" >
+
+$('.nowplaying-content .want_list').slick({
+  centerMode: true,
+  centerPadding: '60px',
+  slidesToShow: 5,
+  swipe: true,
+  swipeToSlide: true,
+  prevArrow: `<button type='button' class='slider_list-btn-left slick-prev slick-arrow'><span span class= "material-icons-outlined" >
             arrow_back_ios
         </span ></button>`,
-    nextArrow: `
-    <button type='button' class='release-btn-right slick-next slick-arrow'>
+  nextArrow: `
+    <button type='button' class='slider_list-btn-right slick-next slick-arrow'>
         <span class="material-icons-outlined">arrow_forward_ios</span>
     </button>`,
-    responsive: [{
-        breakpoint: 1220,
-        settings: {
-          slidesToShow: 2,
-          infinite: true,
-          slidesToScroll: 2
-        }
-      },
-      {
-        breakpoint: 720,
-        settings: {
-          autoplay: true,
-          autoplaySpeed: 3000,
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          dots: true,
-          infinite: true,
-          draggable: true,
-          arrows: false
-        }
+  responsive: [{
+      breakpoint: 1060,
+      settings: {
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 3
       }
-    ]
-  })
-})
+    },
+    {
+      breakpoint: 720,
+      settings: {
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 1,
+        arrows: false,
+        draggable: true,
+
+      }
+    }
+  ]
+});
+
 
 // Line Chart
 let lineChart = () => {
@@ -333,6 +293,8 @@ let lineChart = () => {
           return itemSong[`${e}`].thumbnail
         }
 
+
+
         // render name
         chartNameTop[0].innerHTML = ` <div class="zing-chart_right-top_item">
                                     <div class="zing-chart_right-top_box"></div>
@@ -475,8 +437,14 @@ let lineChart = () => {
                                  </div>
                               </div>
                               <div class="zing-chart_item-bottom">
-                                 <a class="zing-chart_btn" href="#">Xem Thêm</a>
+                                 <a id='more' class="zing-chart_btn" href="#">Xem Thêm</a>
                               </div>`
+
+
+        $("#more").click(function () {
+          $("#topChartClick").click()
+          console.log($("#topChartClick"))
+        })
       }
       renderTop3()
     })
@@ -485,5 +453,8 @@ lineChart()
 
 // Loading page
 window.addEventListener('load', () => {
-  document.querySelector('.loading').remove()
+  setTimeout(() => {
+    document.querySelector('.loading').remove()
+
+  }, 5000)
 })

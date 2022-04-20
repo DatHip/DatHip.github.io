@@ -34,6 +34,8 @@ a {
 }
 
 :root {
+  --kara-btn-bg: hsla(0, 0%, 100%, 0.1);
+  --alpha-layout-bg: rgba(16, 31, 63, 0.8);
   --background-image: "../img/backgrimg/roseBgimg.jpg";
   --navigation-text: #d4d4d4;
   --alpha-bg: rgba(255, 255, 255, 0.1);
@@ -44,11 +46,11 @@ a {
   --purple-primary: #3460f5;
   --text-item-hover: #fff;
   /*  */
-  --border-primary: #2B3F69;
+  --border-primary: rgb(43, 63, 105);
   --black: #32323d;
   --search-text: rgb(219, 219, 219);
   --sticky-header-box-shadow: rgba(0, 0, 0, 0.1);
-  --layout-bg: #061d50;
+  --layout-bg: rgb(5, 29, 79);
   --border-player: hsla(0, 0%, 100%, 0.1);
   --player-bg: rgba(0, 0, 0, 0.2);
   --player-text: #fff;
@@ -66,7 +68,7 @@ a {
   --box-shadow-queue: 0 1px 0 rgba(0, 0, 0, 0.3),
     0 1px 6px rgba(0, 0, 0, 0.3),
     inset 0 1px 1px rgba(25, 255, 255, 0.05);
-  --queue-player-popup-bg: #223c75;
+  --queue-player-popup-bg: rgb(34, 60, 117);
   --empty-episode-icon: url(https://zmp3-static.zmdcdn.me/skins/zmp3-v6.1/images/icons/episode-empty-1.png);
   --song-item-action: hsla(0, 0%, 100%, 0.5);
   --text-primary: #fff;
@@ -94,11 +96,11 @@ li {
 .sider_active {
   background-color: var(--alpha-bg) !important;
   border-left: 3px solid var(--purple-primary) !important;
+  padding-left: 4px !important;
 }
 
 .sider_active a {
   color: var(--text-hover-color) !important;
-  margin-light: 4px !important;
 }
 
 .queue_active-top {
@@ -186,6 +188,12 @@ li {
   -webkit-transition: .1s;
   transition: .1s;
   margin-bottom: 4px;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  height: auto;
+  overflow: hidden;
 }
 
 .main_title-text:hover {
@@ -364,7 +372,7 @@ li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  z-index: 10000;
+  z-index: 10000 !important;
 }
 
 .loader {
@@ -469,5 +477,9 @@ li {
 
 .main-page .main-page-item.active {
   display: block;
+}
+
+.slider_list-main {
+  min-height: 191px !important;
 }
 /*# sourceMappingURL=main.css.map */
