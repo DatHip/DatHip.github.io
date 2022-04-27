@@ -313,6 +313,9 @@
 }
 
 @media (max-width: 719px) {
+  .main.hide-bottom .sider-navbar {
+    height: auto !important;
+  }
   .nowplaying .nowplaying-content .nowplaying-header .nowplaying-header_setting .nowplaying-header_setting-item.item-setting ul {
     top: 0;
     right: 130%;
@@ -1067,6 +1070,7 @@
   }
   .playing-bar .playing-bar-main .player_controls-left .media_left {
     width: 45px;
+    min-width: 45px;
     height: 45px;
   }
   .playing-bar .playing-bar-main .player_controls-center {
@@ -1275,6 +1279,10 @@
 @media (min-width: 2000px) {
   .section {
     background-size: cover !important;
+  }
+  .main_home {
+    max-width: 1400px;
+    margin: auto;
   }
 }
 /*# sourceMappingURL=responsive.css.map */

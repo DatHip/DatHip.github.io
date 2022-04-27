@@ -49,41 +49,6 @@ $(document).ready(function () {
 })
 
 
-$('.nowplaying-content .want_list').slick({
-  centerMode: true,
-  centerPadding: '60px',
-  slidesToShow: 5,
-  swipe: true,
-  swipeToSlide: true,
-  prevArrow: `<button type='button' class='slider_list-btn-left slick-prev slick-arrow'><span span class= "material-icons-outlined" >
-            arrow_back_ios
-        </span ></button>`,
-  nextArrow: `
-    <button type='button' class='slider_list-btn-right slick-next slick-arrow'>
-        <span class="material-icons-outlined">arrow_forward_ios</span>
-    </button>`,
-  responsive: [{
-      breakpoint: 1060,
-      settings: {
-        centerMode: true,
-        centerPadding: '40px',
-        slidesToShow: 3
-      }
-    },
-    {
-      breakpoint: 720,
-      settings: {
-        centerMode: true,
-        centerPadding: '40px',
-        slidesToShow: 1,
-        arrows: false,
-        draggable: true,
-
-      }
-    }
-  ]
-});
-
 
 // Line Chart
 let lineChart = () => {
@@ -456,5 +421,5 @@ window.addEventListener('load', () => {
   setTimeout(() => {
     document.querySelector('.loading').remove()
 
-  }, 5000)
+  }, 10000)
 })
