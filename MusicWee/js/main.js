@@ -48,8 +48,6 @@ $(document).ready(function () {
   })
 })
 
-
-
 // Line Chart
 let lineChart = () => {
   const postApi = 'https://music-player-pink.vercel.app/api/chart-home'
@@ -421,5 +419,5 @@ window.addEventListener('load', () => {
   setTimeout(() => {
     document.querySelector('.loading').remove()
 
-  }, 10000)
+  }, 7000)
 })

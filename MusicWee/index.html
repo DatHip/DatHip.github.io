@@ -30,19 +30,15 @@
 
    <!-- Icons Gg -->
    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet" />
-
    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet" />
-
    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Round" rel="stylesheet" />
-
    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Sharp" rel="stylesheet" />
-
    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Two+Tone" rel="stylesheet" />
-
    <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0" />
 </head>
 
 <body>
+
    <div class="loading">
       <div class="loader">
          <div class="bar1"></div>
@@ -55,24 +51,9 @@
    </div>
 
    <div class="main hide-bottom">
-      <div class="main_toast load-page ">
-         <div class="toast-icon">
-            <span class="material-symbols-outlined">
-               error
-            </span>
-         </div>
-         <div class="toast-content">
-            <h3>Thông Báo </h3>
-            <p>Hiện do sever đang bảo trì nên Nhạc Nước Ngoài và 1 số bài nhạc Việt Sẽ Không Phát Được . Xin Cảm Ơn !</p>
-         </div>
-         <div class="toast-close">
-            <span class="material-symbols-outlined">
-               close
-            </span>
-         </div>
-      </div>
 
-      <div class="main_toast">
+
+      <div class="main_toast msg">
          <div class="toast-icon">
             <span class="material-symbols-outlined">
                error
@@ -92,11 +73,11 @@
          <!-- Left -->
          <aside class="sider-navbar">
             <div class="sider">
-               <div class="sider_brand-item">
-                  <div class="sider_brand-item-img">
-                     <img src="./img/logo/pabicon.webp" alt="" />
+               <div id="logo-sider" class="sider_brand-item">
+                  <div style="pointer-events: none;" class="sider_brand-item-img">
+                     <img style="pointer-events: none;" src="./img/logo/pabicon.webp" alt="" />
                   </div>
-                  <p class="sider_brand-item-text">D4T <span>MP3</span></p>
+                  <p style="pointer-events: none;" class="sider_brand-item-text">D4T <span style="pointer-events: none;">MP3</span></p>
                </div>
             </div>
             <div class="sider_menu sider_menu-c">
@@ -1904,7 +1885,7 @@
                         </div>
                         <div class="info-text">
                            <p>Từ PlayLits</p>
-                           <p>...</p>
+                           <p id="titleList">...</p>
                         </div>
                      </div>
                   </div>
@@ -2154,7 +2135,7 @@
                            <div class="playing_title-hover">Xem MV</div>
                         </div> -->
                   <div class="player_btn playing_karaoke">
-                     <span class="material-icons-outlined"> mic_external_on </span>
+                     <span style="pointer-events: none;" class="material-icons-outlined"> mic_external_on </span>
                      <div class="playing_title-hover">Xem Lời bài hát</div>
                   </div>
                   <div class="player_btn playing_window">
@@ -2181,6 +2162,7 @@
    </div>
    </div>
 
+
    <!-- js slick -->
    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
@@ -2195,6 +2177,7 @@
    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
+   <!-- Link js -->
    <script src="./js/main.js"></script>
    <script src="./js/script.js"></script>
    <script type="modue" src="./index.js"></script>

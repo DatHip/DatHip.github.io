@@ -3062,6 +3062,8 @@
   right: 0;
   transition: .5s linear;
 
+
+
   // bg img
   .nowplaying-bg {
     top: 0;
@@ -3092,6 +3094,7 @@
       z-index: 1;
     }
 
+
     .image-effect {
       position: relative;
       top: 0;
@@ -3109,6 +3112,7 @@
 
         .slick-track {
           height: 100%;
+
         }
       }
 
@@ -3405,6 +3409,11 @@
         &.active {
           display: flex;
         }
+
+        .slick-track {
+          // padding-left: 50%;
+          // padding-right: 50%;
+        }
       }
 
       // Karaoke 
@@ -3453,6 +3462,7 @@
           flex-direction: column;
           justify-content: center;
           margin-left: 20px;
+          margin-right: 20px;
 
           ul {
             font-size: 46px;
@@ -3483,6 +3493,7 @@
               }
             }
 
+            transition: .3s ease-in;
 
             .item {
               text-align: left;
@@ -3490,6 +3501,7 @@
               letter-spacing: -1px;
               font-weight: 700;
               line-height: 1.2;
+              transition: .3s ease-in;
 
               &.is-over {
                 color: hsla(0, 0%, 100%, .5);
@@ -3507,7 +3519,10 @@
         position: relative;
 
         .slick-list {
-          padding: 40px 0 !important;
+          padding-top: 40px !important;
+          padding-bottom: 40px !important;
+          padding-left: 20px;
+          padding-right: 20px;
         }
 
         .slick-slide {
@@ -3520,7 +3535,7 @@
         }
 
         // active 
-        .slick-center {
+        .slick-oke {
           transform: scale(1.15) translateY(-16px);
           transition: transform .5s ease;
 
@@ -3632,7 +3647,27 @@
     display: flex !important;
   }
 
+  &.play_hidden {
 
+    .nowplaying-header_tab,
+    .nowplaying-header_setting,
+    .player_controls-center,
+    .slider_list-btn-right,
+    .slider_list-btn-left,
+    .want_list-item:not(.slick-slide.slick-oke) {
+
+      opacity: 0 !important;
+    }
+  }
+
+  .nowplaying-header_tab,
+  .nowplaying-header_setting,
+  .player_controls-center,
+  .slider_list-btn-right,
+  .slider_list-btn-left,
+  .want_list-item:not(.slick-slide.slick-oke) {
+    transition: .3s ease-in;
+  }
 }
 
 @-webkit-keyframes animateEnter {
@@ -3782,6 +3817,9 @@
     margin-bottom: 0 !important;
     transition: .2s linear;
 
+    .container {
+      padding-bottom: 9rem;
+    }
   }
 
   .playing-bar {
@@ -3807,4 +3845,8 @@
     transition: .2s linear;
 
   }
+}
+
+#titleList {
+  font-weight: 600;
 }

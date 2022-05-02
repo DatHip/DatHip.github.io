@@ -316,6 +316,9 @@
   .main.hide-bottom .sider-navbar {
     height: auto !important;
   }
+  .main.hide-bottom .main-page {
+    margin-bottom: 2rem !important;
+  }
   .nowplaying .nowplaying-content .nowplaying-header .nowplaying-header_setting .nowplaying-header_setting-item.item-setting ul {
     top: 0;
     right: 130%;
@@ -1032,6 +1035,9 @@
   .player_queue {
     bottom: 63px;
   }
+  .player_queue-listmusic {
+    padding-bottom: 3rem !important;
+  }
   .playing-bar {
     bottom: 51px;
   }
@@ -1280,7 +1286,8 @@
   .section {
     background-size: cover !important;
   }
-  .main_home {
+  .main_home,
+  .header_content {
     max-width: 1400px;
     margin: auto;
   }

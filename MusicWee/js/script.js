@@ -565,6 +565,7 @@ const renderAndLenh = () => {
                const list = document.querySelector('.container_release .release_list')
                list.innerHTML = ""
                item.forEach((e, index) => {
+
                   list.innerHTML += `  
                         <a href="#" class="release_list-item">
                            <div class="release_list-item-left main-page_list-item_img main_page-hover">
@@ -589,7 +590,7 @@ const renderAndLenh = () => {
                               </div>
                               <div class="release_list-item-right-bottom">
                                  <div class="release_list-item-chart">#${index + 1}</div>
-                                 <div class="release_list-item-date">${e.album.releaseDate}</div>
+                                 <div class="release_list-item-date"></div>
                               </div>
                            </div>
                         </a>`
@@ -2186,7 +2187,7 @@ const renderAndLenh = () => {
       document.addEventListener('click', e => {
          console.log(e.target)
       })
-
+      const btnKaraoke = document.querySelector('.player_btn.playing_karaoke')
       const itemAvat = document.querySelector('.media_avatar-hover.openNowPlaying')
       const playingBar = document.querySelector('.playing-bar')
       const btnDown = document.querySelector('.nowplaying-header_setting-btn.down')
@@ -2198,6 +2199,14 @@ const renderAndLenh = () => {
          playingSetting.style.display = "flex"
       })
 
+      btnKaraoke.addEventListener('click', () => {
+         itemAvat.click()
+         setTimeout(() => {
+            document.querySelector('.nowplaying-header_tab-item:nth-child(3)').click()
+
+         }, 300)
+      })
+
       btnDown.addEventListener('click', () => {
          playingBar.classList.remove('active')
          playingCenter.style.marginBottom = "0"
@@ -2206,37 +2215,29 @@ const renderAndLenh = () => {
    }
 
    clickOpenNowPlay()
+
+   $('#logo-sider').click(() => {
+      window.location.reload()
+   })
 }
 renderAndLenh()
 
 // Click render danh sách nhạc
 let clickRenderPlayList = () => {
+   document.cookie = 'SameSite=None; Secure'
 
-   function ShowToast() {
-      const toast = document.querySelector('.main_toast.load-page ')
-      const btnClose = toast.querySelector('.toast-close span')
-      setTimeout(function () {
-         toast.classList.add('active-load')
-         btnClose.addEventListener('click', () => {
-            toast.classList.remove('active-load')
-         })
-
-         setTimeout(function () {
-            toast.classList.remove('active-load')
-         }, 12000)
-      }, 6000)
-   }
-   ShowToast()
    setTimeout(function () {
       // Slick sider
       function slickNowPlay() {
          $('.nowplaying-content .want_list').slick({
-            centerMode: true,
+            // centerMode: true,
             centerPadding: '60px',
             slidesToShow: 5,
             swipe: true,
             swipeToSlide: true,
             infinite: false,
+            focusOnSelect: false,
+
             prevArrow: `<button type='button' class='slider_list-btn-left slick-prev slick-arrow'><span span class= "material-icons-outlined" >
                arrow_back_ios
            </span ></button>`,
@@ -2247,7 +2248,7 @@ let clickRenderPlayList = () => {
             responsive: [{
                   breakpoint: 1060,
                   settings: {
-                     centerMode: true,
+                     // centerMode: true,
                      centerPadding: '40px',
                      slidesToShow: 3
                   }
@@ -2255,7 +2256,7 @@ let clickRenderPlayList = () => {
                {
                   breakpoint: 720,
                   settings: {
-                     centerMode: true,
+                     // centerMode: true,
                      centerPadding: '40px',
                      slidesToShow: 1,
                      arrows: false,
@@ -2265,6 +2266,7 @@ let clickRenderPlayList = () => {
                }
             ]
          });
+
       }
 
       // Selector
@@ -2281,20 +2283,20 @@ let clickRenderPlayList = () => {
       const randomMusic = document.querySelector('#randomMusic')
       const volumeUp = document.querySelector('#volumeup')
       const main = document.querySelector('.main')
-
-
+      const playingBar = document.querySelector('.playing-bar')
+      const scrollContent = document.querySelector('.scroll-content')
 
       let isRandom = false
       let isLoopMusic = false
       let musicIndex = 0
 
-
-
       // Function
 
+
+
       function activeErr() {
-         const mainToast = document.querySelector('.main_toast')
-         const closse = document.querySelector('.toast-close span')
+         const mainToast = document.querySelector('.main_toast.msg')
+         const closse = mainToast.querySelector('.toast-close span')
          mainToast.classList.add('active')
          closse.addEventListener('click', () => {
             mainToast.classList.remove('active')
@@ -2304,6 +2306,61 @@ let clickRenderPlayList = () => {
          }, 8000)
       }
 
+      // Tab NowPlaying
+      function acitveTabNow() {
+         let item = document.querySelectorAll('.player_queue-listmusic .player_queue-item [encodeidplay]')
+         let itemNow = document.querySelectorAll('.nowplaying-body [encodeidplay]')
+         let itemLi = document.querySelectorAll('.nowplaying-body .want_list-item')
+
+         itemNow.forEach((e, index) => {
+            let li = e.parentElement.parentElement.parentElement.parentElement.parentElement
+            if (e.getAttribute('name') == 'pause-circle-outline') {
+               e.setAttribute('name', 'play-circle-outline')
+            }
+            e.addEventListener('click', () => {
+               for (let i = 0; i < itemNow.length; i++) {
+                  itemNow[i].setAttribute('name', 'play-circle-outline')
+                  itemLi[i].classList.remove('slick-oke')
+               }
+               item[index].click()
+               e.setAttribute('name', 'pause-circle-outline')
+               li.classList.add('slick-oke')
+               setTimeout(() => {
+                  scrollToActive(li)
+               }, 100)
+               setTimeout(() => {
+                  scrollToActive(item[index])
+               }, 600)
+            })
+         })
+
+      }
+
+      // Function đồng bộ click thanh right vs now pl
+      function clickLiChangeNowPlay(e) {
+         let li = e.parentElement.parentElement.parentElement.parentElement.parentElement
+         let itemLi = document.querySelectorAll('.nowplaying-body .want_list-item')
+         let itemNow = document.querySelectorAll('.nowplaying-body [encodeidplay]')
+         const itemActiveRight = document.querySelector('.player_queue-item.player_queue-active')
+         itemNow.forEach(item => {
+            // change icon
+            if (item.getAttribute('name') == 'pause-circle-outline') {
+               item.setAttribute('name', 'play-circle-outline')
+            }
+         })
+         // remove Class oke
+         itemLi.forEach(e => {
+            e.classList.remove('slick-oke')
+         })
+
+         li.classList.add('slick-oke')
+         e.setAttribute('name', 'pause-circle-outline')
+         scrollToActive(li)
+         scrollToActive(itemActiveRight)
+
+      }
+
+      // 
       function showBottom() {
          main.classList.remove('hide-bottom')
       }
@@ -2313,40 +2370,136 @@ let clickRenderPlayList = () => {
             e.scrollIntoView({
                behavior: "smooth",
                block: "center",
+               inline: "center"
             })
-         }, 300)
+         }, 200)
       }
 
+      // function phụ
       function clickOpenSong(e) {
          let id = e.getAttribute('encodeidplay')
          const apiMusic = `https://music-player-pink.vercel.app/api/song?id=${id}`
+         const apiLyric = `https://music-player-pink.vercel.app/api/lyric?id=${id}`
+
          fetch(apiMusic)
             .then(res => res.json())
             .then(res => {
-
+               pauseMusic()
                if (res.err != 0) {
-                  activeErr()
-                  audio.pause()
-                  pauseMusic()
+                  // Cho Nhạc Nc ngoài 
+                  const apiMusic128 = `http://api.mp3.zing.vn/api/streaming/audio/${id}/128`
+                  const apiMusic320 = `http://api.mp3.zing.vn/api/streaming/audio/${id}/320`
+                  audio.src = apiMusic320
+
+               } else {
+                  let dataSong = res.data[128]
+                  audio.src = dataSong
+               }
+            })
+
+            .then(() => {
+               playMusic()
+            })
+
+            .catch()
+
+         fetch(apiLyric)
+            .then(res => res.json())
+            .then(res => {
+
+               function formatTime(seconds) {
+                  minutes = Math.floor(seconds / 60);
+                  minutes = minutes >= 10 ? minutes : "0" + minutes;
+                  seconds = Math.floor(seconds % 60);
+                  seconds = seconds >= 10 ? seconds : "0" + seconds;
+                  return minutes + ":" + seconds
+               }
+
+               const words = res.data.sentences
+               scrollContent.innerHTML = ``
+
+               if (!words) {
+                  scrollContent.innerHTML += `<li class='item'>Lời bài hát đang được cập nhật</li>`
                   return
                }
 
-               let dataSong = res.data[128]
-               audio.src = dataSong
-               // playMusic()
-            })
-            .then(() => {
-               playMusic()
+               words.forEach(e => {
+                  let word = e.words
+                  let liItem = document.createElement('li')
+                  liItem.classList.add('item')
 
+                  for (let i = 0; i < word.length; i++) {
+                     const text = word[i].data;
+                     liItem.innerHTML += text + ' '
+                  }
+
+                  scrollContent.insertAdjacentElement('beforeend', liItem)
+               });
+
+               setTimeout(() => {
+                  let allItem = scrollContent.querySelectorAll('.item')
+                  audio.addEventListener('loadedmetadata', () => {
+                     words.forEach((ele, index) => {
+                        let e = ele.words
+                        let startTime = formatTime(e[0].startTime / 1000)
+                        let endTime = formatTime(e[e.length - 1].endTime / 1000)
+
+                        audio.addEventListener('timeupdate', () => {
+                           let time = formatTime(audio.currentTime)
+                           if (time >= startTime && time < endTime) {
+                              allItem[index].classList.add('is-active')
+                              setTimeout(() => {
+                                 allItem[index].scrollIntoView({
+                                    behavior: "smooth",
+                                    block: "center",
+                                 })
+                              }, 200)
+                           }
+                           if (time >= endTime) {
+                              allItem[index].classList.remove('is-active')
+                              setTimeout(() => {
+                                 allItem[index].classList.add('is-over')
+                              }, 200);
+                           }
+                        })
+
+                     })
+                  })
+               }, )
             })
             .catch()
       }
 
+      function mouseMoveHide2() {
+         var timeout;
+         document.addEventListener('mousemove', () => {
+            clearTimeout(timeout);
+            let oke = document.querySelector('.want_list-item.slick-oke')
+            timeout = setTimeout(function () {
+               scrollToActive(oke)
+               setTimeout(() => {
+                  playingBar.classList.add('play_hidden')
+               }, 2000);
+            }, 7000);
+            playingBar.classList.remove('play_hidden')
+         })
+      }
+
+      // Chơi nhạc 
       function playMusic() {
          btnPausePLay.classList.add("paused")
          btnPausePLay.setAttribute('name', '')
          btnPausePLay.setAttribute('name', 'pause-circle-outline')
-         audio.play()
+         let isPLay = audio.play()
+         isPLay
+            .then(() => {
+               audio.play()
+            })
+            .catch(() => {
+               activeErr()
+               pauseMusic()
+            })
+
       }
 
       // Function Pause music
@@ -2357,17 +2510,9 @@ let clickRenderPlayList = () => {
          audio.pause()
       }
 
-      function addClassActive(e) {
-         let allLi = document.querySelectorAll('.player_queue-listmusic .player_queue-item')
-         allLi.forEach(item => {
-            if (item.classList.contains('player_queue-active')) {
-               item.classList.remove('player_queue-active')
-            }
-         })
-         e.classList.add('player_queue-active')
-      }
-
+      // next
       function nextMusic() {
+         pauseMusic()
          let item = document.querySelectorAll('.player_queue-listmusic .player_queue-item [encodeidplay]')
 
          if (isRandom) {
@@ -2387,6 +2532,8 @@ let clickRenderPlayList = () => {
 
          let itemIndex = item[`${musicIndex}`]
          let li = itemIndex.parentElement.parentElement.parentElement.parentElement
+         let itemNow = document.querySelectorAll('.nowplaying-body [encodeidplay]')
+
          clickOpenSong(itemIndex)
          RenderData(li)
          addClassActive(li)
@@ -2394,17 +2541,24 @@ let clickRenderPlayList = () => {
          playMusic()
          itemIndex.innerHTML = `pause`
          scrollToActive(li)
+
+         setTimeout(() => {
+            clickLiChangeNowPlay(itemNow[musicIndex])
+         }, 600)
       }
 
-
+      // prev
       function prevMusic() {
          let item = document.querySelectorAll('.player_queue-listmusic .player_queue-item [encodeidplay]')
+         let itemNow = document.querySelectorAll('.nowplaying-body [encodeidplay]')
+
          musicIndex--
          if (musicIndex < 0) {
             musicIndex = item.length
          }
          let itemIndex = item[`${musicIndex}`]
          let li = itemIndex.parentElement.parentElement.parentElement.parentElement
+
          clickOpenSong(itemIndex)
          RenderData(li)
          addClassActive(li)
@@ -2412,27 +2566,59 @@ let clickRenderPlayList = () => {
          playMusic()
          scrollToActive(li)
          itemIndex.innerHTML = `pause`
+
+         setTimeout(() => {
+            clickLiChangeNowPlay(itemNow[musicIndex])
+         }, 500)
       }
 
+
+      // add class active 
+      function addClassActive(e) {
+         let allLi = document.querySelectorAll('.player_queue-listmusic .player_queue-item')
+         allLi.forEach(item => {
+            if (item.classList.contains('player_queue-active')) {
+               item.classList.remove('player_queue-active')
+            }
+         })
+         e.classList.add('player_queue-active')
+      }
+
+
+      // click chơi nhạc function Chính
       function ClickActiveLI() {
          let item = document.querySelectorAll('.player_queue-listmusic .player_queue-item [encodeidplay]')
+         let itemNow = document.querySelectorAll('.nowplaying-body [encodeidplay]')
+
+
          item.forEach((e, index) => {
             e.addEventListener('click', function () {
                let li = e.parentElement.parentElement.parentElement.parentElement
                let i = e.getAttribute('index')
+               let itemNowPlay = itemNow[index]
+
                // Xử lý next bài 
                musicIndex = i
+               // Lấy api nhạc & play
                clickOpenSong(e)
+               // add class active
                addClassActive(li)
+               // render ra thanh bottm
                RenderData(li)
+               // thay đổi icon trong thanh right
                changeIcon()
+
+               clickLiChangeNowPlay(itemNowPlay)
+
                e.innerHTML = `pause`
             })
          })
       }
 
+      // Sự kiện thanh audio
       function EventAudio() {
          audio.addEventListener('ended', () => {
+            pauseMusic()
             if (isLoopMusic) {
                audio.currentTime = 0
                playMusic()
@@ -2505,38 +2691,112 @@ let clickRenderPlayList = () => {
 
       }
 
+      // play bản nhạc đầu tiên 
       function PlayingMusicFist() {
          musicIndex = 0
+
+         let itemNow = document.querySelectorAll('.nowplaying-body [encodeidplay]')
          let itemFist = document.querySelector('.player_queue-listmusic .player_queue-item')
-         RenderData(itemFist)
          let btnPlayFirst = itemFist.querySelector('[encodeidplay]')
-         addClassActive(itemFist)
          let id = btnPlayFirst.getAttribute('encodeidplay')
          const apiMusic = `https://music-player-pink.vercel.app/api/song?id=${id}`
+         const apiLyric = `https://music-player-pink.vercel.app/api/lyric?id=${id}`
+         RenderData(itemFist)
+         addClassActive(itemFist)
+
+         function formatTime(seconds) {
+            minutes = Math.floor(seconds / 60);
+            minutes = minutes >= 10 ? minutes : "0" + minutes;
+            seconds = Math.floor(seconds % 60);
+            seconds = seconds >= 10 ? seconds : "0" + seconds;
+            return minutes + ":" + seconds
+         }
+
          fetch(apiMusic)
             .then(res => res.json())
             .then(res => {
-
                if (res.err != 0) {
-                  pauseMusic()
-                  audio.pause()
-                  activeErr()
-                  return
+                  // Cho Nhạc Nc ngoài 
+                  const apiMusic2 = `http://api.mp3.zing.vn/api/streaming/audio/${id}/320/`
+                  audio.src = apiMusic2
+               } else {
+                  let dataSong = res.data[128]
+                  audio.src = dataSong
                }
 
-               let dataSong = res.data[128]
-               audio.src = dataSong
-               // Nếu btn bottom đang pause thì click cho có chạy
+               clickLiChangeNowPlay(itemNow[0])
                playMusic()
                btnPlayFirst.innerHTML = `pause`
             })
+            .catch()
+
+         fetch(apiLyric)
+            .then(res => res.json())
+            .then(res => {
+               scrollContent.innerHTML = ``
+               const words = res.data.sentences
+
+               if (!words) {
+                  scrollContent.innerHTML += `<li class='item'>Lời bài hát đang được cập nhật</li>`
+                  return
+               }
+
+               words.forEach(e => {
+                  let word = e.words
+                  let liItem = document.createElement('li')
+                  liItem.classList.add('item')
+
+                  for (let i = 0; i < word.length; i++) {
+                     const text = word[i].data;
+                     liItem.innerHTML += text + ' '
+                  }
+
+                  scrollContent.insertAdjacentElement('beforeend', liItem)
+               });
+
+               setTimeout(() => {
+                  let allItem = scrollContent.querySelectorAll('.item')
+                  audio.addEventListener('loadedmetadata', () => {
+                     words.forEach((ele, index) => {
+                        let e = ele.words
+                        let startTime = formatTime(e[0].startTime / 1000)
+                        let endTime = formatTime(e[e.length - 1].endTime / 1000)
+
+                        audio.addEventListener('timeupdate', () => {
+                           let time = formatTime(audio.currentTime)
+                           if (time >= startTime && time < endTime) {
+                              allItem[index].classList.add('is-active')
+                              setTimeout(() => {
+                                 allItem[index].scrollIntoView({
+                                    behavior: "smooth",
+                                    block: "center",
+                                 })
+                              }, 200)
+                           }
+                           if (time >= endTime) {
+                              allItem[index].classList.remove('is-active')
+                              setTimeout(() => {
+                                 allItem[index].classList.add('is-over')
+                              }, 200);
+                           }
+                        })
+
+                     })
+                  })
+               }, )
+            })
+            .catch()
+
       }
 
+      // render data Thanh bottm 
       function RenderData(e) {
          let itemActive = e
+
          let SongName = itemActive.querySelector('.player_queue-music').innerHTML
          let SongArit = itemActive.querySelector('.player_queue-name').innerHTML
          let SongImg = itemActive.querySelector('.player_queue-img').getAttribute('srcm')
+
          let mediaAvatar = document.querySelector('.media-avatar')
          let mediaMusic = document.querySelector('.media_center .media_music')
          let mediaName = document.querySelector('.media_center .media_name')
@@ -2546,8 +2806,10 @@ let clickRenderPlayList = () => {
          mediaMusic.innerHTML = SongName
          mediaName.innerHTML = SongArit
          avatarLyric.src = SongImg
+
       }
 
+      // thay đổi icon
       function changeIcon(e) {
          let items = document.querySelectorAll('.player_queue-listmusic .player_queue-item:not(.player_queue-item.player_queue-active) [encodeidplay]')
          items.forEach(item => {
@@ -2566,9 +2828,7 @@ let clickRenderPlayList = () => {
          })
       }
 
-
       // Evnet add
-
       // Xử lý click  loop Music
       loopMusicBtn.addEventListener('click', () => {
          isLoopMusic = !isLoopMusic
@@ -2614,6 +2874,7 @@ let clickRenderPlayList = () => {
       volumeUp.addEventListener('click', () => {
          volumeUpClick()
       })
+
       // Click btn volume up 
       function volumeUpClick() {
 
@@ -2633,6 +2894,7 @@ let clickRenderPlayList = () => {
          let color = `linear-gradient(90deg, var(--progressbar-active-bg) ${x}%, var(--progressbar-player-bg) ${x}%)`
          inputVolume.style.background = color
       })
+
       inputVolume.addEventListener('mousemove', () => {
          let x = inputVolume.value
          let color = `linear-gradient(90deg, var(--progressbar-active-bg) ${x}%, var(--progressbar-player-bg) ${x}%)`
@@ -2644,27 +2906,61 @@ let clickRenderPlayList = () => {
          prevMusic()
       })
 
+      // Enver keyboard
+      document.addEventListener('keydown', e => {
+         let data = e.keyCode
+         switch (data) {
+            case 32:
+               btnPausePLay.click();
+               e.preventDefault();
+               break;
+            case 39:
+               nextMusicBtn.click();
+               break;
+            case 37:
+               prevMusicBtn.click();
+               break;
+            case 74:
+               randomMusic.click();
+               break;
+            case 76:
+               loopMusicBtn.click();
+               break;
+            case 38:
+               inputVolume.value += 10;
+               break;
+            case 40:
+               inputVolume.value -= 10;
+               break;
+         }
+      })
+
+
       // Click PlayList danh sach nhac
       const btnPlay = document.querySelectorAll('.icon_play-btn:not(.icon_play-btn.bottom)[encodeid]')
       btnPlay.forEach((playlist, index) => {
          playlist.addEventListener("click", () => {
-
-            document.querySelector('.player_queue-listmusic').innerHTML = ``
             let id = playlist.getAttribute('encodeid')
+            const apiList = `https://music-player-pink.vercel.app/api/playlist?id=${id}`
             changeIconMain()
             playlist.setAttribute('name', 'pause-circle-outline')
-
-            const apiList = `https://music-player-pink.vercel.app/api/playlist?id=${id}`
+            pauseMusic()
+            document.querySelector('.player_queue-listmusic').innerHTML = ``
             fetch(apiList)
                .then(res => res.json())
                .then(res => {
+
                   const ListMusicLeft = document.querySelector('.player_queue-listmusic')
                   const ListMusicNowPlay = document.querySelector('.nowplaying-body .want_list ')
+                  const titleList = document.querySelector('#titleList')
                   let items = res.data.song.items
 
                   if (!res.msg == "Success") {
                      return
                   }
+
+                  titleList.innerHTML = res.data.title
+
                   showBottom()
                   ListMusicLeft.innerHTML = ``
 
@@ -2737,170 +3033,6 @@ let clickRenderPlayList = () => {
                      </div>`
                   })
 
-
-                  // let currentIndex = 0
-                  // // add Sự Kiện Click 
-                  // let Allitem = document.querySelectorAll('.player_queue-listmusic .encodeidplay')
-                  // let audio = document.querySelector('#main-audio')
-                  // let itemFist = Allitem[0]
-
-                  // console.log(Allitem)
-                  // console.log(audio)
-
-                  // // Cick toggle btn play bottom
-                  // const btnPausePLay = document.querySelector('#play-pause')
-                  // // btnPausePLay.setAttribute('name', 'pause-circle-outline')
-                  // btnPausePLay.addEventListener('click', () => {
-                  //    let namePlay = btnPausePLay.getAttribute('name')
-                  //    switch (namePlay) {
-                  //       case 'pause-circle-outline':
-                  //          btnPausePLay.setAttribute('name', 'play-circle-outline')
-                  //          audio.pause()
-                  //          break
-                  //       case 'play-circle-outline':
-                  //          btnPausePLay.setAttribute('name', 'pause-circle-outline')
-                  //          audio.play()
-                  //          break
-
-                  //    }
-                  // })
-
-                  // // CLick Next 
-                  // function ClickNextBtn() {
-                  //    console.log(currentIndex)
-                  //    currentIndex++
-                  //    currentIndex > items.length ? currentIndex = 0 : currentIndex
-                  //    let ItemIndex = Allitem[currentIndex]
-                  //    PLayingList(ItemIndex)
-                  // }
-
-                  // function ClickPrevBtn() {
-                  //    console.log(currentIndex)
-                  //    currentIndex--
-                  //    currentIndex <= 0 ? currentIndex = items.length : currentIndex
-                  //    let itemIndex = Allitem[currentIndex]
-                  //    PLayingList(itemIndex)
-                  // }
-
-                  // PLayingList(itemFist)
-                  // // Khi cick get Api SOng 
-                  // function PLayingList(e, index) {
-                  //    let codeid = e.getAttribute('encodeidplay')
-                  //    let codeIndex = e.getAttribute('index')
-
-                  //    const getApiSong = `https://music-player-pink.vercel.app/api/song?id=${codeid}`
-                  //    const item = items[`${codeIndex}`]
-                  //    // đổi data bottom
-                  //    const mediaAvatar = document.querySelector('.media-avatar')
-                  //    const mediaMusic = document.querySelector('.media_center .media_music')
-                  //    const mediaName = document.querySelector('.media_center .media_name')
-                  //    const avatarLyric = document.querySelector('.nowplaying-body_lyrics-item-img img')
-
-                  //    const PlayingTimeCurrent = document.querySelector('.playing_time-left')
-                  //    const PlayingTimeDuartion = document.querySelector('.playing_time-right')
-                  //    const progressArea = document.querySelector('.progress-area')
-                  //    const progressBar = document.querySelector('.progress-bar')
-
-                  //    let renderDataBottom = () => {
-                  //       mediaAvatar.src = item.thumbnail
-                  //       mediaMusic.innerHTML = item.title
-                  //       mediaName.innerHTML = item.artistsNames
-                  //       avatarLyric.src = item.thumbnailM
-                  //    }
-
-                  //    fetch(getApiSong)
-                  //       .then(res => res.json())
-                  //       .then(res => {
-                  //          // if (res.err !== 0) {
-                  //          //    return
-                  //          // }
-                  //          renderDataBottom()
-                  //          btnPausePLay.setAttribute('name', 'pause-circle-outline')
-
-                  //          // toggle btn main 
-                  //          let BtnPlaylist = playlist.getAttribute('name')
-                  //          playlist.setAttribute('name', 'pause-circle-outline')
-                  //          switch (BtnPlaylist) {
-                  //             case 'pause-circle-outline':
-                  //                playlist.setAttribute('name', 'play-circle-outline')
-                  //                break
-                  //             case 'play-circle-outline':
-                  //                playlist.setAttribute('name', 'pause-circle-outline')
-                  //                break
-                  //          }
-
-                  //          // Toggle btn Bot
-                  //          e.innerHTML = `pause`
-                  //          e.addEventListener('click', () => {
-                  //             if (e.innerHTML == `pause`) {
-                  //                e.innerHTML = 'play_arrow'
-                  //             } else if (e.innerHTML == `play_arrow`) {
-                  //                e.innerHTML = 'pause'
-                  //             }
-                  //          })
-
-                  //          let urlSong = res.data[128]
-                  //          audio.src = urlSong
-                  //          audio.play()
-
-                  //          audio.addEventListener('timeupdate', () => {
-                  //             // Update thanh time
-                  //             const currentTime = audio.currentTime // tgian hiện tại
-                  //             const duration = audio.duration // Tổng thời gian
-                  //             let progressWidth = (currentTime / duration) * 100
-
-                  //             progressBar.style.width = progressWidth + '%'
-
-                  //             // update song total duration
-                  //             audio.addEventListener('loadeddata', () => {
-                  //                let audioDuration = audio.duration
-                  //                let totalMin = Math.floor(audioDuration / 60)
-                  //                let totalSec = Math.floor(audioDuration % 60)
-                  //                if (totalSec < 10) { //add thêm 0 trước nến giây nhỏ hơn 10
-                  //                   totalSec = `0${totalSec}`
-                  //                }
-                  //                PlayingTimeDuartion.innerHTML = totalMin + ":" + totalSec
-                  //             })
-
-                  //             // update song Current Time
-                  //             let currentMin = Math.floor(currentTime / 60)
-                  //             let currentSec = Math.floor(currentTime % 60)
-                  //             if (currentSec < 10) {
-                  //                currentSec = `0${currentSec}`
-                  //             }
-                  //             PlayingTimeCurrent.innerHTML = currentMin + ':' + currentSec
-                  //          })
-
-                  //          // update playing song current time according to the preogress bar width
-                  //          progressArea.addEventListener('click', e => {
-                  //             let progressWidhtVal = progressArea.clientWidth // Lấy chiều x
-                  //             let clickedOffSetX = e.offsetX // lấy value chiều x khi click
-                  //             let songDuration = audio.duration
-
-                  //             audio.currentTime = (clickedOffSetX / progressWidhtVal) * songDuration
-
-                  //          })
-
-
-                  //       })
-                  // }
-
-                  // audio.addEventListener('ended', () => {
-                  //    document.querySelector('.player_btn.playing_next').click()
-                  // })
-
-                  // let nextBtn = document.querySelector('.player_btn.playing_next')
-                  // nextBtn.addEventListener('click', () => {
-                  //    ClickNextBtn()
-                  //    console.log(currentIndex)
-                  // })
-
-                  // let prevBtn = document.querySelector('.player_btn.playing_back')
-                  // prevBtn.addEventListener('click', () => {
-                  //    ClickPrevBtn()
-                  //    console.log(currentIndex)
-                  // })
-
                })
 
                .then(() => {
@@ -2909,7 +3041,11 @@ let clickRenderPlayList = () => {
                   })
                   PlayingMusicFist()
                   ClickActiveLI()
+                  acitveTabNow()
                   EventAudio()
+                  setTimeout(() => {
+                     mouseMoveHide2()
+                  }, 5000)
                })
 
 

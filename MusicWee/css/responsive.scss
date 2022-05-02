@@ -356,10 +356,13 @@
 
 // Mobile
 @media (max-width: 719px) {
-
   .main.hide-bottom {
     .sider-navbar {
       height: auto !important;
+    }
+
+    .main-page {
+      margin-bottom: 2rem !important;
     }
   }
 
@@ -1149,6 +1152,10 @@
     bottom: 63px;
   }
 
+  .player_queue-listmusic {
+    padding-bottom: 3rem !important;
+  }
+
   .playing-bar {
     bottom: 51px;
 
@@ -1442,9 +1449,9 @@
     background-size: cover !important;
   }
 
-  .main_home {
+  .main_home,
+  .header_content {
     max-width: 1400px;
     margin: auto;
-
   }
 }
