@@ -82,6 +82,14 @@
 }
 
 @media (max-width: 1225px) {
+  .main.hide-bottom {
+
+
+    .playing-bar {
+      pointer-events: none;
+    }
+  }
+
   .header {
     padding-top: 1.4rem;
     padding-bottom: 1.4rem;
@@ -363,6 +371,10 @@
 
     .main-page {
       margin-bottom: 2rem !important;
+    }
+
+    .playing-bar {
+      pointer-events: none;
     }
   }
 

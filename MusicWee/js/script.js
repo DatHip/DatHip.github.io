@@ -560,12 +560,13 @@ const renderAndLenh = () => {
          .then(res => {
             let items = res.data.items
 
+
             let renderMoiPhatHanh = () => {
-               const item = items[1].items
+               const item = items[0].items
                const list = document.querySelector('.container_release .release_list')
                list.innerHTML = ""
-               item.forEach((e, index) => {
 
+               item.forEach((e, index) => {
                   list.innerHTML += `  
                         <a href="#" class="release_list-item">
                            <div class="release_list-item-left main-page_list-item_img main_page-hover">
@@ -575,7 +576,7 @@ const renderAndLenh = () => {
                               <div class="recently_list-item_hover">
                                  <div class="recently_btn-hover recently_btn-hover-play">
                                     <span>
-                                       <ion-icon encodeIdPlay="${e.encodeId}" class="icon_play-btn" name="play-circle-outline"></ion-icon>
+                                       <ion-icon index="${index}" encodeid="ZDB6EB9C"  encodeidplay="${e.encodeId}" class="icon_play-btn" name="play-circle-outline"></ion-icon>
                                     </span>
                                     <!-- <span> <ion-icon class="icon_pause-btn" name="pause-circle-outline"></ion-icon> </span> -->
                                  </div>
@@ -931,7 +932,7 @@ const renderAndLenh = () => {
                                                 <div class="recently_list-item_hover">
                                                    <div class="recently_btn-hover recently_btn-hover-play">
                                                       <span>
-                                                         <ion-icon encodeid="${e.id}" class="icon_play-btn" name="play-circle-outline"></ion-icon>
+                                                         <ion-icon index="${i}" encodeid="ZO68OC68"  encodeidplay="${e.id}" class="icon_play-btn" name="play-circle-outline"></ion-icon>
                                                       </span>
                                                       <!-- <span>
                                                             <ion-icon class="icon_pause-btn" name="pause-circle-outline"></ion-icon>
@@ -967,7 +968,8 @@ const renderAndLenh = () => {
 
             btnChartMore.addEventListener('click', () => {
                // render more100
-               for (let i = 10; i < itemChart2.length; i++) {
+               let length = itemChart2.length
+               for (let i = 10; i < length; i++) {
                   let e = itemChart2[i]
                   chartList.innerHTML += ` <div class="zing-chart_item main_page-hover">
                                     <div class="zing-chart_item-left">
@@ -996,7 +998,7 @@ const renderAndLenh = () => {
                                                 <div class="recently_list-item_hover">
                                                    <div class="recently_btn-hover recently_btn-hover-play">
                                                       <span>
-                                                         <ion-icon class="icon_play-btn" name="play-circle-outline"></ion-icon>
+                                                         <ion-icon index="${i} encodeid="ZO68OC68" encodeidplay="${e.id}" class="icon_play-btn" name="play-circle-outline"></ion-icon>
                                                       </span>
                                                       <!-- <span>
                                                             <ion-icon class="icon_pause-btn" name="pause-circle-outline"></ion-icon>
@@ -1027,6 +1029,8 @@ const renderAndLenh = () => {
                                  </div>`
                }
                btnChartMore.remove()
+               // test
+
             })
          })
    }
@@ -1117,11 +1121,9 @@ const renderAndLenh = () => {
                                                 <div class="recently_list-item_hover">
                                                    <div class="recently_btn-hover recently_btn-hover-play">
                                                       <span>
-                                                         <ion-icon class="icon_play-btn" name="play-circle-outline"></ion-icon>
+                                                         <ion-icon index="${i}" encodeid="6BWFIAE8" encodeidplay="${e.id}"  class="icon_play-btn" name="play-circle-outline"></ion-icon>
                                                       </span>
-                                                      <!-- <span>
-                                                            <ion-icon class="icon_pause-btn" name="pause-circle-outline"></ion-icon>
-                                                         </span> -->
+                                                     
                                                    </div>
                                                 </div>
                                              </div>
@@ -1176,11 +1178,9 @@ const renderAndLenh = () => {
                                                 <div class="recently_list-item_hover">
                                                    <div class="recently_btn-hover recently_btn-hover-play">
                                                       <span>
-                                                         <ion-icon class="icon_play-btn" name="play-circle-outline"></ion-icon>
+                                                         <ion-icon index="${i}" encodeid="6BWCBFDF" encodeidplay="${e.id}"  class="icon_play-btn" name="play-circle-outline"></ion-icon>
                                                       </span>
-                                                      <!-- <span>
-                                                            <ion-icon class="icon_pause-btn" name="pause-circle-outline"></ion-icon>
-                                                         </span> -->
+                                                     
                                                    </div>
                                                 </div>
                                              </div>
@@ -1204,6 +1204,7 @@ const renderAndLenh = () => {
                                     </div>
                                  </div>`
             }
+
             // render chart korea
             for (let i = 0; i < 5; i++) {
                let e = dataKorea[i]
@@ -1235,7 +1236,7 @@ const renderAndLenh = () => {
                                                 <div class="recently_list-item_hover">
                                                    <div class="recently_btn-hover recently_btn-hover-play">
                                                       <span>
-                                                         <ion-icon class="icon_play-btn" name="play-circle-outline"></ion-icon>
+                                                         <ion-icon index="${i}" encodeid="6BWF7Z70" encodeidplay="${e.id}"  class="icon_play-btn" name="play-circle-outline"></ion-icon>
                                                       </span>
                                                       <!-- <span>
                                                             <ion-icon class="icon_pause-btn" name="pause-circle-outline"></ion-icon>
@@ -1322,7 +1323,7 @@ const renderAndLenh = () => {
                                                 <div class="recently_list-item_hover">
                                                    <div class="recently_btn-hover recently_btn-hover-play">
                                                       <span>
-                                                         <ion-icon class="icon_play-btn" name="play-circle-outline"></ion-icon>
+                                                         <ion-icon encodeId="ZDB6EB9C" encodeidplay="${e.encodeId}" index="${i}" class="icon_play-btn" name="play-circle-outline"></ion-icon>
                                                       </span>
                                                    </div>
                                                 </div>
@@ -2292,8 +2293,6 @@ let clickRenderPlayList = () => {
 
       // Function
 
-
-
       function activeErr() {
          const mainToast = document.querySelector('.main_toast.msg')
          const closse = mainToast.querySelector('.toast-close span')
@@ -2479,7 +2478,7 @@ let clickRenderPlayList = () => {
                scrollToActive(oke)
                setTimeout(() => {
                   playingBar.classList.add('play_hidden')
-               }, 2000);
+               }, 1200);
             }, 7000);
             playingBar.classList.remove('play_hidden')
          })
@@ -2789,6 +2788,106 @@ let clickRenderPlayList = () => {
 
       }
 
+      function PlayingMusicIndex(e) {
+
+         musicIndex = e
+
+         let itemNow = document.querySelectorAll('.nowplaying-body [encodeidplay]')
+         let itemFist = document.querySelectorAll('.player_queue-listmusic .player_queue-item')[e]
+         let btnPlayFirst = itemFist.querySelector('[encodeidplay]')
+         let id = btnPlayFirst.getAttribute('encodeidplay')
+
+         const apiMusic = `https://music-player-pink.vercel.app/api/song?id=${id}`
+         const apiLyric = `https://music-player-pink.vercel.app/api/lyric?id=${id}`
+
+         RenderData(itemFist)
+         addClassActive(itemFist)
+
+         function formatTime(seconds) {
+            minutes = Math.floor(seconds / 60);
+            minutes = minutes >= 10 ? minutes : "0" + minutes;
+            seconds = Math.floor(seconds % 60);
+            seconds = seconds >= 10 ? seconds : "0" + seconds;
+            return minutes + ":" + seconds
+         }
+
+         fetch(apiMusic)
+            .then(res => res.json())
+            .then(res => {
+               if (res.err != 0) {
+                  // Cho Nhạc Nc ngoài 
+                  const apiMusic2 = `http://api.mp3.zing.vn/api/streaming/audio/${id}/320/`
+                  audio.src = apiMusic2
+               } else {
+                  let dataSong = res.data[128]
+                  audio.src = dataSong
+               }
+
+               clickLiChangeNowPlay(itemNow[e])
+               playMusic()
+               btnPlayFirst.innerHTML = `pause`
+            })
+            .catch()
+
+         fetch(apiLyric)
+            .then(res => res.json())
+            .then(res => {
+               scrollContent.innerHTML = ``
+               const words = res.data.sentences
+
+               if (!words) {
+                  scrollContent.innerHTML += `<li class='item'>Lời bài hát đang được cập nhật</li>`
+                  return
+               }
+
+               words.forEach(e => {
+                  let word = e.words
+                  let liItem = document.createElement('li')
+                  liItem.classList.add('item')
+
+                  for (let i = 0; i < word.length; i++) {
+                     const text = word[i].data;
+                     liItem.innerHTML += text + ' '
+                  }
+
+                  scrollContent.insertAdjacentElement('beforeend', liItem)
+               });
+
+               setTimeout(() => {
+                  let allItem = scrollContent.querySelectorAll('.item')
+                  audio.addEventListener('loadedmetadata', () => {
+                     words.forEach((ele, index) => {
+                        let e = ele.words
+                        let startTime = formatTime(e[0].startTime / 1000)
+                        let endTime = formatTime(e[e.length - 1].endTime / 1000)
+
+                        audio.addEventListener('timeupdate', () => {
+                           let time = formatTime(audio.currentTime)
+                           if (time >= startTime && time < endTime) {
+                              allItem[index].classList.add('is-active')
+                              setTimeout(() => {
+                                 allItem[index].scrollIntoView({
+                                    behavior: "smooth",
+                                    block: "center",
+                                 })
+                              }, 200)
+                           }
+                           if (time >= endTime) {
+                              allItem[index].classList.remove('is-active')
+                              setTimeout(() => {
+                                 allItem[index].classList.add('is-over')
+                              }, 200);
+                           }
+                        })
+
+                     })
+                  })
+               }, )
+            })
+            .catch()
+
+      }
+
       // render data Thanh bottm 
       function RenderData(e) {
          let itemActive = e
@@ -2935,123 +3034,240 @@ let clickRenderPlayList = () => {
          }
       })
 
+      var ClickPlayingAll = () => {
+         // Click PlayList danh sach nhac
+         const btnPlay = document.querySelectorAll('[encodeid]')
+         btnPlay.forEach((playlist, index) => {
+            playlist.addEventListener("click", () => {
+               let id = playlist.getAttribute('encodeid')
+               let idPlay = playlist.getAttribute('encodeidplay')
+               let indexItemSong = playlist.getAttribute('index')
 
-      // Click PlayList danh sach nhac
-      const btnPlay = document.querySelectorAll('.icon_play-btn:not(.icon_play-btn.bottom)[encodeid]')
-      btnPlay.forEach((playlist, index) => {
-         playlist.addEventListener("click", () => {
-            let id = playlist.getAttribute('encodeid')
-            const apiList = `https://music-player-pink.vercel.app/api/playlist?id=${id}`
-            changeIconMain()
-            playlist.setAttribute('name', 'pause-circle-outline')
-            pauseMusic()
-            document.querySelector('.player_queue-listmusic').innerHTML = ``
-            fetch(apiList)
-               .then(res => res.json())
-               .then(res => {
+               function playListActive() {
+                  const apiList = `https://music-player-pink.vercel.app/api/playlist?id=${id}`
+                  changeIconMain()
+                  playlist.setAttribute('name', 'pause-circle-outline')
+                  pauseMusic()
+                  document.querySelector('.player_queue-listmusic').innerHTML = ``
+                  fetch(apiList)
+                     .then(res => res.json())
+                     .then(res => {
+                        const ListMusicLeft = document.querySelector('.player_queue-listmusic')
+                        const ListMusicNowPlay = document.querySelector('.nowplaying-body .want_list ')
+                        const titleList = document.querySelector('#titleList')
+                        let items = res.data.song.items
 
-                  const ListMusicLeft = document.querySelector('.player_queue-listmusic')
-                  const ListMusicNowPlay = document.querySelector('.nowplaying-body .want_list ')
-                  const titleList = document.querySelector('#titleList')
-                  let items = res.data.song.items
+                        if (!res.msg == "Success") {
+                           return
+                        }
 
-                  if (!res.msg == "Success") {
-                     return
-                  }
+                        titleList.innerHTML = res.data.title
 
-                  titleList.innerHTML = res.data.title
+                        showBottom()
+                        ListMusicLeft.innerHTML = ``
 
-                  showBottom()
-                  ListMusicLeft.innerHTML = ``
+                        // Thanh Now PLay
+                        ListMusicNowPlay.innerHTML = ``
+                        ListMusicNowPlay.classList.remove('slick-initialized')
+                        ListMusicNowPlay.classList.remove('slick-slider')
 
-                  // Thanh Now PLay
-                  ListMusicNowPlay.innerHTML = ``
-                  ListMusicNowPlay.classList.remove('slick-initialized')
-                  ListMusicNowPlay.classList.remove('slick-slider')
-
-                  // inset thanh Right
-                  items.forEach((item, index) => {
-                     ListMusicLeft.innerHTML += `  
-                     <li class="player_queue-item">
-                        <div class="player_queue-item-left">
-                           <div class="player_queue-left">
-                              <img class="player_queue-img" src="${item.thumbnail}" alt="" srcm="${item.thumbnailM}" />
-                              <div class="player_queue-img-hover">
-                                <span index="${index}" encodeidplay="${item.encodeId}" class="material-icons encodeidplay"> play_arrow </span>
-                                 <!-- <span class="material-icons"> pause </span> -->
+                        // inset thanh Right
+                        items.forEach((item, index) => {
+                           ListMusicLeft.innerHTML += `  
+                           <li class="player_queue-item">
+                              <div class="player_queue-item-left">
+                                 <div class="player_queue-left">
+                                    <img class="player_queue-img" src="${item.thumbnail}" alt="" srcm="${item.thumbnailM}" />
+                                    <div class="player_queue-img-hover">
+                                      <span index="${index}" encodeidplay="${item.encodeId}" class="material-icons encodeidplay"> play_arrow </span>
+                                       <!-- <span class="material-icons"> pause </span> -->
+                                    </div>
+                                 </div>
+                                 <div class="player_queue-music-info">
+                                    <div class="player_queue-music">${item.title}</div>
+                                    <div class="player_queue-name">${item.artistsNames}</div>
+                                 </div>
                               </div>
-                           </div>
-                           <div class="player_queue-music-info">
-                              <div class="player_queue-music">${item.title}</div>
-                              <div class="player_queue-name">${item.artistsNames}</div>
-                           </div>
-                        </div>
-                        <div class="player_queue-item-right">
-                           <div class="player_queue-btn player_btn">
-                              <span class="material-icons-outlined"> favorite_border </span>
-                              <span class="playing_title-hover">Thêm vào thư viện </span>
-                           </div>
-                           <div class="player_queue-btn player_btn">
-                              <span class="material-icons-outlined"> more_horiz </span>
-                              <span class="playing_title-hover">Xem thêm</span>
-                           </div>
-                        </div>
-                     </li>`
-                  })
-
-                  // inset thanh now
-                  items.forEach((item, index) => {
-                     ListMusicNowPlay.innerHTML += `
-                      <div class="want_list-item">
-                        <a class="want_list-item-link main-page_list-item main_page-hover" href="#">
-                           <div class="want_list-item-link main-page_list-item_img">
-                              <img src="${item.thumbnailM}" alt="${item.title}">
-                           </div>
-                           <div class="recently_list-item_hover">
-                              <div class="recently_btn-hover player_btn">
-                                 <span class="material-icons-outlined"> favorite_border </span>
-                                 <span class="playing_title-hover">Thêm vào thư viện </span>
+                              <div class="player_queue-item-right">
+                                 <div class="player_queue-btn player_btn">
+                                    <span class="material-icons-outlined"> favorite_border </span>
+                                    <span class="playing_title-hover">Thêm vào thư viện </span>
+                                 </div>
+                                 <div class="player_queue-btn player_btn">
+                                    <span class="material-icons-outlined"> more_horiz </span>
+                                    <span class="playing_title-hover">Xem thêm</span>
+                                 </div>
                               </div>
-                              <div class="recently_btn-hover recently_btn-hover-play">
-                                 <span>
-                                    <ion-icon  index="${index}"  encodeidplay="${item.encodeId}" class="icon_play-btn md hydrated encodeidplay" name="play-circle-outline" role="img" aria-label="play circle outline"></ion-icon>
-                                 </span>
-                                 <!-- <span> <ion-icon class="icon_pause-btn" name="pause-circle-outline"></ion-icon> </span> -->
+                           </li>`
+                        })
+
+                        // inset thanh now
+                        items.forEach((item, index) => {
+                           ListMusicNowPlay.innerHTML += `
+                            <div class="want_list-item">
+                              <a class="want_list-item-link main-page_list-item main_page-hover" href="#">
+                                 <div class="want_list-item-link main-page_list-item_img">
+                                    <img src="${item.thumbnailM}" alt="${item.title}">
+                                 </div>
+                                 <div class="recently_list-item_hover">
+                                    <div class="recently_btn-hover player_btn">
+                                       <span class="material-icons-outlined"> favorite_border </span>
+                                       <span class="playing_title-hover">Thêm vào thư viện </span>
+                                    </div>
+                                    <div class="recently_btn-hover recently_btn-hover-play">
+                                       <span>
+                                          <ion-icon  index="${index}"  encodeidplay="${item.encodeId}" class="icon_play-btn md hydrated encodeidplay" name="play-circle-outline" role="img" aria-label="play circle outline"></ion-icon>
+                                       </span>
+                                       <!-- <span> <ion-icon class="icon_pause-btn" name="pause-circle-outline"></ion-icon> </span> -->
+                                    </div>
+                                    <div class="recently_btn-hover player_btn">
+                                       <span class="material-icons-outlined"> more_horiz </span>
+                                       <span class="playing_title-hover">Xem thêm</span>
+                                    </div>
+                                 </div>
+                              </a>
+                              <div class="want_list-item-title">
+                                 <a class="main_title-text" title="${item.title}" href="#">${item.title}</a>
+                                 <div class="main_subtitle">
+                                    <a href="#">${item.artistsNames}</a>
+                                 </div>
                               </div>
-                              <div class="recently_btn-hover player_btn">
-                                 <span class="material-icons-outlined"> more_horiz </span>
-                                 <span class="playing_title-hover">Xem thêm</span>
+                           </div>`
+                        })
+
+                     })
+
+                     .then(() => {
+                        $(document).ready(function () {
+                           slickNowPlay()
+                        })
+                        PlayingMusicFist()
+                        ClickActiveLI()
+                        acitveTabNow()
+                        EventAudio()
+                        setTimeout(() => {
+                           mouseMoveHide2()
+                        }, 5000)
+                     })
+               }
+
+               if (idPlay) {
+                  const apiList = `https://music-player-pink.vercel.app/api/playlist?id=${id}`
+                  changeIconMain()
+                  playlist.setAttribute('name', 'pause-circle-outline')
+                  pauseMusic()
+                  document.querySelector('.player_queue-listmusic').innerHTML = ``
+                  fetch(apiList)
+                     .then(res => res.json())
+                     .then(res => {
+                        const ListMusicLeft = document.querySelector('.player_queue-listmusic')
+                        const ListMusicNowPlay = document.querySelector('.nowplaying-body .want_list ')
+                        const titleList = document.querySelector('#titleList')
+                        let items = res.data.song.items
+
+                        if (!res.msg == "Success") {
+                           return
+                        }
+
+                        titleList.innerHTML = res.data.title
+
+                        showBottom()
+                        ListMusicLeft.innerHTML = ``
+
+                        // Thanh Now PLay
+                        ListMusicNowPlay.innerHTML = ``
+                        ListMusicNowPlay.classList.remove('slick-initialized')
+                        ListMusicNowPlay.classList.remove('slick-slider')
+
+                        // inset thanh Right
+                        items.forEach((item, index) => {
+                           ListMusicLeft.innerHTML += `  
+                           <li class="player_queue-item">
+                              <div class="player_queue-item-left">
+                                 <div class="player_queue-left">
+                                    <img class="player_queue-img" src="${item.thumbnail}" alt="" srcm="${item.thumbnailM}" />
+                                    <div class="player_queue-img-hover">
+                                      <span index="${index}" encodeidplay="${item.encodeId}" class="material-icons encodeidplay"> play_arrow </span>
+                                       <!-- <span class="material-icons"> pause </span> -->
+                                    </div>
+                                 </div>
+                                 <div class="player_queue-music-info">
+                                    <div class="player_queue-music">${item.title}</div>
+                                    <div class="player_queue-name">${item.artistsNames}</div>
+                                 </div>
                               </div>
-                           </div>
-                        </a>
-                        <div class="want_list-item-title">
-                           <a class="main_title-text" title="${item.title}" href="#">${item.title}</a>
-                           <div class="main_subtitle">
-                              <a href="#">${item.artistsNames}</a>
-                           </div>
-                        </div>
-                     </div>`
-                  })
+                              <div class="player_queue-item-right">
+                                 <div class="player_queue-btn player_btn">
+                                    <span class="material-icons-outlined"> favorite_border </span>
+                                    <span class="playing_title-hover">Thêm vào thư viện </span>
+                                 </div>
+                                 <div class="player_queue-btn player_btn">
+                                    <span class="material-icons-outlined"> more_horiz </span>
+                                    <span class="playing_title-hover">Xem thêm</span>
+                                 </div>
+                              </div>
+                           </li>`
+                        })
 
-               })
+                        // inset thanh now
+                        items.forEach((item, index) => {
+                           ListMusicNowPlay.innerHTML += `
+                            <div class="want_list-item">
+                              <a class="want_list-item-link main-page_list-item main_page-hover" href="#">
+                                 <div class="want_list-item-link main-page_list-item_img">
+                                    <img src="${item.thumbnailM}" alt="${item.title}">
+                                 </div>
+                                 <div class="recently_list-item_hover">
+                                    <div class="recently_btn-hover player_btn">
+                                       <span class="material-icons-outlined"> favorite_border </span>
+                                       <span class="playing_title-hover">Thêm vào thư viện </span>
+                                    </div>
+                                    <div class="recently_btn-hover recently_btn-hover-play">
+                                       <span>
+                                          <ion-icon  index="${index}"  encodeidplay="${item.encodeId}" class="icon_play-btn md hydrated encodeidplay" name="play-circle-outline" role="img" aria-label="play circle outline"></ion-icon>
+                                       </span>
+                                       <!-- <span> <ion-icon class="icon_pause-btn" name="pause-circle-outline"></ion-icon> </span> -->
+                                    </div>
+                                    <div class="recently_btn-hover player_btn">
+                                       <span class="material-icons-outlined"> more_horiz </span>
+                                       <span class="playing_title-hover">Xem thêm</span>
+                                    </div>
+                                 </div>
+                              </a>
+                              <div class="want_list-item-title">
+                                 <a class="main_title-text" title="${item.title}" href="#">${item.title}</a>
+                                 <div class="main_subtitle">
+                                    <a href="#">${item.artistsNames}</a>
+                                 </div>
+                              </div>
+                           </div>`
+                        })
 
-               .then(() => {
-                  $(document).ready(function () {
-                     slickNowPlay()
-                  })
-                  PlayingMusicFist()
-                  ClickActiveLI()
-                  acitveTabNow()
-                  EventAudio()
-                  setTimeout(() => {
-                     mouseMoveHide2()
-                  }, 5000)
-               })
+                     })
+
+                     .then(() => {
+                        $(document).ready(function () {
+                           slickNowPlay()
+                        })
+                        PlayingMusicIndex(indexItemSong)
+                        ClickActiveLI()
+                        acitveTabNow()
+                        EventAudio()
+                        setTimeout(() => {
+                           mouseMoveHide2()
+                        }, 5000)
+                     })
 
 
+
+               } else {
+                  playListActive()
+               }
+
+            })
          })
-      })
-
+      }
+      ClickPlayingAll()
    }, 14000)
 }
 clickRenderPlayList()
