@@ -303,7 +303,7 @@ const renderAndLenh = () => {
                       <div class="col l-1-4 m-2 c-5 m2-6 m2-5" >
                            <a class="xones_list-item-link main-page_list-item main_page-hover" href="#">
                               <div class="xones_list-item-link-img main-page_list-item_img" >
-                                 <img src="${e.program.thumbnail}" alt="" />
+                                 <img src="${e.thumbnail}" alt="" />
                               </div>
                               <div class="xones_list-item-link-logo">
                                  <img src="${e.thumbnail}" alt="" />
@@ -584,7 +584,7 @@ const renderAndLenh = () => {
                            </div>
                            <div class="release_list-item-right">
                               <div class="release_list-item-right-top">
-                                 <div class="main_title-text">Nhạt Nhòa Mùa Phai</div>
+                                 <div class="main_title-text">${e.title}</div>
                                  <div class="main_subtitle">
                                     <span>${e.artistsNames}</span>
                                  </div>
@@ -2293,6 +2293,20 @@ let clickRenderPlayList = () => {
 
       // Function
 
+      let addCardVip = e => {
+         const isVip = document.querySelectorAll('.player_queue-main .player_queue-item.is-vip .player_queue-music')
+
+         if (!isVip) {
+            return
+         }
+         isVip.forEach(e => {
+            let creatI = document.createElement('div')
+            creatI.classList.add('is-vip_img')
+            creatI.innerHTML = ""
+            e.appendChild(creatI)
+         })
+      }
+
       function activeErr() {
          const mainToast = document.querySelector('.main_toast.msg')
          const closse = mainToast.querySelector('.toast-close span')
@@ -2495,8 +2509,16 @@ let clickRenderPlayList = () => {
                audio.play()
             })
             .catch(() => {
-               activeErr()
-               pauseMusic()
+               isPLay
+                  .then(() => {
+                     setTimeout(() => {
+                        audio.play()
+                     }, 2000)
+                  })
+                  .catch(() => {
+                     pauseMusic()
+                     activeErr()
+                  })
             })
 
       }
@@ -2615,6 +2637,7 @@ let clickRenderPlayList = () => {
       }
 
       // Sự kiện thanh audio
+
       function EventAudio() {
          audio.addEventListener('ended', () => {
             pauseMusic()
@@ -2689,6 +2712,8 @@ let clickRenderPlayList = () => {
          // })
 
       }
+
+      EventAudio()
 
       // play bản nhạc đầu tiên 
       function PlayingMusicFist() {
@@ -2789,9 +2814,7 @@ let clickRenderPlayList = () => {
       }
 
       function PlayingMusicIndex(e) {
-
          musicIndex = e
-
          let itemNow = document.querySelectorAll('.nowplaying-body [encodeidplay]')
          let itemFist = document.querySelectorAll('.player_queue-listmusic .player_queue-item')[e]
          let btnPlayFirst = itemFist.querySelector('[encodeidplay]')
@@ -3034,7 +3057,7 @@ let clickRenderPlayList = () => {
          }
       })
 
-      var ClickPlayingAll = () => {
+      let ClickPlayingAll = () => {
          // Click PlayList danh sach nhac
          const btnPlay = document.querySelectorAll('[encodeid]')
          btnPlay.forEach((playlist, index) => {
@@ -3042,6 +3065,14 @@ let clickRenderPlayList = () => {
                let id = playlist.getAttribute('encodeid')
                let idPlay = playlist.getAttribute('encodeidplay')
                let indexItemSong = playlist.getAttribute('index')
+
+               function isVip(e) {
+                  if (e == 1) {
+                     return ""
+                  } else if (e == 2) {
+                     return ` is-vip `
+                  }
+               }
 
                function playListActive() {
                   const apiList = `https://music-player-pink.vercel.app/api/playlist?id=${id}`
@@ -3061,6 +3092,7 @@ let clickRenderPlayList = () => {
                            return
                         }
 
+
                         titleList.innerHTML = res.data.title
 
                         showBottom()
@@ -3074,13 +3106,13 @@ let clickRenderPlayList = () => {
                         // inset thanh Right
                         items.forEach((item, index) => {
                            ListMusicLeft.innerHTML += `  
-                           <li class="player_queue-item">
+                           <li li li class = "player_queue-item ${isVip(item.streamingStatus)}" >
                               <div class="player_queue-item-left">
                                  <div class="player_queue-left">
                                     <img class="player_queue-img" src="${item.thumbnail}" alt="" srcm="${item.thumbnailM}" />
                                     <div class="player_queue-img-hover">
                                       <span index="${index}" encodeidplay="${item.encodeId}" class="material-icons encodeidplay"> play_arrow </span>
-                                       <!-- <span class="material-icons"> pause </span> -->
+                                      
                                     </div>
                                  </div>
                                  <div class="player_queue-music-info">
@@ -3104,7 +3136,7 @@ let clickRenderPlayList = () => {
                         // inset thanh now
                         items.forEach((item, index) => {
                            ListMusicNowPlay.innerHTML += `
-                            <div class="want_list-item">
+                            <div class="want_list-item ${isVip(item.streamingStatus)}">
                               <a class="want_list-item-link main-page_list-item main_page-hover" href="#">
                                  <div class="want_list-item-link main-page_list-item_img">
                                     <img src="${item.thumbnailM}" alt="${item.title}">
@@ -3118,7 +3150,7 @@ let clickRenderPlayList = () => {
                                        <span>
                                           <ion-icon  index="${index}"  encodeidplay="${item.encodeId}" class="icon_play-btn md hydrated encodeidplay" name="play-circle-outline" role="img" aria-label="play circle outline"></ion-icon>
                                        </span>
-                                       <!-- <span> <ion-icon class="icon_pause-btn" name="pause-circle-outline"></ion-icon> </span> -->
+                            
                                     </div>
                                     <div class="recently_btn-hover player_btn">
                                        <span class="material-icons-outlined"> more_horiz </span>
@@ -3138,13 +3170,14 @@ let clickRenderPlayList = () => {
                      })
 
                      .then(() => {
+                        addCardVip()
                         $(document).ready(function () {
                            slickNowPlay()
                         })
                         PlayingMusicFist()
                         ClickActiveLI()
                         acitveTabNow()
-                        EventAudio()
+                        // EventAudio()
                         setTimeout(() => {
                            mouseMoveHide2()
                         }, 5000)
@@ -3182,7 +3215,7 @@ let clickRenderPlayList = () => {
                         // inset thanh Right
                         items.forEach((item, index) => {
                            ListMusicLeft.innerHTML += `  
-                           <li class="player_queue-item">
+                           <li li class = "player_queue-item ${isVip(item.streamingStatus)}" >
                               <div class="player_queue-item-left">
                                  <div class="player_queue-left">
                                     <img class="player_queue-img" src="${item.thumbnail}" alt="" srcm="${item.thumbnailM}" />
@@ -3212,7 +3245,7 @@ let clickRenderPlayList = () => {
                         // inset thanh now
                         items.forEach((item, index) => {
                            ListMusicNowPlay.innerHTML += `
-                            <div class="want_list-item">
+                            <div div class = "want_list-item ${isVip(item.streamingStatus)}" >
                               <a class="want_list-item-link main-page_list-item main_page-hover" href="#">
                                  <div class="want_list-item-link main-page_list-item_img">
                                     <img src="${item.thumbnailM}" alt="${item.title}">
@@ -3226,7 +3259,6 @@ let clickRenderPlayList = () => {
                                        <span>
                                           <ion-icon  index="${index}"  encodeidplay="${item.encodeId}" class="icon_play-btn md hydrated encodeidplay" name="play-circle-outline" role="img" aria-label="play circle outline"></ion-icon>
                                        </span>
-                                       <!-- <span> <ion-icon class="icon_pause-btn" name="pause-circle-outline"></ion-icon> </span> -->
                                     </div>
                                     <div class="recently_btn-hover player_btn">
                                        <span class="material-icons-outlined"> more_horiz </span>
@@ -3246,19 +3278,18 @@ let clickRenderPlayList = () => {
                      })
 
                      .then(() => {
+                        addCardVip()
                         $(document).ready(function () {
                            slickNowPlay()
                         })
                         PlayingMusicIndex(indexItemSong)
                         ClickActiveLI()
                         acitveTabNow()
-                        EventAudio()
+                        // EventAudio()
                         setTimeout(() => {
                            mouseMoveHide2()
                         }, 5000)
                      })
-
-
 
                } else {
                   playListActive()

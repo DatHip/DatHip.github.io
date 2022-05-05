@@ -868,6 +868,10 @@
     padding: 0.8rem;
     border-radius: 4px;
 
+    .material-icons {
+      font-size: 30px;
+    }
+
     &:hover {
       background: var(--alpha-bg);
       transition: 0.2s;
@@ -879,6 +883,22 @@
       .player_queue-item-right {
         display: flex !important;
       }
+    }
+
+    &.is-vip {
+      opacity: .5 !important;
+
+      .is-vip_img {
+        background-image: url(https://zjs.zmdcdn.me/zmp3-desktop/releases/v1.6.24/static/media/vip-label.3dd6ac7e.svg);
+        width: 26px;
+        height: 12px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: inline-block;
+        flex-shrink: 0;
+        margin-left: 8px;
+      }
+
     }
 
     .player_queue-music-info {
@@ -972,7 +992,6 @@
   // active li
   .player_queue-active {
     background-color: var(--purple-primary) !important;
-
     transition: .2s;
   }
 }
@@ -1561,7 +1580,7 @@
     margin-top: 3.6rem;
 
     .icon_play-btn {
-      font-size: 6.5rem;
+      font-size: 7rem;
     }
 
     .recently_btn-hover-play {
@@ -1657,7 +1676,7 @@
     }
 
     .icon_play-btn {
-      font-size: 4rem;
+      font-size: 4.6rem;
     }
 
     .zing-chart_right {
@@ -2024,7 +2043,7 @@
 }
 
 .icon_play-btn {
-  font-size: 50px;
+  font-size: 60px;
   color: #ffffff;
   --ionicon-stroke-width: 16px;
 }
@@ -2541,7 +2560,7 @@
     }
 
     .recently_list-item_hover .recently_btn-hover-play span .icon_play-btn {
-      font-size: 3.6rem;
+      font-size: 4rem;
     }
 
     .zing-chart_item-center {

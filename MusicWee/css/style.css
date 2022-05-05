@@ -1050,6 +1050,10 @@
   border-radius: 4px;
 }
 
+.player_queue .player_queue-item .material-icons {
+  font-size: 30px;
+}
+
 .player_queue .player_queue-item:hover {
   background: var(--alpha-bg);
   -webkit-transition: 0.2s;
@@ -1064,6 +1068,22 @@
   display: -webkit-box !important;
   display: -ms-flexbox !important;
   display: flex !important;
+}
+
+.player_queue .player_queue-item.is-vip {
+  opacity: .5 !important;
+}
+
+.player_queue .player_queue-item.is-vip .is-vip_img {
+  background-image: url(https://zjs.zmdcdn.me/zmp3-desktop/releases/v1.6.24/static/media/vip-label.3dd6ac7e.svg);
+  width: 26px;
+  height: 12px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: inline-block;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  margin-left: 8px;
 }
 
 .player_queue .player_queue-item .player_queue-music-info .player_queue-music {
@@ -1847,7 +1867,7 @@
 }
 
 .main-page .container_favorite-artist .icon_play-btn {
-  font-size: 6.5rem;
+  font-size: 7rem;
 }
 
 .main-page .container_favorite-artist .recently_btn-hover-play {
@@ -1942,7 +1962,7 @@
 }
 
 .main-page .container_zing-chart .icon_play-btn {
-  font-size: 4rem;
+  font-size: 4.6rem;
 }
 
 .main-page .container_zing-chart .zing-chart_right {
@@ -2351,7 +2371,7 @@
 }
 
 .icon_play-btn {
-  font-size: 50px;
+  font-size: 60px;
   color: #ffffff;
   --ionicon-stroke-width: 16px;
 }
@@ -3021,7 +3041,7 @@
 }
 
 .main-page .main_topchart .recently_list-item_hover .recently_btn-hover-play span .icon_play-btn {
-  font-size: 3.6rem;
+  font-size: 4rem;
 }
 
 .main-page .main_topchart .zing-chart_item-center p {
