@@ -3,7 +3,6 @@ const renderAndLenh = () => {
    const btnExpanded = document.querySelector('.sider-navbar-exanded')
    const widthBodyStart = document.body.clientWidth
 
-
    let renderHomePage1 = () => {
       const api = 'https://dathuynhmusictest-three.vercel.app/api/home?page=1'
       fetch(api)
@@ -284,7 +283,6 @@ const renderAndLenh = () => {
    }
    renderHomePage1()
 
-
    let renderHomePage2 = () => {
       const api = 'https://dathuynhmusictest-three.vercel.app/api/home?page=2'
       fetch(api)
@@ -463,7 +461,6 @@ const renderAndLenh = () => {
             renderNewMusicToday()
          })
    }
-
    renderHomePage2()
 
    let renderHomePage3 = () => {
@@ -678,7 +675,7 @@ const renderAndLenh = () => {
                                        <span>
                                           <ion-icon encodeId="${e.encodeId}" class="icon_play-btn" name="play-circle-outline"></ion-icon>
                                        </span>
-                                       <!-- <span> <ion-icon class="icon_pause-btn" name="pause-circle-outline"></ion-icon> </span> -->
+                                       
                                     </div>
                                  </div>
                                  <div class="favorite_content">
@@ -1348,7 +1345,6 @@ const renderAndLenh = () => {
             }
          })
    }
-
    renderSongNew()
 
    // Render Main Top 100

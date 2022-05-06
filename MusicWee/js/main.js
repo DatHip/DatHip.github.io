@@ -300,11 +300,9 @@ let lineChart = () => {
                                              <div class="recently_list-item_hover">
                                                 <div class="recently_btn-hover recently_btn-hover-play">
                                                    <span>
-                                                      <ion-icon class="icon_play-btn" name="play-circle-outline"></ion-icon>
+                                                      <ion-icon  class="icon_play-btn" name="play-circle-outline"></ion-icon>
                                                    </span>
-                                                   <!-- <span>
-                                                         <ion-icon class="icon_pause-btn" name="pause-circle-outline"></ion-icon>
-                                                      </span> -->
+                                                 
                                                 </div>
                                              </div>
                                           </div>
@@ -339,9 +337,7 @@ let lineChart = () => {
                                                    <span>
                                                       <ion-icon class="icon_play-btn" name="play-circle-outline"></ion-icon>
                                                    </span>
-                                                   <!-- <span>
-                                                         <ion-icon class="icon_pause-btn" name="pause-circle-outline"></ion-icon>
-                                                      </span> -->
+                                                  
                                                 </div>
                                              </div>
                                           </div>
@@ -378,9 +374,7 @@ let lineChart = () => {
                                                    <span>
                                                       <ion-icon class="icon_play-btn" name="play-circle-outline"></ion-icon>
                                                    </span>
-                                                   <!-- <span>
-                                                         <ion-icon class="icon_pause-btn" name="pause-circle-outline"></ion-icon>
-                                                      </span> -->
+                                                
                                                 </div>
                                              </div>
                                           </div>
