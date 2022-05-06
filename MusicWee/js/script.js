@@ -54,7 +54,7 @@ const renderAndLenh = () => {
                            <div class="want_list-item-title">
                               <a class="main_title-text" title="${item[i].sortDescription}" href="#">${item[i].title}</a>
                               <div class="main_subtitle">
-                                 <a href="#">${item[i].artists[0].name}</a>, <a href="#">${item[i].artists[1].name}r</a>, <a href="#">${item[i].artists[2].name}</a>...
+                                 <a href="#">${item[i].artists[0].name}</a>, <a href="#">${item[i].artists[1].name}</a>, <a href="#">${item[i].artists[2].name}</a>...
                               </div>
                            </div>
                         </div>`
@@ -85,7 +85,7 @@ const renderAndLenh = () => {
                            <div class="want_list-item-title">
                               <a class="main_title-text" title="${item[4].sortDescription}" href="#"> ${item[4].title}</a>
                               <div class="main_subtitle">
-                                 <a href="#">${item[4].artists[0].name}</a>, <a href="#">${item[4].artists[1].name}r</a>, <a href="#">${item[4].artists[2].name}</a>...
+                                 <a href="#">${item[4].artists[0].name}</a>, <a href="#">${item[4].artists[1].name}</a>, <a href="#">${item[4].artists[2].name}</a>...
                               </div>
                            </div>
                         </div>`
@@ -591,7 +591,7 @@ const renderAndLenh = () => {
                               </div>
                               <div class="release_list-item-right-bottom">
                                  <div class="release_list-item-chart">#${index + 1}</div>
-                                 <div class="release_list-item-date"></div>
+                                 <div class="release_list-item-date">${e.album.releaseDate}</div>
                               </div>
                            </div>
                         </a>`
@@ -2185,9 +2185,7 @@ const renderAndLenh = () => {
    nowPlaying()
 
    let clickOpenNowPlay = () => {
-      document.addEventListener('click', e => {
-         console.log(e.target)
-      })
+
       const btnKaraoke = document.querySelector('.player_btn.playing_karaoke')
       const itemAvat = document.querySelector('.media_avatar-hover.openNowPlaying')
       const playingBar = document.querySelector('.playing-bar')
