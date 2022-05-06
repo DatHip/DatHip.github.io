@@ -5,7 +5,7 @@ const renderAndLenh = () => {
 
 
    let renderHomePage1 = () => {
-      const api = 'https://music-player-pink.vercel.app/api/home?page=1'
+      const api = 'https://dathuynhmusictest-three.vercel.app/api/home?page=1'
       fetch(api)
          .then(res => res.json())
          .then(res => {
@@ -286,7 +286,7 @@ const renderAndLenh = () => {
 
 
    let renderHomePage2 = () => {
-      const api = 'https://music-player-pink.vercel.app/api/home?page=2'
+      const api = 'https://dathuynhmusictest-three.vercel.app/api/home?page=2'
       fetch(api)
          .then(res => res.json())
          .then(res => {
@@ -467,7 +467,7 @@ const renderAndLenh = () => {
    renderHomePage2()
 
    let renderHomePage3 = () => {
-      const api = 'https://music-player-pink.vercel.app/api/home?page=3'
+      const api = 'https://dathuynhmusictest-three.vercel.app/api/home?page=3'
       fetch(api)
          .then(res => res.json())
          .then(res => {
@@ -554,7 +554,7 @@ const renderAndLenh = () => {
 
 
    let renderHomePage4 = () => {
-      const api = 'https://music-player-pink.vercel.app/api/home?page=4'
+      const api = 'https://dathuynhmusictest-three.vercel.app/api/home?page=4'
       fetch(api)
          .then(res => res.json())
          .then(res => {
@@ -655,7 +655,7 @@ const renderAndLenh = () => {
    renderHomePage4()
 
    let renderHomePage5 = () => {
-      const api = 'https://music-player-pink.vercel.app/api/home?page=5'
+      const api = 'https://dathuynhmusictest-three.vercel.app/api/home?page=5'
       fetch(api)
          .then(res => res.json())
          .then(res => {
@@ -1038,7 +1038,7 @@ const renderAndLenh = () => {
 
    // call api chart week
    let renderChartWeek = () => {
-      const api = 'https://music-player-pink.vercel.app/api/chart-home'
+      const api = 'https://dathuynhmusictest-three.vercel.app/api/chart-home'
       fetch(api)
          .then(res => res.json())
          .then(res => {
@@ -1270,7 +1270,7 @@ const renderAndLenh = () => {
 
    // Render Api Tab Mới Phát Hành
    let renderSongNew = () => {
-      const api = 'https://music-player-pink.vercel.app/api/chart-home'
+      const api = 'https://dathuynhmusictest-three.vercel.app/api/chart-home'
       const newSongList = document.querySelector('.main_songnew .zing-chart_list')
 
       fetch(api)
@@ -1353,7 +1353,7 @@ const renderAndLenh = () => {
 
    // Render Main Top 100
    let renderMainTop100 = () => {
-      const api = 'https://music-player-pink.vercel.app/api/top100'
+      const api = 'https://dathuynhmusictest-three.vercel.app/api/top100'
       fetch(api)
          .then(res => res.json())
          .then(res => {
@@ -1705,7 +1705,7 @@ const renderAndLenh = () => {
          // Render Main
          const renderMainItem2 = (apiId, itemMv) => {
             // APi Main
-            const api = `https://music-player-pink.vercel.app/api/listMV?id=${apiId}&page=1&count=64`
+            const api = `https://dathuynhmusictest-three.vercel.app/api/listMV?id=${apiId}&page=1&count=64`
             const nameItemMv = document.querySelector(
                `.main_mv-container_${itemMv} .container_top100-list.row`
             )
@@ -1792,7 +1792,7 @@ const renderAndLenh = () => {
             const ListDropDown = document.querySelector(
                `.main_mv-container_${itemMv} .main_mv-dropdown-list`
             )
-            const apiCategory = `https://music-player-pink.vercel.app/api/category?id=${apiId}`
+            const apiCategory = `https://dathuynhmusictest-three.vercel.app/api/category?id=${apiId}`
             fetch(apiCategory)
                .then(res => res.json())
                .then(res => {
@@ -2391,8 +2391,8 @@ let clickRenderPlayList = () => {
       // function phụ
       function clickOpenSong(e) {
          let id = e.getAttribute('encodeidplay')
-         const apiMusic = `https://music-player-pink.vercel.app/api/song?id=${id}`
-         const apiLyric = `https://music-player-pink.vercel.app/api/lyric?id=${id}`
+         const apiMusic = `https://dathuynhmusictest-three.vercel.app/api/song?id=${id}`
+         const apiLyric = `https://dathuynhmusictest-three.vercel.app/api/lyric?id=${id}`
 
          fetch(apiMusic)
             .then(res => res.json())
@@ -2723,8 +2723,8 @@ let clickRenderPlayList = () => {
          let itemFist = document.querySelector('.player_queue-listmusic .player_queue-item')
          let btnPlayFirst = itemFist.querySelector('[encodeidplay]')
          let id = btnPlayFirst.getAttribute('encodeidplay')
-         const apiMusic = `https://music-player-pink.vercel.app/api/song?id=${id}`
-         const apiLyric = `https://music-player-pink.vercel.app/api/lyric?id=${id}`
+         const apiMusic = `https://dathuynhmusictest-three.vercel.app/api/song?id=${id}`
+         const apiLyric = `https://dathuynhmusictest-three.vercel.app/api/lyric?id=${id}`
          RenderData(itemFist)
          addClassActive(itemFist)
 
@@ -2820,8 +2820,8 @@ let clickRenderPlayList = () => {
          let btnPlayFirst = itemFist.querySelector('[encodeidplay]')
          let id = btnPlayFirst.getAttribute('encodeidplay')
 
-         const apiMusic = `https://music-player-pink.vercel.app/api/song?id=${id}`
-         const apiLyric = `https://music-player-pink.vercel.app/api/lyric?id=${id}`
+         const apiMusic = `https://dathuynhmusictest-three.vercel.app/api/song?id=${id}`
+         const apiLyric = `https://dathuynhmusictest-three.vercel.app/api/lyric?id=${id}`
 
          RenderData(itemFist)
          addClassActive(itemFist)
@@ -3075,7 +3075,7 @@ let clickRenderPlayList = () => {
                }
 
                function playListActive() {
-                  const apiList = `https://music-player-pink.vercel.app/api/playlist?id=${id}`
+                  const apiList = `https://dathuynhmusictest-three.vercel.app/api/playlist?id=${id}`
                   changeIconMain()
                   playlist.setAttribute('name', 'pause-circle-outline')
                   pauseMusic()
@@ -3185,7 +3185,7 @@ let clickRenderPlayList = () => {
                }
 
                if (idPlay) {
-                  const apiList = `https://music-player-pink.vercel.app/api/playlist?id=${id}`
+                  const apiList = `https://dathuynhmusictest-three.vercel.app/api/playlist?id=${id}`
                   changeIconMain()
                   playlist.setAttribute('name', 'pause-circle-outline')
                   pauseMusic()
