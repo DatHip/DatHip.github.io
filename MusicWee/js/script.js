@@ -2199,7 +2199,7 @@ const renderAndLenh = () => {
          setTimeout(() => {
             document.querySelector('.nowplaying-header_tab-item:nth-child(3)').click()
 
-         }, 300)
+         }, 150)
       })
 
       btnDown.addEventListener('click', () => {
@@ -2310,7 +2310,7 @@ let clickRenderPlayList = () => {
          })
          setTimeout(() => {
             mainToast.classList.remove('active')
-         }, 8000)
+         }, 7000)
       }
 
       // Tab NowPlaying
@@ -2337,7 +2337,7 @@ let clickRenderPlayList = () => {
                }, 100)
                setTimeout(() => {
                   scrollToActive(item[index])
-               }, 600)
+               }, 1500)
             })
          })
 
@@ -2486,7 +2486,7 @@ let clickRenderPlayList = () => {
                scrollToActive(oke)
                setTimeout(() => {
                   playingBar.classList.add('play_hidden')
-               }, 1200);
+               }, 1000);
             }, 7000);
             playingBar.classList.remove('play_hidden')
          })
@@ -2559,7 +2559,7 @@ let clickRenderPlayList = () => {
 
          setTimeout(() => {
             clickLiChangeNowPlay(itemNow[musicIndex])
-         }, 600)
+         }, 1000)
       }
 
       // prev
