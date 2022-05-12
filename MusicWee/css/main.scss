@@ -5,7 +5,7 @@
   font-family: "Inter", sans-serif;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  transform: .3s;
+  transition: .3s linear;
 }
 
 .block {
@@ -33,7 +33,10 @@ a {
 }
 
 :root {
+  --image-queue-loader: url(https://zmp3-static.zmdcdn.me/skins/zmp3-v6.1/images/backgrounds/bg-empty-dark.svg);
+
   --progressbar-active-bg: #fff;
+
   --progressbar-player-bg: hsla(0, 0%, 100%, 0.3);
   --kara-btn-bg: hsla(0, 0%, 100%, 0.1);
   --alpha-layout-bg: rgba(16, 31, 63, 0.8);

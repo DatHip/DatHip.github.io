@@ -70,6 +70,13 @@
 }
 
 @media (max-width: 1225px) {
+  .player_queue .player_queue-main .player_queue-header {
+    padding-top: 1.8rem;
+    padding-bottom: 1.4rem;
+  }
+  .player_queue .player_queue-main .player_queue-container {
+    margin-top: 70px;
+  }
   .main.hide-bottom .playing-bar {
     pointer-events: none;
   }
@@ -227,12 +234,16 @@
     margin-right: 0;
   }
   .player_queue {
-    -webkit-transition: right 0.5s linear;
-    transition: right 0.5s linear;
+    -webkit-transition: 0.5s linear;
+    transition: 0.5s linear;
     right: -350px;
     -webkit-box-shadow: var(--box-shadow-queue);
             box-shadow: var(--box-shadow-queue);
     background-color: var(--layout-bg);
+  }
+  .player_queue .player_queue-header {
+    right: -350px;
+    position: absolute;
   }
   .player_device-column {
     display: block;
@@ -297,7 +308,8 @@
   .container_recently .recently_btn-hover-play {
     margin: 0;
   }
-  .container_recently .recently_btn-hover-play span {
+  .container_recently .recently_btn-hover-play span,
+  .container_recently .recently_btn-hover-play .icon_play-btn {
     font-size: 4rem;
   }
 }
@@ -316,6 +328,17 @@
 }
 
 @media (max-width: 719px) {
+  .player_queue .player_queue-main .player_queue-header {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  .player_queue .player_queue-main .player_queue-container {
+    margin-top: 60px;
+  }
+  .main .section {
+    background-image: unset;
+    background-color: var(--layout-bg);
+  }
   .main.hide-bottom .sider-navbar {
     height: auto !important;
   }
@@ -334,6 +357,14 @@
   }
   .playing-bar .player_queue {
     background-color: var(--layout-bg);
+  }
+  .playing-bar.active .player_queue .player_queue-main .player_queue-header {
+    background: transparent;
+    left: 0;
+    position: unset !important;
+  }
+  .playing-bar.active .player_queue .player_queue-main .player_queue-container {
+    margin-top: 0;
   }
   .playing-bar.active .player_queue {
     -webkit-box-shadow: none;
@@ -1035,11 +1066,11 @@
     margin: 0;
   }
   .player_queue .player_queue-main {
-    height: calc(100vh - 112px);
-    max-height: calc(100vh - 112px);
+    height: calc(100vh - 120px);
+    max-height: calc(100vh - 120px);
   }
   .player_queue {
-    bottom: 63px;
+    bottom: 70px;
   }
   .player_queue-listmusic {
     padding-bottom: 3rem !important;

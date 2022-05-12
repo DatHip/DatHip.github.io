@@ -22,7 +22,6 @@ const renderAndLenh = () => {
             }
             renderBanner()
 
-
             let renderMuonNghe = () => {
                let item = items[3].items
                let list = document.querySelector('.container_want .want_list')
@@ -166,6 +165,7 @@ const renderAndLenh = () => {
             }
             renderLuaChonToday()
 
+
             let renderXones = () => {
                let item = items[5].items
                let list = document.querySelector('.container_xones .xones_list')
@@ -301,7 +301,7 @@ const renderAndLenh = () => {
                       <div class="col l-1-4 m-2 c-5 m2-6 m2-5" >
                            <a class="xones_list-item-link main-page_list-item main_page-hover" href="#">
                               <div class="xones_list-item-link-img main-page_list-item_img" >
-                                 <img src="${e.thumbnail}" alt="" />
+                                 <img src="${e.program.thumbnail}" alt="" />
                               </div>
                               <div class="xones_list-item-link-logo">
                                  <img src="${e.thumbnail}" alt="" />
@@ -344,7 +344,7 @@ const renderAndLenh = () => {
                                     <span>
                                        <ion-icon  class="icon_play-btn" name="play-circle-outline"></ion-icon>
                                     </span>
-                                    <!-- <span> <ion-icon class="icon_pause-btn" name="pause-circle-outline"></ion-icon> </span> -->
+                                    
                                  </div>
                               </div>
                            </a>
@@ -372,7 +372,7 @@ const renderAndLenh = () => {
                                     <span>
                                        <ion-icon  class="icon_play-btn" name="play-circle-outline"></ion-icon>
                                     </span>
-                                    <!-- <span> <ion-icon class="icon_pause-btn" name="pause-circle-outline"></ion-icon> </span> -->
+                                    
                                  </div>
                               </div>
                            </a>
@@ -3293,6 +3293,6 @@ let clickRenderPlayList = () => {
          })
       }
       ClickPlayingAll()
-   }, 14000)
+   }, 12000)
 }
 clickRenderPlayList()

@@ -413,5 +413,5 @@ window.addEventListener('load', () => {
   setTimeout(() => {
     document.querySelector('.loading').remove()
 
-  }, 7000)
+  }, 5000)
 })

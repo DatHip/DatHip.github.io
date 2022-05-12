@@ -5,13 +5,11 @@
 
   .section {
     background-size: 1920px auto;
-    // height: calc(100vh - 90px);
+    background-image: url(../img/backgrimg/roseBgimg.jpg);
     height: 100vh;
     background-color: 1920px auto repeat;
     width: 100%;
-    // min-width: 768px;
     display: flex;
-
   }
 }
 
@@ -794,10 +792,15 @@
 
 
     .player_queue-header {
+      transition: .5s linear;
       padding: 2.3rem 1rem 2.3rem 1rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      position: fixed;
+      z-index: 2;
+      background: var(--layout-bg);
+
 
       .queue_list-history {
         display: flex;
@@ -854,147 +857,215 @@
         }
       }
     }
-  }
 
-  .player_queue-listmusic {
-    padding: 0 1rem;
-  }
-
-  // li
-  .player_queue-item {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0.8rem;
-    border-radius: 4px;
-
-    .material-icons {
-      font-size: 30px;
+    .player_queue-container {
+      margin-top: 82px;
     }
 
-    &:hover {
-      background: var(--alpha-bg);
-      transition: 0.2s;
+    //  Trong ul khi ko co gi
 
-      .player_queue-img-hover {
-        visibility: visible !important;
-      }
-
-      .player_queue-item-right {
-        display: flex !important;
-      }
+    .empty {
+      margin: 1.2rem .8rem;
     }
 
-    &.is-vip {
-      opacity: .5 !important;
-
-      .is-vip_img {
-        background-image: url(https://zjs.zmdcdn.me/zmp3-desktop/releases/v1.6.24/static/media/vip-label.3dd6ac7e.svg);
-        width: 26px;
-        height: 12px;
-        background-repeat: no-repeat;
-        background-size: cover;
-        display: inline-block;
-        flex-shrink: 0;
-        margin-left: 8px;
-      }
-
+    .empty-img {
+      width: 100%;
+      height: 24rem;
+      background: var(--image-queue-loader) 50%/cover no-repeat;
+      opacity: .5;
     }
 
-    .player_queue-music-info {
-      .player_queue-music {
-        color: var(--player-text);
-        font-size: 1.4rem;
-        cursor: pointer;
+    .empty-queue {
+      position: absolute;
+      top: 50%;
+      bottom: auto;
+      z-index: 98;
+      transform: translateY(-50%);
+      text-align: center;
+      padding: 0 33px;
 
-        &:hover {
-          opacity: 0.8;
-        }
+      .material-symbols-outlined {
+        margin-right: 6px;
+        font-size: 1.8rem;
       }
 
-      .player_queue-name {
-        color: var(--text-secondary);
-        font-size: 1.2rem;
-        cursor: pointer;
-
-        &:hover {
-          text-decoration: underline;
-        }
-      }
-    }
-
-    .player_queue-item-left {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .player_queue-left {
-      cursor: pointer;
-      border-radius: 8px;
-      width: 4rem;
-      min-width: 4rem;
-      height: 4rem;
-      border-radius: 4px;
-      overflow: hidden;
-      box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 8px;
-      margin-right: 1rem;
-      position: relative;
-
-      .player_queue-img-hover {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        cursor: pointer;
-        border-radius: 4px;
-        width: 4rem;
-        height: 4rem;
+      .empty-queue-btn {
         display: flex;
-        visibility: hidden;
         align-items: center;
         justify-content: center;
-        z-index: 1;
-        background-color: rgba(0, 0, 0, 0.3);
-      }
+        margin: auto;
+        font-size: 12px;
+        padding: 7px 20px;
+        background-color: var(--purple-primary);
+        border-color: var(--purple-primary);
+        color: var(--white);
+        border: 1px solid var(--border-primary);
+        border-radius: 999px;
+        line-height: normal;
+        cursor: pointer;
+        transition: .3s;
 
-      img {
-        border-radius: 4px;
-        width: 100%;
-        height: auto;
+        &:hover {
+          filter: brightness(.9);
+        }
+
+        &:active {
+          filter: brightness(.7);
+
+        }
       }
+    }
+
+    .content {
+      line-height: 1.58;
+      margin: 6px 0 20px;
+      font-size: 14px;
+    }
+  }
+}
+
+.player_queue-listmusic {
+  padding: 0 1rem;
+
+
+
+}
+
+// li
+.player_queue-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.8rem;
+  border-radius: 4px;
+
+  .material-icons {
+    font-size: 30px;
+  }
+
+  &:hover {
+    background: var(--alpha-bg);
+    transition: 0.2s;
+
+    .player_queue-img-hover {
+      visibility: visible !important;
     }
 
     .player_queue-item-right {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      display: none;
+      display: flex !important;
+    }
+  }
 
-      .player_queue-btn:first-child {
-        margin-right: 3.3px;
+  &.is-vip {
+    opacity: .5 !important;
+
+    .is-vip_img {
+      background-image: url(https://zjs.zmdcdn.me/zmp3-desktop/releases/v1.6.24/static/media/vip-label.3dd6ac7e.svg);
+      width: 26px;
+      height: 12px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: inline-block;
+      flex-shrink: 0;
+      margin-left: 8px;
+    }
+
+  }
+
+  .player_queue-music-info {
+    .player_queue-music {
+      color: var(--player-text);
+      font-size: 1.4rem;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 0.8;
       }
+    }
 
-      .player_queue-btn:nth-child(2) {
-        .playing_title-hover {
-          width: 80px;
-          left: -44px;
+    .player_queue-name {
+      color: var(--text-secondary);
+      font-size: 1.2rem;
+      cursor: pointer;
 
-          &::after {
-            left: 78%;
-          }
-        }
+      &:hover {
+        text-decoration: underline;
       }
     }
   }
 
-  // active li
-  .player_queue-active {
-    background-color: var(--purple-primary) !important;
-    transition: .2s;
+  .player_queue-item-left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .player_queue-left {
+    cursor: pointer;
+    border-radius: 8px;
+    width: 4rem;
+    min-width: 4rem;
+    height: 4rem;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 8px;
+    margin-right: 1rem;
+    position: relative;
+
+    .player_queue-img-hover {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      cursor: pointer;
+      border-radius: 4px;
+      width: 4rem;
+      height: 4rem;
+      display: flex;
+      visibility: hidden;
+      align-items: center;
+      justify-content: center;
+      z-index: 1;
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+
+    img {
+      border-radius: 4px;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .player_queue-item-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+
+    .player_queue-btn:first-child {
+      margin-right: 3.3px;
+    }
+
+    .player_queue-btn:nth-child(2) {
+      .playing_title-hover {
+        width: 80px;
+        left: -44px;
+
+        &::after {
+          left: 78%;
+        }
+      }
+    }
   }
 }
+
+// active li
+.player_queue-active {
+  background-color: var(--purple-primary) !important;
+  transition: .2s;
+}
+
 
 // Main Page
 .main-page {
@@ -1580,7 +1651,7 @@
     margin-top: 3.6rem;
 
     .icon_play-btn {
-      font-size: 7rem;
+      font-size: 6.8rem;
     }
 
     .recently_btn-hover-play {
@@ -1676,7 +1747,7 @@
     }
 
     .icon_play-btn {
-      font-size: 4.6rem;
+      font-size: 4.2rem;
     }
 
     .zing-chart_right {
@@ -2040,6 +2111,11 @@
 .player_queue-is_active {
   right: 0 !important;
 
+  .player_queue-header {
+    right: 0 !important;
+    position: fixed !important;
+
+  }
 }
 
 .icon_play-btn {
@@ -3468,7 +3544,7 @@
             img {
               padding: 10%;
               width: 100%;
-              border-radius: 4px;
+              border-radius: 12%;
             }
           }
         }
@@ -3872,4 +3948,8 @@
 
 #play-pause {
   font-size: 50px;
+}
+
+.container_recently .icon_play-btn {
+  font-size: 48px;
 }
