@@ -588,7 +588,7 @@ const renderAndLenh = () => {
                               </div>
                               <div class="release_list-item-right-bottom">
                                  <div class="release_list-item-chart">#${index + 1}</div>
-                                 <div class="release_list-item-date">${e.album.releaseDate}</div>
+                                 <div class="release_list-item-date"></div>
                               </div>
                            </div>
                         </a>`
