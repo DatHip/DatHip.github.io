@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>details</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .app {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    p {
+      text-align: left;
+      width: 100%;
+      max-width: 60%;
+    }
+
+    img {
+      width: 200px;
+
+    }
+  </style>
+</head>
+
+<body>
+  <div class="app">
+  </div>
+
+  <script>
+    let url = window.location.search
+    let DataUrl = new URLSearchParams(url)
+    console.log(DataUrl.toString())
+    const app = document.querySelector('.app')
+    app.innerHTML = `
+    <img  src="${DataUrl.get('image')}" alt="${DataUrl.get('title')}">
+    <br>
+        <p class="name">${DataUrl.get('title')}</p>
+        <p class="description">description: ${DataUrl.get('description')}</p>
+        <p class="priece">priece: ${DataUrl.get('price')}</p>
+        <p class="star">rate: ${DataUrl.get('rate')}</p>
+        <p class="count">count: ${DataUrl.get('count')}</p>
+    `
+  </script>
+</body>
+
+</html>
