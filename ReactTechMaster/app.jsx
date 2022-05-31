@@ -135,7 +135,6 @@ function handleSelect(e) {
       second: document.querySelector(".hand--second"),
       minute: document.querySelector(".hand--minute"),
       hour: document.querySelector(".hand--hour"),
-      h2: document.querySelector(h2),
    }
 
    function updateClock() {
