@@ -50,7 +50,7 @@ $(document).ready(function () {
 
 // Line Chart
 let lineChart = () => {
-  const postApi = 'https://music-player-pink.vercel.app/api/chart-home'
+  const postApi = 'https://dathuynhmusictest.vercel.app/api/chart-home'
   fetch(postApi)
     .then(res => res.json())
     .then(res => {
