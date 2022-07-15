@@ -684,7 +684,7 @@ const renderAndLenh = () => {
                                     <div class="favorite_content-list row">
                                        <div class="col l-3 m-3 c-3">
                                           <div class="favorite_content-img">
-                                             <img src="${e.song.items[0].thumbnailM ? : e.song.items[0].thumbnailM  : ''}" alt="" />
+                                             <img src="${e.song.items[0].thumbnailM ?  e.song.items[0].thumbnailM  : ''}" alt="" />
                                           </div>
                                        </div>
                                        <div class="col l-3 m-3 c-3">
