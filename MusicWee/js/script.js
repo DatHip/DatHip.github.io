@@ -52,7 +52,7 @@ const renderAndLenh = () => {
                            <div class="want_list-item-title">
                               <a class="main_title-text" title="${item[i].sortDescription}" href="#">${item[i].title}</a>
                               <div class="main_subtitle">
-                                 <a href="#">${item[i].artists[0].name}</a>, <a href="#">${item[i].artists[1].name}</a>, <a href="#">${item[i].artists[2].name}</a>...
+                                 <a href="#">${item[i].artists[0].name ? item[i].artists[0].name : ""}</a>, <a href="#">${item[i].artists[1].name}</a>, <a href="#">${item[i].artists[2].name}</a>...
                               </div>
                            </div>
                         </div>`
@@ -304,7 +304,7 @@ const renderAndLenh = () => {
                                  <img src="${e.program.thumbnail}" alt="" />
                               </div>
                               <div class="xones_list-item-link-logo">
-                                 <img src="${e.thumbnail}" alt="" />
+                                 <img src="${e.thumbnail ? e.thumbnail : ''}" alt="" />
                               </div>
                               <div class="xones_list-item-link-logo-live">
                                  <img src="https://zmp3-static.zadn.vn/skins/zmp3-v6.1/images/icons/live-tag.svg" alt="taylor" />
@@ -547,7 +547,7 @@ const renderAndLenh = () => {
             renderNgheSiNoiBat()
          })
    }
-   renderHomePage3()
+   
 
 
    let renderHomePage4 = () => {
@@ -684,7 +684,7 @@ const renderAndLenh = () => {
                                     <div class="favorite_content-list row">
                                        <div class="col l-3 m-3 c-3">
                                           <div class="favorite_content-img">
-                                             <img src="${e.song.items[0].thumbnailM}" alt="" />
+                                             <img src="${e.song.items[0].thumbnailM ? : e.song.items[0].thumbnailM  : ''}" alt="" />
                                           </div>
                                        </div>
                                        <div class="col l-3 m-3 c-3">
